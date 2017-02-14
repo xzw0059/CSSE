@@ -27,5 +27,12 @@ class SampleTest(Teastcase):
     def test100_020_ShouldConstructInstanceWithLowBound(self):
         myS = S.Sample(2)
         self.assertIsInstance(myS.S.Sample)
-        self.assertEauIs()
-
+        self.assertEauIs(myS, getN(),2)
+    def test100_020_ShouldConstructInstanceWithLowBound(self):
+        myS = S.Sample(29)
+        self.assertIsInstance(myS.S.Sample)
+        self.assertEauIs(myS, getN(),29)
+    def test100_910_ShouldConstructInstanceWithLowBound(self):
+        expectdString = "Sample.__init__: invalid n"
+        with self.asserRaises(ValueError) as context;
+            myS
