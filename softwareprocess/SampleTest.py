@@ -236,9 +236,4 @@ class SampleTest(unittest.TestCase):
         self.assertAlmostEquals(mySample.f(1, 5), 0.578703704)
 
 
-        ##test code for integrate
-    def test501110_020_ShouldCalculateF(self):
-        def f(u, n):
-            return u ** 2
-        mySample = SM.Sample(self.nominalN)
-        self.assertAlmostEquals(mySample.integrate(0.0, 1.0,1,f(0.0,0.1)), 0.3333,4)
+

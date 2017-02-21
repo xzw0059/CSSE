@@ -65,7 +65,7 @@ class Sample(object):
         return result
 
     def number1(self,s,n,highBound,w):
-        #sum= float(n)
+#equal to f(0)+ 4f(0 + W) + 2f(0 + 2W) + ... + 4f(highBound - W) + f(highBound)
         sum = 0.0
         for i in range(s + 1):
             if i == 0:
