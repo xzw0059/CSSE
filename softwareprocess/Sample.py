@@ -94,7 +94,7 @@ class Sample(object):
             simpsonOld = simpsonNew
             w = (highBound - 0.0) / s
             simpsonNew = (w / 3) * self.number1(s,n,highBound,w)
-
+            s = s * 2
         return simpsonNew
         
         

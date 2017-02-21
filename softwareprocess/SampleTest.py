@@ -235,5 +235,22 @@ class SampleTest(unittest.TestCase):
         mySample = SM.Sample(self.nominalN)
         self.assertAlmostEquals(mySample.f(1, 5), 0.578703704)
 
-
-
+# 900 intergrate
+# ANALYSIS VI
+#   inputs
+#       low bound -> numeric mandatory validated... will be 0.0
+#       high bound -> numeric mandatory validated... will be t
+#       n -> interger mandatory validated 2..29
+#       n -> funcition mandatory validatedth analysis
+#
+#   outputs
+#       float .GE. 0
+#
+#   happy path # ANALYSIS
+#
+#       intergrate(lowbBound, highbound, n, f) expected result is
+#       strategy
+#           1) Know curve, minimum slices, hardcode simpsom coefficients
+#           2) Know curve, minimum slices * 2, hardcode simpsom coefficients
+#           3) Know curve, hardcode the number of
+#           4) Know curve, minimum slices * 2, hardcode simpsom coefficients
