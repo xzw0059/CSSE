@@ -237,7 +237,7 @@ class SampleTest(unittest.TestCase):
 
 
         ##test code for integrate
-    def test500_020_ShouldCalculate(self):
+    def test501110_020_ShouldCalculate(self):
         def f(u, n):
             return u
         mySample = SM.Sample(self.nominalN)
