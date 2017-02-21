@@ -66,7 +66,7 @@ class Sample(object):
 
     def number1(self,s,n,highBound,w):
         #sum= float(n)
-        sum=0.0
+        sum=0.00000
         for i in range(0,s + 1):
             if i == 0:
                 sum += self.f(0.0, n)
@@ -84,7 +84,7 @@ class Sample(object):
 
     def integrate(self, lowBound , highBound, n, f):
         lowBound = 0.0
-        epsilon = 0.0000000001
+        epsilon = 0.000000000000001
         simpsonOld = 0.0
         simpsonNew = epsilon
         s = 4
