@@ -66,15 +66,15 @@ class Sample(object):
 
     def number1(self,s,n,highBound,w):
         #sum= float(n)
-        sum=0.00000
-        for i in range(0,s + 1):
+        sum = 0.0
+        for i in range(s + 1):
             if i == 0:
                 sum += self.f(0.0, n)
             elif i == s:
                 sum += self.f(highBound, n)
-            elif (i % 2) == 1:
+            elif i != s and i != 0 and (i % 2) == 1:
                 sum += 4 * self.f(w * i, n)
-            elif (i % 2) == 0:
+            elif i != s and i != 0 and (i % 2) == 0:
                 sum += 2 * self.f(w * i, n)
 
         return sum
@@ -84,10 +84,11 @@ class Sample(object):
 
     def integrate(self, lowBound , highBound, n, f):
         lowBound = 0.0
-        epsilon = 0.000000000000001
+        epsilon = 0.001
         simpsonOld = 0.0
         simpsonNew = epsilon
-        s = 4
+        s = 16
+
         while abs((simpsonNew - simpsonOld) / simpsonNew) > epsilon:
 
             simpsonOld = simpsonNew
