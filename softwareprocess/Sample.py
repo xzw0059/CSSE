@@ -64,35 +64,37 @@ class Sample(object):
         result = base ** exponent
         return result
 
-    def number1(self):
-        count = w+1
-        number2= float(n)
-        for i in count
-            if count == 0 or w+1:
-                number2 += f(0.0, n)
-                count = count - 1
-            elif count != 0 or w+1 and (count % 2) == 1:
-                number2 += 2f(2i, n)
-                elif count != 0 or w+1 and (count % 2) == 0:
-                    number2 += 4f(2i, n)
-        return print number2
+    def number1(self,s,n,highBound,w):
+        #sum= float(n)
+        sum=0.0
+        for i in range(0,s + 1):
+            if i == 0:
+                sum += self.f(0.0, n)
+            elif i == s:
+                sum += self.f(highBound, n)
+            elif (i % 2) == 1:
+                sum += 4 * self.f(w * i, n)
+            elif (i % 2) == 0:
+                sum += 2 * self.f(w * i, n)
+
+        return sum
 
 
 
 
-    def integrate(self, 0.0, highBound, n, f):
-        epsilon = 0.001
+    def integrate(self, lowBound , highBound, n, f):
+        lowBound = 0.0
+        epsilon = 0.0000000001
         simpsonOld = 0.0
         simpsonNew = epsilon
         s = 4
-        while abs((simpsonNew - simpsonOld) / simpsonNew) > epsilon):
-        {
+        while abs((simpsonNew - simpsonOld) / simpsonNew) > epsilon:
+
             simpsonOld = simpsonNew
             w = (highBound - 0.0) / s
-            simpsonNew = (w / 3) * number1(w)
-        }
+            simpsonNew = (w / 3) * self.number1(s,n,highBound,w)
+
         return simpsonNew
-        pass
         
         
     
