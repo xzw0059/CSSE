@@ -21,3 +21,7 @@ def dispatch(values=None):
     else:
         values['error'] = 'op is not a legal operation'
         return values
+# Sad path tests
+    def test_100_900_ShouldReturnErrorNoInput(self):
+        self.assertDictEqual(cs2d.convertString2Dictionary(), self.errorDict,
+                             "Major defect:  does not return proper result on missing parm")
