@@ -4,8 +4,3 @@ for i in range(10):
         continue
     #打印
     print i
-1
-3
-5
-7
-9
