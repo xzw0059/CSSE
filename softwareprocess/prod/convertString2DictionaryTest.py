@@ -1,6 +1,5 @@
 from unittest import TestCase
-import unittest
-import dispatch as dispatch
+import softwareprocess.prod.dispatch as dispatch
 from softwareprocess import prod as cs2d
 
 
@@ -10,13 +9,13 @@ class convertString2DictionaryTest(TestCase):
     def setUpClass(cls):
         cls.errorDict = {'error':'true'}
 
-
-
-
-class MyTest(unittest.TestCase):
+#class MyTest(unittest.TestCase):
     def test(self):
-        self.assertDictEqual(dispatch({'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}, {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'})
----)
+         self.assertDictEqual(dispatch.dispatch({'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}), {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'})
+
+    def test2(self):
+        values={}
+        self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
 
 # Acceptance test analysis
 #   input:  inputString -> percent-encoded UTF-8, optional,
@@ -82,13 +81,13 @@ class MyTest(unittest.TestCase):
 #                              "Major defect:  not able to parse appropriate white space")
 #
 # # Sad path tests
-    def test_100_900_ShouldReturnErrorNoInput(self):
-        self.assertDictEqual(cs2d.convertString2Dictionary(), self.errorDict,
-                             "Major defect:  does not return proper result on missing parm")
-#
-    def test_100_905_ShouldReturnErrorNullString(self):
-        self.assertDictEqual(cs2d.convertString2Dictionary(" "), self.errorDict,
-                             "Minor defect:  does not return proper result on blank parm")
+#     def test_100_900_ShouldReturnErrorNoInput(self):
+#         self.assertDictEqual(cs2d.convertString2Dictionary(), self.errorDict,
+#                              "Major defect:  does not return proper result on missing parm")
+# #
+#     def test_100_905_ShouldReturnErrorNullString(self):
+#         self.assertDictEqual(cs2d.convertString2Dictionary(" "), self.errorDict,
+#                              "Minor defect:  does not return proper result on blank parm")
 #
 #     def test_100_910_ShouldReturnErrorOnMissingComma(self):
 #         encodedString = urllib.quote("key1=value1 key2=value2")
