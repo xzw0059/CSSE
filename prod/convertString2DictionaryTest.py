@@ -1,4 +1,5 @@
 from unittest import TestCase
+import unittest
 import urllib
 import dispatch as dispatch
 
@@ -10,6 +11,12 @@ class convertString2DictionaryTest(TestCase):
     def setUpClass(cls):
         cls.errorDict = {'error':'true'}
 
+
+
+
+class MyTest(unittest.TestCase):
+    def test(self):
+        self.assertEqual(dispatch('observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'), 'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85')
 # ---
 # Acceptance test analysis
 #   input:  inputString -> percent-encoded UTF-8, optional,
