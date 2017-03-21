@@ -1,7 +1,8 @@
 from unittest import TestCase
 import urllib
+import dispatch as dispatch
 
-import prod.convertString2Dictionary as cs2d
+import prod.dispatch.convertString2Dictionary as cs2d
 
 class convertString2DictionaryTest(TestCase):
 
@@ -78,9 +79,9 @@ class convertString2DictionaryTest(TestCase):
         self.assertDictEqual(cs2d.convertString2Dictionary(), self.errorDict,
                              "Major defect:  does not return proper result on missing parm")
 #
-#     def test_100_905_ShouldReturnErrorNullString(self):
-#         self.assertDictEqual(cs2d.convertString2Dictionary(" "), self.errorDict,
-#                              "Minor defect:  does not return proper result on blank parm")
+    def test_100_905_ShouldReturnErrorNullString(self):
+        self.assertDictEqual(cs2d.convertString2Dictionary(" "), self.errorDict,
+                             "Minor defect:  does not return proper result on blank parm")
 #
 #     def test_100_910_ShouldReturnErrorOnMissingComma(self):
 #         encodedString = urllib.quote("key1=value1 key2=value2")
