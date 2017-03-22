@@ -55,9 +55,9 @@ import string
 
 x = '567.675'
 u = '1234.0'
-y = 'sdfds'
-u1 = int(u)
-u2=u1*10
+# y = 'sdfds'
+# u1 = int(u)
+# u2=u1*10
 # y1=str(y)
 # # print u
 # # print  type(u)
