@@ -41,6 +41,12 @@ class convertString2DictionaryTest(TestCase):
         result={'altitude':'9d54.7','temperature': '72', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'observation': '10d00.0', 'op': 'adjust'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
+
+    def test_100_050_RightValuesPdfEx2(self):
+        values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
+        result={'altitude':'45d11.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
+        print values
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
     #     self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})

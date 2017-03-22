@@ -67,7 +67,6 @@ def dispatch(values=None,dip=None):
             return values
 
         if (not isinstance(float(values['height']),float)):
-            print  values['height']
             values['error'] = 'height is not invalid__not num'
             return values
 
