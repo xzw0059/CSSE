@@ -72,4 +72,6 @@ values1={}
 values1['height'] = 0
 values1['height1'] = {0}
 
+print values1
+
 
