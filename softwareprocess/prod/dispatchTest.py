@@ -68,12 +68,12 @@ u = '1234.0'
 # print u1
 # # print type(u1)
 # print (u2.isdigit())
-values1={}
-values1['height'] = 0
-values1['height1'] = {0}
-values1['height2'] = {'0'}
-values1['height3'] = '0'
-
-print values1
+# values1={}
+# values1['height'] = 0
+# values1['height1'] = {0}
+# values1['height2'] = {'0'}
+# values1['height3'] = '0'
+#
+# print values1
 
 
