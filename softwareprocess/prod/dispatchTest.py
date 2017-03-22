@@ -24,17 +24,18 @@ import math
 # print M2
 
 altitude0= 678.324
-tempalt = {}
-tempalt == str(altitude0).split('.')
-print tempalt
-D2 = tempalt[0]
-M2 = tempalt[1]*60
-altitudedig = {}
-altitudedig = {'altitude':D2 + 'D' + round(M2,1)}
-
+D2 = int(altitude0)
+M2 = altitude0 - D2
+# tempalt == str(altitude0).split('.')
+# print tempalt
+# D2 = tempalt[0]
+# M2 = tempalt[1]*60
+# altitudedig = {}
+altitudedig = {'altitude':str(D2) + 'D' + str(round(M2*60,1))}
+# values.up
 print D2,M2
-altitudedig={}
-altitudedig = {str(D2) + 'D' + str(round(M2,1))}
+# altitudedig={}
+# altitudedig = {str(D2) + 'D' + str(round(M2,1))}
 # values = {'altitude':"altitudedig"}
 # values = {}
 print altitudedig

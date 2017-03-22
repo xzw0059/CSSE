@@ -32,7 +32,6 @@ class convertString2DictionaryTest(TestCase):
         values={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
         # self.assertDictEqual(dispatch.dispatch(values),{dispatch.dispatch(values)})
         # print dispatch.dispatch(values)
-        print dip
         print values
         # print dip.
     # def test_100_010_ShouldBeNotNone(self):
