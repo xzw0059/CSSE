@@ -14,7 +14,7 @@ def dispatch(values=None):
 
 
 
-    if(values['op'] !=None and values['op'] != 'adjust'or 'predict'or 'correct' or'locate'):
+    if(values['op'] !=None and values['op'] != 'adjust'):
         return {'error': 'op is not a legal operation'}
 
 
