@@ -31,7 +31,7 @@ def dispatch(values=None,dip=None):
     if(values['op'] == 'adjust'):
         print values
         o = values['observation']
-        list1 = None
+        list1 = {}
         list1 == o.split('d')
         x = list1[1]
         print x
