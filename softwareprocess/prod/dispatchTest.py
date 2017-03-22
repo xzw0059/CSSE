@@ -71,6 +71,8 @@ u = '1234.0'
 values1={}
 values1['height'] = 0
 values1['height1'] = {0}
+values1['height2'] = {'0'}
+values1['height3'] = '0'
 
 print values1
 
