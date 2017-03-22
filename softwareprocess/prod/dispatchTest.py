@@ -48,7 +48,7 @@ import math
 #
 # print dic
 
-u = '1234.45'
+u = '1234'
 y = 'sdfds'
 u1 = int(u)
 y1=int(y)
