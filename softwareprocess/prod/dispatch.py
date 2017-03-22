@@ -146,7 +146,7 @@ def dispatch(values=None,dip=None):
 
         values['altitude'] = altitudedig
 
-        print altitudedig
+        # print altitudedig
         print values
 
 
