@@ -26,8 +26,8 @@ import math
 u = math.modf(666.777)
 print u
 tempalt = 567,789
-D2 = tempalt[1]
-M2 = tempalt[0]
+D2 = tempalt[0]
+M2 = tempalt[1]
 
 print D2,M2
 altitudedig = {str(D2) + 'D' + str(round(M2,1))}
