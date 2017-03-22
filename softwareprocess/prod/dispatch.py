@@ -29,7 +29,7 @@ def dispatch(values=None,dip=None):
 
     #Perform designated function
     if(values['op'] == 'adjust'):
-        print values
+        print 'adjust'
         o = values['observation']
         list1 = {}
         list1 = o.split('d')
