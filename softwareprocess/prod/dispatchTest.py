@@ -26,6 +26,7 @@ import math
 altitude0= 678.324
 tempalt = {}
 tempalt == str(altitude0).split('.')
+print tempalt
 D2 = tempalt[0]
 M2 = tempalt[1]*60
 altitudedig = {}
