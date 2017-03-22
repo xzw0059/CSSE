@@ -109,7 +109,7 @@ def dispatch(values=None,dip=None):
         D2 = tempalt[0]
         M2 = tempalt[1]*60
         altitudedig = {}
-        altitudedig = D2 + 'D' + round(M2,1)
+        altitudedig = {'altitude':D2 + 'D' + round(M2,1)}
 
         if not (isinstance(D2,int)):
             values['error'] = 'altitude-degree is not invalid__not int'
