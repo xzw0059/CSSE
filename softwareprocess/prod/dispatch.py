@@ -49,7 +49,7 @@ def dispatch(values=None,dip=None):
         hr = values['horizon']
         # print dip
 
-        if not (isinstance(int(list1[0]),int) or isinstance(int(list1[0]),float) ):
+        if not (isinstance(int(list1[0]),int)):
             values['error'] = 'degree is not invalid__not int'
             return values
         if  not (int(list1[0]) >= 0 and int(list1[0]) < 90):
@@ -66,11 +66,10 @@ def dispatch(values=None,dip=None):
             values['height'] = 0
             return values
 
-        # if (not values['height'].isdigit()):
-        #     if (values['height'])
-        #     print  values['height']
-        #     values['error'] = 'height is not invalid__not num'
-        #     return values
+        if (not  isinstance(int(values['height']),int) and isinstance(float(values['height']),float)):
+            print  values['height']
+            values['error'] = 'height is not invalid__not num'
+            return values
 
 
         if (not float(values['height']) >= 0):
