@@ -91,7 +91,7 @@ def dispatch(values=None,dip=None):
         if (p == None):
             p = 1010
             return values
-        if not (isinstance(int(values['pressure']),int)or isinstance(float(values['pressure']),float)):
+        if not (isinstance(float(values['pressure']),float)):
             values['error'] = 'pressure is not invalid__not str of number'
             return values
         if not (p >= 100 and p <= 1100):
