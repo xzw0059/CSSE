@@ -18,6 +18,6 @@ import math
 # print math.tan(90d30)
 tempalt = math.modf(123.678)
 D2 = tempalt[1]
-M2 = tempalt[2]
+# M2 = tempalt[2]
 print D2
-print M2
+print math.modf(123.678)
