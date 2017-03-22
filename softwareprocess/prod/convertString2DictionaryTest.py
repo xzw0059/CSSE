@@ -10,12 +10,33 @@ class convertString2DictionaryTest(TestCase):
         cls.errorDict = {'error':'true'}
 
 #class MyTest(unittest.TestCase):
-    def test(self):
+
+    def test_100_000_ShouldBeDictionary(self):
+        values=None
+        self.assertDictEqual(dispatch.dispatch(values),{'error': 'parameter is missing'})
+
+    # def test_100_010_OpShouldBeNotNone(self):
+    #     values={}
+    #     self.assertDictEqual(dispatch.dispatch(values),{'error':'no op is specified'})
+    #     print dispatch.dispatch(values)
+
+    def test_100_020_ValuesShouldNotViolatesTheParameterDescriptionAbove(self):
+        values={'op': 'unknown'}
+        self.assertDictEqual(dispatch.dispatch(values),{'error':'op is not a legal operation'})
+
+    def test_100_010_RightAdjust(self):
          self.assertDictEqual(dispatch.dispatch({'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}), {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'})
 
-    def test2(self):
-        values={}
-        self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
+    def test_100_030_ValuesShouldNotViolatesTheParameterDescriptionAbove(self):
+        values={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
+        self.assertDictEqual(dispatch.dispatch(values),{'error':'op is not a legal operation'})
+        print dispatch.dispatch(values)
+    # def test_100_010_ShouldBeNotNone(self):
+    #     values={}
+    #     self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
+    # {'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72'}
+
+
 
 # Acceptance test analysis
 #   input:  inputString -> percent-encoded UTF-8, optional,
