@@ -15,6 +15,7 @@ import math
 #
 # if __name__ == '__main__':
 #     unittest.main()
- u = math.tan(math.pi/2)
- print u
+ num = None
+ num = math.tan(math.pi/2)
+ print num
 
