@@ -6,8 +6,10 @@ def dispatch(values=None,dip=None):
     #Validate parm
     if(values == None):
         return {'error': 'parameter is missing'}
+
     if(not(isinstance(values,dict))):
         return {'error': 'parameter is not a dictionary'}
+
     if (not('op' in values)):
         values['error'] = 'no op  is specified'
         return values
@@ -112,8 +114,7 @@ def dispatch(values=None,dip=None):
         # tempalt = str(altitude0).split('.')
         D2 = int(altitude0)
         M2 = (altitude0 - D2)*60
-        altitudedig = {}
-        altitudedig = {'altitude':D2 + 'D' + round(M2,1)}
+        altitudedig = D2 + 'D' + round(M2,1)
 
 
         if not (isinstance(D2,int)):
@@ -131,7 +132,7 @@ def dispatch(values=None,dip=None):
             return values
 
         values['altitude'] = altitudedig
-        values = {}
+
         print altitudedig
 
 

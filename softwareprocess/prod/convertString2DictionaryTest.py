@@ -1,6 +1,7 @@
 from unittest import TestCase
 import softwareprocess.prod.dispatch as dispatch
 from softwareprocess import prod as cs2d
+import dispatch
 
 
 class convertString2DictionaryTest(TestCase):
@@ -33,8 +34,11 @@ class convertString2DictionaryTest(TestCase):
         # self.assertDictEqual(dispatch.dispatch(values),{dispatch.dispatch(values)})
         # print dispatch.dispatch(values)
         print values
-        # print dip.
 
+        # print dip.
+    def test_100_040_RightValuesPdfEx1(self):
+        values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
+        self.assertDictEqual(dispatch.dispatch(values),{'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'})
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
     #     self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
