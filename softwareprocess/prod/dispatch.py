@@ -123,7 +123,7 @@ def dispatch(values=None,dip=None):
         D2 = int(altitude0)
         M2 = (altitude0 - D2)*60
         altitudedig = str(D2) + 'd' + str(round(M2,1))
-        print type(altitudedig)
+        # print type(altitudedig)
 
 
         if not (isinstance(D2,int)):
