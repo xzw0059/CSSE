@@ -24,11 +24,12 @@ class convertString2DictionaryTest(TestCase):
         values={'op': 'unknown'}
         self.assertDictEqual(dispatch.dispatch(values),{'error':'op is not a legal operation'})
 
-    def test_100_010_RightAdjust(self):
-         self.assertDictEqual(dispatch.dispatch({'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}), {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'})
-
-    def test_100_030_ValuesShouldNotViolatesTheParameterDescriptionAbove(self):
-        values={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
+    # def test_100_010_RightAdjust(self):
+    #
+    #      self.assertDictEqual(dispatch.dispatch({'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}), {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'})
+    #
+    # def test_100_030_ValuesShouldNotViolatesTheParameterDescriptionAbove(self):
+    #     values={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
         # self.assertDictEqual(dispatch.dispatch(values),{dispatch.dispatch(values)})
         # print dispatch.dispatch(values)
         print values
