@@ -15,5 +15,5 @@ import math
 #
 # if __name__ == '__main__':
 #     unittest.main()
-print math.tan(math.pi/2)
+# print math.tan(90d30)
 

@@ -100,7 +100,11 @@ def dispatch(values=None):
             dip = 0
 
 
-        refraction=( -0.00452*int(p))/(273+tc)/math.tan(o)
+        refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
+        altitude0 = y/60+x + dip + refraction
+        altitude0
+        altitude = round(altitude0,[1])
+
 
 
 
