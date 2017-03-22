@@ -102,7 +102,9 @@ def dispatch(values=None):
 
         refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
         altitude0 = y/60+x + dip + refraction
-        altitude0
+        tempalt = math.modf(altitude0)
+        D2 = tempalt[1]
+        M2 = tempalt[2]
         altitude = round(altitude0,[1])
 
 
