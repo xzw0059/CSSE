@@ -34,6 +34,7 @@ def dispatch(values=None,dip=None):
         list1 = {}
         list1 = o.split('d')
         x = int(list1[0])
+        print type(list1[0])
         print type(x)
         print x
         y = list1[1]
