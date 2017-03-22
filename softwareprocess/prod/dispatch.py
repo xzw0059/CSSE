@@ -39,6 +39,7 @@ def dispatch(values=None,dip=None):
         tc = 5 * (tf - 32) / 9
         p = values['pressure']
         hr = values['horizon']
+        print dip
 
         if not (isinstance(x,int)):
             values['error'] = 'degree is not invalid__not int'
@@ -102,16 +103,17 @@ def dispatch(values=None,dip=None):
             dip = 0
             return values
 
-        print dip
+
 
         refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
         altitude0 = y/60+x + dip + refraction
-        tempalt = {}
-        tempalt = str(altitude0).split('.')
-        D2 = tempalt[0]
-        M2 = tempalt[1]*60
+        # tempalt = {}
+        # tempalt = str(altitude0).split('.')
+        D2 = int(altitude0)
+        M2 = (altitude0 - D2)*60
         altitudedig = {}
         altitudedig = {'altitude':D2 + 'D' + round(M2,1)}
+
 
         if not (isinstance(D2,int)):
             values['error'] = 'altitude-degree is not invalid__not int'
@@ -120,10 +122,10 @@ def dispatch(values=None,dip=None):
                 values['error'] = 'altitude-degree is not invalid__not in -90~90'
                 return values
 
-        if not (isinstance(M2,float)):
+        if not (isinstance(round(M2,1),float)):
             values['error'] = 'altitude-min is not invalid__not float'
             return values
-        if not (M2 >= 0 and M2 < 60):
+        if not (M2 >= 0 and round(M2,1) < 60):
             values['error'] = 'altitude-min is not invalid__not 0~60'
             return values
 
