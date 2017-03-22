@@ -40,7 +40,8 @@ import math
 # # values = {}
 # print altitudedig
 dic={'a':2,'b':3}
-d={'c':4}
-dic.update(d)
+dic={'c':4}
+# dic.update(d)
+
 print dic
 
