@@ -38,6 +38,8 @@ def dispatch(values=None,dip=None):
         print type(x)
         print x
         y = list1[1]
+        print type(list1[1])
+        print type(y)
         print y
         h = values['height']
         tf = values['temperature']
