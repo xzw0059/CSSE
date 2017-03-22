@@ -43,8 +43,8 @@ def dispatch(values=None,dip=None):
         # print y
 
 
-        tf = str(values['temperature'])
-        tc = 5 * (int(tf) - 32) / 9
+
+        tc = 5 * (float(values['temperature']) - 32) / 9
         p = values['pressure']
         hr = values['horizon']
         # print dip
@@ -66,7 +66,7 @@ def dispatch(values=None,dip=None):
             values['height'] = 0
             return values
 
-        if (not  isinstance(int(values['height']),int) or isinstance(float(values['height']),float)):
+        if (not  isinstance(float(values['height']),float)):
             print  values['height']
             values['error'] = 'height is not invalid__not num'
             return values
@@ -77,13 +77,13 @@ def dispatch(values=None,dip=None):
             return values
 
 
-        if (tf == None):
+        if (int(values['temperature']) == None):
             t = 72
             return values
-        if not (isinstance(tf,int)):
+        if not (isinstance(int(values['temperature']),int)or isinstance(float(values['temperature']),float)):
             values['error'] = 'temperature is not invalid__not int'
             return values
-        if not (tf >= -20 and tf <= 120):
+        if not (int(values['temperature']) >= -20 and int(values['temperature']) <= 120):
             values['error'] = 'temperature is not invalid__not -20~120'
             return values
 
