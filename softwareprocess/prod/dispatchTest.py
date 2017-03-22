@@ -50,8 +50,10 @@ import math
 
 u = '1234'
 y = 'sdfds'
+print u
 print  type(u)
 print  type(y)
+print y
 
 
 
