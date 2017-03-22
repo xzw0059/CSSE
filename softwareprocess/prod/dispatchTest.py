@@ -28,6 +28,8 @@ print u
 tempalt = 567,789
 D2 = tempalt[1]
 M2 = tempalt[0]
+
+print D2,M2
 altitudedig = {str(D2) + 'D' + str(round(M2,1))}
 # values = {'altitude':"altitudedig"}
 # values = {}
