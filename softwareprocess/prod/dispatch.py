@@ -122,7 +122,7 @@ def dispatch(values=None,dip=None):
         # tempalt = str(altitude0).split('.')
         D2 = int(altitude0)
         M2 = (altitude0 - D2)*60
-        altitudedig = str(D2) + 'D' + str(round(M2,1))
+        altitudedig = str(D2) + 'd' + str(round(M2,1))
         print type(altitudedig)
 
 
