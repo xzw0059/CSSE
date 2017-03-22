@@ -51,7 +51,7 @@ import math
 u = '1234'
 y = 'sdfds'
 u1 = int(u)
-y1=int(y)
+y1=str(y)
 print u
 print  type(u)
 print  type(y)
