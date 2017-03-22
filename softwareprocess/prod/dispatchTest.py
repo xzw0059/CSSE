@@ -58,16 +58,16 @@ u = '1234.0'
 y = 'sdfds'
 u1 = int(u)
 u2=u1*10
-y1=str(y)
-# print u
-# print  type(u)
-# print  type(y)
-# print  type(u1)
-# print type(y1)
-# print y1
-print u1
-# print type(u1)
-print (u2.isdigit())
+# y1=str(y)
+# # print u
+# # print  type(u)
+# # print  type(y)
+# # print  type(u1)
+# # print type(y1)
+# # print y1
+# print u1
+# # print type(u1)
+# print (u2.isdigit())
 
 
 
