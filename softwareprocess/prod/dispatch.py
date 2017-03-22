@@ -104,8 +104,10 @@ def dispatch(values=None):
         altitude0 = y/60+x + dip + refraction
         tempalt = math.modf(altitude0)
         D2 = tempalt[1]
-        M2 = tempalt[2]
-        altitude = round(altitude0,[1])
+        M2 = tempalt[0]
+        altitudedig = D2 + 'D' + round(M2,1)
+        altitude[altitude] = altitudedig
+
 
 
 
