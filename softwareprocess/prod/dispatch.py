@@ -36,7 +36,7 @@ def dispatch(values=None,dip=None):
         x = list1[0]
         print x
         y = list1[1]
-        print y
+        # print y
         h = values['height']
         tf = values['temperature']
         tc = 5 * (int(tf) - 32) / 9
