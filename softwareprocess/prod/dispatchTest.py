@@ -65,7 +65,7 @@ y1=str(y)
 # print type(y1)
 # print y1
 print y
-print (string.isdigit(u))
+print (string.isdigit(u1))
 
 
 
