@@ -104,12 +104,28 @@ def dispatch(values=None,dip=None):
 
         refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
         altitude0 = y/60+x + dip + refraction
-        tempalt = None
+        tempalt = {}
         tempalt == altitude0.split('.')
         D2 = tempalt[0]
         M2 = tempalt[1]*60
+        altitudedig = {}
         altitudedig = D2 + 'D' + round(M2,1)
-        values = {'altitude':"altitudedig"}
+
+        if not (isinstance(D2,int)):
+            values['error'] = 'altitude-degree is not invalid__not int'
+            return values
+        if  not (D2 > -90 and D2 < 90):
+                values['error'] = 'altitude-degree is not invalid__not in -90~90'
+                return values
+
+        if not (isinstance(M2,float)):
+            values['error'] = 'altitude-min is not invalid__not float'
+            return values
+        if not (M2 >= 0 and M2 < 60):
+            values['error'] = 'altitude-min is not invalid__not 0~60'
+            return values
+
+        values = {'altitude':altitudedig}
         values = {}
         print altitudedig
 
