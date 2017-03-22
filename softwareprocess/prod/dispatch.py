@@ -42,7 +42,7 @@ def dispatch(values=None,dip=None):
         tc = 5 * (int(tf) - 32) / 9
         p = values['pressure']
         hr = values['horizon']
-        print dip
+        # print dip
 
         if not (isinstance(x,int)):
             values['error'] = 'degree is not invalid__not int'
