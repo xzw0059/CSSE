@@ -22,6 +22,4 @@ import math
 # print D2
 # print math.modf(123.678)
 # print M2
-x=15
-y=25
-print 5000/x/y
+

@@ -106,7 +106,7 @@ def dispatch(values=None):
         D2 = tempalt[1]
         M2 = tempalt[0]
         altitudedig = D2 + 'D' + round(M2,1)
-        altitude[altitude] = altitudedig
+        values['altitude'] = altitudedig
 
 
 
