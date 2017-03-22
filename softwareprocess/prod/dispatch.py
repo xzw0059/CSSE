@@ -33,7 +33,7 @@ def dispatch(values=None,dip=None):
         o = values['observation']
         list1 = {}
         list1 = o.split('d')
-        x = list1[0]
+        x = str(list1[0])
         print type(x)
         print x
         y = list1[1]
