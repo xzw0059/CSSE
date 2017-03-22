@@ -123,7 +123,8 @@ def dispatch(values=None,dip=None):
         # tempalt = str(altitude0).split('.')
         D2 = int(altitude0)
         M2 = (altitude0 - D2)*60
-        altitudedig = D2 + 'D' + round(M2,1)
+        altitudedig = str(D2) + 'D' + str(round(M2,1))
+        print altitudedig
 
 
         if not (isinstance(D2,int)):
