@@ -108,7 +108,7 @@ def dispatch(values=None):
         altitudedig = D2 + 'D' + round(M2,1)
         values['altitude'] = altitudedig
         values= values + altitudedig
-        print values
+        print altitudedig
 
 
 
