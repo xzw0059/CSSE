@@ -41,7 +41,6 @@ def dispatch(values=None,dip=None):
         # print type(list1[1])
         # print type(y)
         # print y
-        h = values['height']
         tf = values['temperature']
         tc = 5 * (int(tf) - 32) / 9
         p = values['pressure']
@@ -61,13 +60,15 @@ def dispatch(values=None,dip=None):
             values['error'] = 'min is not invalid__not 0~60'
             return values
 
-        if (h == None):
+        if (values['height'] == None):
             h = 0
             return values
-        if (not h.isdigit()):
-            print type(h)
+        if (not values['height'].isdigit()):
             values['error'] = 'height is not invalid__not num'
             return values
+
+        h = int(values['height'])
+
         if (not h >= 0):
             values['error'] = 'height is not invalid__not >= 0'
             return values
