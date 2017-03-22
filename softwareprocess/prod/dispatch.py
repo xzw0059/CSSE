@@ -29,7 +29,6 @@ def dispatch(values=None,dip=None):
 
     #Perform designated function
     if(values['op'] == 'adjust'):
-        print 'adjust'
 
         o = values['observation']
         list1 = {}
