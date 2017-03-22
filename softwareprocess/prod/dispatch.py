@@ -129,7 +129,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'altitude-min is not invalid__not 0~60'
             return values
 
-        values.update = {'altitude':altitudedig}
+        values['altitude'] = altitudedig
         values = {}
         print altitudedig
 
