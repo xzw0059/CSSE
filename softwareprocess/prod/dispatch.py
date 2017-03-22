@@ -34,13 +34,13 @@ def dispatch(values=None,dip=None):
         list1 = {}
         list1 = o.split('d')
         x = int(list1[0])
-        print type(list1[0])
-        print type(x)
-        print x
-        y = list1[1]
-        print type(list1[1])
-        print type(y)
-        print y
+        # print type(list1[0])
+        # print type(x)
+        # print x
+        y = float(list1[1])
+        # print type(list1[1])
+        # print type(y)
+        # print y
         h = values['height']
         tf = values['temperature']
         tc = 5 * (int(tf) - 32) / 9
