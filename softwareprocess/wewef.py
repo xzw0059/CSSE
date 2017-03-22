@@ -2,6 +2,7 @@ import math
 
 def dispatch(values=None,dip=None):
 
+    values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 
     #Validate parm
     if(values == None):
@@ -167,5 +168,4 @@ def dispatch(values=None,dip=None):
         values['error'] = 'op is not a legal operation'
         return values
 
-values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
-print dispatch(values)
+    print dispatch(values)
