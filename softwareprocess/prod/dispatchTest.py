@@ -39,12 +39,20 @@ import math
 # # values = {'altitude':"altitudedig"}
 # # values = {}
 # print altitudedig
-dic={'a':2,'b':3}
-d = {'f':55}
-dic['z']={5}
-# dic = d
-dic.update(d)
+# dic={'a':2,'b':3}
+# d = {'f':55}
+# dic['z']={5}
+# # dic = d
 # dic.update(d)
+# # dic.update(d)
+#
+# print dic
 
-print dic
+u = '1234'
+y = 'sdfds'
+print  type(u)
+print  type(y)
+
+
+
 
