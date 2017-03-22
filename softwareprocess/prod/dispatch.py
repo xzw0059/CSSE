@@ -104,9 +104,10 @@ def dispatch(values=None,dip=None):
 
         refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
         altitude0 = y/60+x + dip + refraction
-        tempalt = math.modf(altitude0)
+        tempalt = None
+        tempalt == altitude0.split('.')
         D2 = tempalt[0]
-        M2 = tempalt[1]
+        M2 = tempalt[1]*60
         altitudedig = D2 + 'D' + round(M2,1)
         values = {'altitude':"altitudedig"}
         values = {}
