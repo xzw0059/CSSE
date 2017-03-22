@@ -23,9 +23,9 @@ import math
 # print math.modf(123.678)
 # print M2
 
-u = math.modf(666.777)
+u = math.modf(666.666.777.888)
 print u
-tempalt = 567,789
+tempalt = u
 D2 = tempalt[0]
 M2 = tempalt[1]
 
