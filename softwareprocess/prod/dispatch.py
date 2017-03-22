@@ -98,7 +98,7 @@ def dispatch(values=None,dip=None):
 
         else:
             dip = 0
-
+        print dip
 
         refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
         altitude0 = y/60+x + dip + refraction
