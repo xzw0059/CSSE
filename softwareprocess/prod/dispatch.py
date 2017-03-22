@@ -30,6 +30,7 @@ def dispatch(values=None,dip=None):
     #Perform designated function
     if(values['op'] == 'adjust'):
         print 'adjust'
+
         o = values['observation']
         list1 = {}
         list1 = o.split('d')
@@ -41,6 +42,8 @@ def dispatch(values=None,dip=None):
         # print type(list1[1])
         # print type(y)
         # print y
+
+
         tf = values['temperature']
         tc = 5 * (int(tf) - 32) / 9
         p = values['pressure']
@@ -64,13 +67,13 @@ def dispatch(values=None,dip=None):
             h = 0
             return values
 
-        if (not values['height'].isdigit()):
-            if (values['height'])
-            print  values['height']
-            values['error'] = 'height is not invalid__not num'
-            return values
+        # if (not values['height'].isdigit()):
+        #     if (values['height'])
+        #     print  values['height']
+        #     values['error'] = 'height is not invalid__not num'
+        #     return values
 
-        h = int(values['height'])
+        h = float(values['height'])
 
         if (not h >= 0):
             values['error'] = 'height is not invalid__not >= 0'
