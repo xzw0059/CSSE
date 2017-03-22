@@ -108,8 +108,8 @@ def dispatch(values=None,dip=None):
         D2 = tempalt[1]
         M2 = tempalt[0]
         altitudedig = D2 + 'D' + round(M2,1)
-        values.items()= {'altitude':"altitudedig"}
-        values=altitudedig
+        values = {'altitude':"altitudedig"}
+        values = altitudedig
         print altitudedig
 
 
