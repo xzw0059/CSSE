@@ -1,6 +1,11 @@
 import unittest
 import softwareprocess.prod.dispatch as dispatch
 import math
+import string
+
+
+
+
 #
 # class MyTestCase(unittest.TestCase):
 #     def setUp(self):
@@ -48,18 +53,19 @@ import math
 #
 # print dic
 
+x = '567.675'
 u = '1234'
 y = 'sdfds'
 u1 = int(u)
 y1=str(y)
-print u
-print  type(u)
-print  type(y)
-print  type(u1)
-print type(y1)
-print y1
+# print u
+# print  type(u)
+# print  type(y)
+# print  type(u1)
+# print type(y1)
+# print y1
 print y
-
+print (string.isdigit(x))
 
 
 
