@@ -95,6 +95,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'pressure is not invalid__not str'
             return values
         if not (p >= 100 and p <= 1100):
+            print  values['pressure']
             values['error'] = 'pressure is not invalid__not 100~1100'
             return values
 
