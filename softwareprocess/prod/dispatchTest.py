@@ -22,6 +22,9 @@ import math
 # print D2
 # print math.modf(123.678)
 # print M2
+
+u = math.modf(666.777)
+print u
 tempalt = 567,789
 D2 = tempalt[1]
 M2 = tempalt[0]
