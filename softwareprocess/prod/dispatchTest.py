@@ -24,4 +24,4 @@ import math
 # print M2
 x=15
 y=25
-print 50/x/y
+print 5000/x/y
