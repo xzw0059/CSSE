@@ -45,7 +45,7 @@ def dispatch(values=None,dip=None):
 
 
         tc = 5 * (float(values['temperature']) - 32) / 9
-        p = values['pressure']
+        p =float(values['pressure'])
         hr = values['horizon']
         # print dip
 
