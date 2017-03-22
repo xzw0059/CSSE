@@ -25,7 +25,7 @@ import math
 tempalt = 567,789
 D2 = tempalt[1]
 M2 = tempalt[0]
-altitudedig = {str[D2] + 'D' + str[round(M2,1)]}
+altitudedig = {str(D2) + 'D' + str(round(M2,1))}
 # values = {'altitude':"altitudedig"}
 # values = {}
 print altitudedig
