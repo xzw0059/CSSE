@@ -140,6 +140,10 @@ def dispatch(values=None,dip=None):
             values['error'] = 'altitude-min is not invalid__not 0~60'
             return values
 
+        if ('altitude' in values):
+            values['error'] = 'altitude-already exist'
+            return values
+
         values['altitude'] = altitudedig
 
         print altitudedig
