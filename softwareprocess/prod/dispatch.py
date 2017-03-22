@@ -32,7 +32,7 @@ def dispatch(values=None,dip=None):
         print values
         o = values['observation']
         list1 = {}
-        list1 == o.split('d')
+        list1 = o.split('d')
         x = list1[1]
         print x
         y = list1[2]
