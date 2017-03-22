@@ -65,6 +65,7 @@ def dispatch(values=None,dip=None):
             return values
 
         if (not values['height'].isdigit()):
+            if (values['height'])
             print  values['height']
             values['error'] = 'height is not invalid__not num'
             return values
