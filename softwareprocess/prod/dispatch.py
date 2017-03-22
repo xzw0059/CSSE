@@ -33,9 +33,9 @@ def dispatch(values=None,dip=None):
         o = values['observation']
         list1 = {}
         list1 = o.split('d')
-        x = list1[1]
+        x = list1[0]
         print x
-        y = list1[2]
+        y = list1[1]
         print y
         h = values['height']
         tf = values['temperature']
