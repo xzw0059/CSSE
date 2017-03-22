@@ -14,8 +14,8 @@ def dispatch(values=None,dip=None):
 
 
 
-    if(values['op'] !=None and values['op'] != 'adjust'):
-        return {'error': 'op is not a legal operation'}
+    # if(values['op'] !=None and values['op'] != 'adjust'):
+    #     return {'error': 'op is not a legal operation'}
 
 
     if(values['altitude'] is not None):
