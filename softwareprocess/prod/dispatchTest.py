@@ -23,13 +23,16 @@ import math
 # print math.modf(123.678)
 # print M2
 
-u = math.modf(666666.777888)
-print u
-tempalt = u
+altitude0= 678.324
+tempalt = {}
+tempalt == altitude0.split('.')
 D2 = tempalt[0]
-M2 = tempalt[1]
+M2 = tempalt[1]*60
+altitudedig = {}
+altitudedig = {'altitude':D2 + 'D' + round(M2,1)}
 
 print D2,M2
+altitudedig={}
 altitudedig = {str(D2) + 'D' + str(round(M2,1))}
 # values = {'altitude':"altitudedig"}
 # values = {}
