@@ -34,7 +34,6 @@ def dispatch(values=None,dip=None):
         o = values['observation']
         list1 = {}
         list1 = o.split('d')
-        x = int(list1[0])
         # print type(list1[0])
         # print type(x)
         # print x
@@ -50,10 +49,10 @@ def dispatch(values=None,dip=None):
         hr = values['horizon']
         # print dip
 
-        if not (isinstance(x,int)):
+        if not (isinstance(int(list1[0]),int) or isinstance(int(list1[0]),float) ):
             values['error'] = 'degree is not invalid__not int'
             return values
-        if  not (x >= 0 and x < 90):
+        if  not (int(list1[0]) >= 0 and int(list1[0]) < 90):
                 values['error'] = 'degree is not invalid__not in 0~90'
                 return values
         if not (isinstance(y,float)):
@@ -64,7 +63,7 @@ def dispatch(values=None,dip=None):
             return values
 
         if (values['height'] == None):
-            h = 0
+            values['height'] = 0
             return values
 
         # if (not values['height'].isdigit()):
@@ -73,9 +72,8 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'height is not invalid__not num'
         #     return values
 
-        h = float(values['height'])
 
-        if (not h >= 0):
+        if (not float(values['height']) >= 0):
             values['error'] = 'height is not invalid__not >= 0'
             return values
 
@@ -112,7 +110,7 @@ def dispatch(values=None,dip=None):
             return values
 
         if (hr == 'natural'):
-            dip = (-0.97 * math.sqrt( h )) / 60
+            dip = (-0.97 * math.sqrt( float(values['height']) )) / 60
 
         else:
             dip = 0
@@ -120,8 +118,8 @@ def dispatch(values=None,dip=None):
 
 
 
-        refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
-        altitude0 = y/60+x + dip + refraction
+        refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+int(list1[0])))
+        altitude0 = y/60+int(list1[0]) + dip + refraction
         # tempalt = {}
         # tempalt = str(altitude0).split('.')
         D2 = int(altitude0)
