@@ -100,17 +100,17 @@ def dispatch(values=None,dip=None):
             dip = 0
             return values
 
-    print dip
+        print dip
 
-    refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
-    altitude0 = y/60+x + dip + refraction
-    tempalt = math.modf(altitude0)
-    D2 = tempalt[1]
-    M2 = tempalt[0]
-    altitudedig = D2 + 'D' + round(M2,1)
-    values['altitude'] = {'altitude':altitudedig}
-    values=  altitudedig
-    print altitudedig
+        refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+x))
+        altitude0 = y/60+x + dip + refraction
+        tempalt = math.modf(altitude0)
+        D2 = tempalt[1]
+        M2 = tempalt[0]
+        altitudedig = D2 + 'D' + round(M2,1)
+        values.items()= {'altitude':"altitudedig"}
+        values=altitudedig
+        print altitudedig
 
 
 
