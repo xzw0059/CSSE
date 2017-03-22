@@ -34,7 +34,7 @@ class convertString2DictionaryTest(TestCase):
         # print dispatch.dispatch(values)
 
         print values
-        print dip.
+        # print dip.
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
     #     self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
