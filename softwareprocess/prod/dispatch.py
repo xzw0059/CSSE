@@ -39,7 +39,7 @@ def dispatch(values=None,dip=None):
         print y
         h = values['height']
         tf = values['temperature']
-        tc = 5 * (tf - 32) / 9
+        tc = 5 * (int(tf) - 32) / 9
         p = values['pressure']
         hr = values['horizon']
         print dip
