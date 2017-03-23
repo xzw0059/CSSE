@@ -73,7 +73,7 @@ def dispatch(values=None,dip=None):
             return values
 
 
-        if (not float(values['height']) >= 0):
+        if (not float(h) >= 0):
             values['error'] = 'height is not invalid__not >= 0'
             return values
 
