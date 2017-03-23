@@ -1,6 +1,6 @@
 import math
 
-def dispatch(values=None,dip=None):
+def dispatch(values=None):
 
 
     #Validate parm
