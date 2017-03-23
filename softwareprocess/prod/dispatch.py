@@ -118,10 +118,17 @@ def dispatch(values=None,dip=None):
             t = 72
         else:
             t =values['temperature']
-        if not isinstance(float(t),float):
+
+        try:
+            temptest= float(t)
+        except ValueError:
             values['error'] = 'temperature is invalid'
-            # __not number
             return values
+
+        # if not isinstance(float(t),float):
+        #     values['error'] = 'temperature is invalid'
+        #     # __not number
+        #     return values
         if not (int(t) >= -20 and int(t) <= 120):
             values['error'] = 'temperature is invalid'
             # __not -20~120
@@ -129,17 +136,25 @@ def dispatch(values=None,dip=None):
 
         tc = 5 * (float(t) - 32) / 9
 
+
+
+
+        try:
+            temptest= float(p)
+        except ValueError:
+            values['error'] = 'pressure is invalid'
+            return values
+
         if (not('pressure' in values)):
             p = 1010
         else:
             p =float(values['pressure'])
 
+        # if not (isinstance(float(p),float)):
+        #     values['error'] = 'pressure is invalid'
+        #     # __not str of number
+        #     return values
 
-
-        if not (isinstance(float(p),float)):
-            values['error'] = 'pressure is invalid'
-            # __not str of number
-            return values
         if not (p >= 100 and p <= 1100):
             print  values['pressure']
             values['error'] = 'pressure is invalid'
@@ -187,27 +202,41 @@ def dispatch(values=None,dip=None):
         print altitudedig
 
 
-        if not (isinstance(D2,int)):
-            # values['error'] = 'altitude-degree is not invalid__not int'
-            values['error'] = 'altitude-degree is not invalid'
-            return values
-        if  not (D2 > -90 and D2 < 90):
-            # values['error'] = 'altitude-degree is not invalid__not in -90~90'
-            values['error'] = 'altitude-degree is not invalid'
+        try:
+            temptest= int(D2)
+        except ValueError:
+            values['error'] = 'altitude is invalid'
             return values
 
-        if not (isinstance(round(M2,1),float)):
-            # values['error'] = 'altitude-min is not invalid__not float'
-            values['error'] = 'altitude-min is not invalid'
-            return values
-        if not (M2 >= 0 and round(M2,1) < 60):
-            # values['error'] = 'altitude-min is not invalid__not 0~60'
+        # if not (isinstance(D2,int)):
+        #     # values['error'] = 'altitude-degree is not invalid__not int'
+        #     values['error'] = 'altitude-degree is not invalid'
+        #     return values
+
+        if  not (D2 > -90 and D2 < 90):
+            # values['error'] = 'altitude-degree is not invalid__not in -90~90'
             values['error'] = 'altitude is not invalid'
+            return values
+
+        try:
+            temptest= float(M2)
+        except ValueError:
+            values['error'] = 'altitude is invalid'
+            return values
+
+        # if not (isinstance(round(M2,1),float)):
+        #     # values['error'] = 'altitude-min is not invalid__not float'
+        #     values['error'] = 'altitude-min is not invalid'
+        #     return values
+
+        if (not (M2 >= 0 and round(M2,1) < 60)):
+            # values['error'] = 'altitude-min is not invalid__not 0~60'
+            values['error'] = 'altitude is invalid'
             return values
 
         if ('altitude' in values):
             # values['error'] = 'altitude-already exist'
-            values['error'] = 'altitude is not invalid'
+            values['error'] = 'altitude is invalid'
             return values
 
         values['altitude'] = altitudedig

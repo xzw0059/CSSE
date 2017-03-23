@@ -55,6 +55,13 @@ import string
 k = 'adf'
 x = '567.675'
 u = '1234.0'
+
+# try:
+#     htest= float(x)
+# except ValueError:
+    # values['error'] = 'height is invalid'
+    # return values
+
 # y = 'sdfds'
 # u1 = int(u)
 # u2=u1*10
