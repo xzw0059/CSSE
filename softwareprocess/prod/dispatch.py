@@ -60,6 +60,7 @@ def dispatch(values=None,dip=None):
         if not (y >= 0 and y < 60):
             values['error'] = 'min is not invalid__not 0~60'
             return values
+
         if (int(list1[0])==0 and y<0.1):
             values['error'] = 'o is not invalid__o is LT 0.0.1'
             return values
@@ -146,7 +147,6 @@ def dispatch(values=None,dip=None):
         if ('altitude' in values):
             values['error'] = 'altitude-already exist'
             return values
-        if (values['observation' < ])
 
         values['altitude'] = altitudedig
 
