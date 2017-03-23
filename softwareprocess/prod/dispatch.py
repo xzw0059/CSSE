@@ -157,6 +157,9 @@ def dispatch(values=None,dip=None):
         except ValueError:
             values['error'] = 'pressure is invalid'
             return values
+        except KeyError:
+            values['error'] = 'pressure is invalid'
+            return values
 
         # if not (isinstance(float(p),float)):
         #     values['error'] = 'pressure is invalid'
