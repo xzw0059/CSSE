@@ -143,7 +143,7 @@ def dispatch(values=None,dip=None):
         else:
             hr = values['horizon']
 
-        if (len(hr.replace(' ',''))>0):
+        if (len(hr.replace(' ',' '))>0):
             values['error'] = 'horizon is invalid'
             return values
 
