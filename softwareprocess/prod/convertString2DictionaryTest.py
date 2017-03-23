@@ -105,7 +105,7 @@ class convertString2DictionaryTest(TestCase):
 
     def test_200_010_ObservationIsInvalidCauseMmnuteToobig(self):
         values={'observation': '45d95.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
-        result={'observation is invalid'}
+        result={'error':'observation is invalid'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
