@@ -70,7 +70,7 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'observation is invalid'
         #     # __not float
         #     return values
-        if not (y >= 0 and y < 60):
+        if not (y >= 0.0 and y < 60.0):
             values['error'] = 'observation is invalid'
             # __not 0~60
             return values
@@ -245,7 +245,7 @@ def dispatch(values=None,dip=None):
 
         if ('altitude' in values):
             # values['error'] = 'altitude-already exist'
-            values['error'] = 'altitude is invalid'
+            values['error'] = 'altitude is not invalid'
             return values
 
         values['altitude'] = altitudedig
