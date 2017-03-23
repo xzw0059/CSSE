@@ -40,16 +40,17 @@ def dispatch(values=None,dip=None):
         o = values['observation']
         list1 = {}
 
+
         list1 = o.split('d')
         try:
-            y = float(list1[1])
+            ominutes = float(list1[1])
         except IndexError:
             values['error'] = 'observation is invalid'
             return values
 
 
         try:
-            degree= int(list1[0])
+            odegree= int(list1[0])
         except ValueError:
             values['error'] = 'observation is invalid'
             return values
@@ -61,21 +62,21 @@ def dispatch(values=None,dip=None):
             return values
 
         try:
-            minutes= float(y)
+            minutes= float(ominutes)
         except ValueError:
             values['error'] = 'observation is invalid'
             return values
 
-        # if not (isinstance(y,float)):
+        # if not (isinstance(ominutes,float)):
         #     values['error'] = 'observation is invalid'
         #     # __not float
         #     return values
-        if not (y >= 0.0 and y < 60.0):
+        if not (ominutes >= 0.0 and ominutes < 60.0):
             values['error'] = 'observation is invalid'
             # __not 0~60
             return values
 
-        if (int(list1[0])==0 and y<0.1):
+        if (int(list1[0])==0 and ominutes<0.1):
             values['error'] = 'observation is invalid'
             # __o is LT 0.0.1
             return values
@@ -201,8 +202,8 @@ def dispatch(values=None,dip=None):
 
 
 
-        refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+int(list1[0])))
-        altitude0 = y/60+int(list1[0]) + dip + refraction
+        refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(ominutes/60+int(list1[0])))
+        altitude0 = ominutes/60+int(list1[0]) + dip + refraction
         # tempalt = {}
         # tempalt = str(altitude0).split('.')
         D2 = int(altitude0)
