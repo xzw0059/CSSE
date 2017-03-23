@@ -16,10 +16,10 @@ class convertString2DictionaryTest(TestCase):
         values=None
         self.assertDictEqual(dispatch.dispatch(values),{'error': 'parameter is missing'})
 
-    # def test_100_010_OpShouldBeNotNone(self):
-    #     values={}
-    #     self.assertDictEqual(dispatch.dispatch(values),{'error':'no op is specified'})
-    #     print dispatch.dispatch(values)
+    def test_100_010_OpShouldBeNotNone(self):
+        values={}
+        self.assertDictEqual(dispatch.dispatch(values),{'error':'no op is specified'})
+        print dispatch.dispatch(values)
 
     def test_100_020_ValuesShouldNotViolatesTheParameterDescriptionAbove(self):
         values={'op': 'unknown'}
