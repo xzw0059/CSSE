@@ -53,7 +53,8 @@ def dispatch(values=None,dip=None):
         # print dip
 
         if not (isinstance(int(list1[0]),int)):
-            values['error'] = 'degree is not invalid__not int'
+            # values['error'] = 'degree is not invalid__not int'
+            values['error'] = 'degree is not invalid'
             return values
         if  not (int(list1[0]) >= 0 and int(list1[0]) < 90):
             values['error'] = 'degree is not invalid'
