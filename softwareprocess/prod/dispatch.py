@@ -139,17 +139,18 @@ def dispatch(values=None,dip=None):
 
 
 
-        try:
-            temptest= float(values['pressure'])
-        except ValueError:
-            values['error'] = 'pressure is invalid'
-            return values
+
 
         if (not('pressure' in values)):
             p = 1010
         else:
             p =float(values['pressure'])
 
+        try:
+            temptest= float(values['pressure'])
+        except ValueError:
+            values['error'] = 'pressure is invalid'
+            return values
         # if not (isinstance(float(p),float)):
         #     values['error'] = 'pressure is invalid'
         #     # __not str of number
