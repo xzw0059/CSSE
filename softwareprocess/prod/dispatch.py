@@ -47,25 +47,34 @@ def dispatch(values=None,dip=None):
         # print type(list1[1])
         # print type(y)
         # print y
-        print 123
+        # print 123
 
 
 
 
         # print dip
-
-        if not (isinstance(int(list1[0]),int)):
-            # values['error'] = 'degree is not invalid__not int'
+        try:
+            degree= int(list1[0])
+        except ValueError:
             values['error'] = 'observation is invalid'
             return values
+
+
         if  not (int(list1[0]) >= 0 and int(list1[0]) < 90):
             values['error'] = 'observation is invalid'
             # __not in 0~90
             return values
-        if not (isinstance(y,float)):
+
+        try:
+            minutes= float(y)
+        except ValueError:
             values['error'] = 'observation is invalid'
-            # __not float
             return values
+
+        # if not (isinstance(y,float)):
+        #     values['error'] = 'observation is invalid'
+        #     # __not float
+        #     return values
         if not (y >= 0 and y < 60):
             values['error'] = 'observation is invalid'
             # __not 0~60
