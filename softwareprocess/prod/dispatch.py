@@ -30,10 +30,10 @@ def dispatch(values=None,dip=None):
     #Perform designated function
     if(values['op'] == 'adjust'):
 
-        if (not('height' in values)):
+        if (not('observation' in values)):
             values['error'] = 'mandatory information is missing'
             return values
-        
+
         o = values['observation']
         list1 = {}
         list1 = o.split('d')
