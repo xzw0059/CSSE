@@ -66,7 +66,6 @@ def dispatch(values=None,dip=None):
         if (values['height'] == None):
             print values['height']
             h = 0
-            return values
         else:
             h = values['height']
 
