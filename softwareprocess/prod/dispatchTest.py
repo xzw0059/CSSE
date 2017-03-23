@@ -60,8 +60,8 @@ test1='  '
 test2=''
 print type(test1)
 print type(test2)
-ominutes=123
-print float(ominutes)
+ominutes='123.0'
+print int(ominutes)
 # print type()
 
 # list1 = o.split('d')
