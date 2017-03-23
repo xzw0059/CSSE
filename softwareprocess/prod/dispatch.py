@@ -85,7 +85,9 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'height is not invalid'
         #     # __not num
         #     return values
-
+        try:
+            htest= int(h)
+            
         if (not isinstance(float(h),float)):
             values['error'] = 'height is not invalid'
             # __not num
