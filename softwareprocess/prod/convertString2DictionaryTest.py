@@ -115,7 +115,10 @@ class convertString2DictionaryTest(TestCase):
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
-
+    def test_100_060_InCoValuesObservationDegreeIsTooBig(self):
+        values={'observation': '110d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        result={'observation': '110d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85','error':'observation is invalid'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
 
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
