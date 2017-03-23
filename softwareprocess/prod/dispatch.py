@@ -30,6 +30,9 @@ def dispatch(values=None,dip=None):
     #Perform designated function
     if(values['op'] == 'adjust'):
 
+        if (not('height' in values)):
+            values['error'] = 'min is not invalid__not float'
+            return values
         o = values['observation']
         list1 = {}
         list1 = o.split('d')

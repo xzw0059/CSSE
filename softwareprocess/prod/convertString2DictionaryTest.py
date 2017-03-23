@@ -74,15 +74,15 @@ class convertString2DictionaryTest(TestCase):
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
-    def test_100_090_RightValuesXls2t5(self):
+    def test_100_100_RightValuesXls2t5(self):
         values={'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
         result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
-    def test_100_090_InCoValuesXls2t6(self):
+    def test_100_110_InCoValuesXls2t6(self):
         values={'op': 'adjust'}
-        result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
+        result={'error':'mandatory information is missing'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
     # def test_100_010_ShouldBeNotNone(self):
