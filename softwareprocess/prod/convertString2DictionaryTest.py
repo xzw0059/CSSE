@@ -144,6 +144,10 @@ class convertString2DictionaryTest(TestCase):
         result={'observation': '30d1.5', 'height': '19.0', 'pressure': 'a', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85','error':'pressure is invalid'}
         self.assertDictEqual(dispatch.dispatch(values),result)
 
+    def test_100_140_InCoValuesHorizonIsInvalid(self):
+        values={'observation': '45d15.2', 'height': '6', 'horizon': 'a', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
+        result={'observation': '45d15.2', 'height': '6', 'horizon': 'a', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
+
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
     #     self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
