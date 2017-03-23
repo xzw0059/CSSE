@@ -79,7 +79,7 @@ def dispatch(values=None,dip=None):
         else:
             h = values['height']
 
-        print values['height']
+
 
         # if (values['height'].isalpha() == ture ):
         #     values['error'] = 'height is not invalid'
