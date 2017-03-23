@@ -117,11 +117,14 @@ def dispatch(values=None,dip=None):
             hr = values['horizon']
 
         if not (isinstance(hr,str)):
-            values['error'] = 'horizon is not invalid__not str'
+            # values['error'] = 'horizon is not invalid__not str'
+            values['error'] = 'horizon is not invalid'
             return values
         if(not(hr == 'artificial' or 'natural')):
-            values['error'] = 'horizon is not invalid__not  artificial or natural'
+            # values['error'] = 'horizon is not invalid__not  artificial or natural'
+            values['error'] = 'horizon is not invalid'
             return values
+
 
         if (hr == 'natural'):
             dip = (-0.97 * math.sqrt( float(h) )) / 60
