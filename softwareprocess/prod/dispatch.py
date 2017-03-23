@@ -118,7 +118,7 @@ def dispatch(values=None,dip=None):
             return values
 
         if (hr == 'natural'):
-            dip = (-0.97 * math.sqrt( float(hr) )) / 60
+            dip = (-0.97 * math.sqrt( float(h) )) / 60
 
         else:
             dip = 0
