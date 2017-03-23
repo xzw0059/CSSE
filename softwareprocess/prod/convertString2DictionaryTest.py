@@ -103,6 +103,10 @@ class convertString2DictionaryTest(TestCase):
         result={'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
         self.assertDictEqual(dispatch.dispatch(values),result)
 
+    def test_100_141_InCoValuesXls2t9(self):
+        values={'observation': '45d15.2', 'height': '6', 'horizon': 'a', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
+        result={'observation': '45d15.2', 'height': '6', 'horizon': 'a', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
+
     def test_100_150_OnlyObsAndOp(self):
         values={'observation': '45d15.2', 'op': 'adjust'}
         result={'altitude': '45d14.3', 'observation': '45d15.2', 'op': 'adjust'}
