@@ -47,19 +47,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'observation is invalid'
             return values
 
-        # print type(list1[0])
-        # print type(x)
-        # print x
 
-        # print type(list1[1])
-        # print type(y)
-        # print y
-        # print 123
-
-
-
-
-        # print dip
         try:
             degree= int(list1[0])
         except ValueError:

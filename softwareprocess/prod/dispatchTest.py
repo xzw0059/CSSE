@@ -56,6 +56,12 @@ k = 'adf'
 x = '567.675'
 u = '1234.0'
 o='123453456'
+test1='  '
+test2=''
+print type(test1)
+print type(test2)
+print type(   )
+
 # list1 = o.split('d')
 # print list1[0]
 # print list1[1]
