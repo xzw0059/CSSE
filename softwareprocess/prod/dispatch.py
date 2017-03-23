@@ -105,11 +105,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'pressure is not invalid__not 100~1100'
             return values
 
+        if (not('horizon' in values)):
+            hr = 'natural'
+        else:
+            hr = values['horizon']
 
-        if (values['horizon'] == None):
-            values['horizon'] = 'natural'
-            return values
-        if not (isinstance(values['horizon'],str)):
+        if not (isinstance(hr,str)):
             values['error'] = 'horizon is not invalid__not str'
             return values
         if(not(values['horizon'] == 'artificial' or 'natural')):
