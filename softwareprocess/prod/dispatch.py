@@ -82,20 +82,21 @@ def dispatch(values=None,dip=None):
         else:
             t =values['temperature']
         if not isinstance(float(t),float):
-            values['error'] = 'temperature is not invalid__not int'
+            values['error'] = 'temperature is not invalid__not number'
             return values
         if not (int(t) >= -20 and int(t) <= 120):
             values['error'] = 'temperature is not invalid__not -20~120'
             return values
 
-        if (not('pressure' in values)):
-            
-        p =float(values['pressure'])
         tc = 5 * (float(values['temperature']) - 32) / 9
 
-        if (p == None):
+        if (not('pressure' in values)):
             p = 1010
-            return values
+        else:
+            p =float(values['pressure'])
+
+
+
         if not (isinstance(float(values['pressure']),float)):
             values['error'] = 'pressure is not invalid__not str of number'
             return values
