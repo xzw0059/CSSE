@@ -109,15 +109,20 @@ class convertString2DictionaryTest(TestCase):
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
-    def test_200_010_ObservationIsInvalidCauseMmnuteTooLess(self):
+    def test_200_020_ObservationIsInvalidCauseMmnuteTooLess(self):
         values={'observation': '00d00.0', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
         result={'observation': '00d00.0', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71','error':'observation is invalid'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
-    def test_100_060_InCoValuesObservationDegreeIsTooBig(self):
+    def test_200_030_InCoValuesObservationDegreeIsTooBig(self):
         values={'observation': '110d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         result={'observation': '110d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85','error':'observation is invalid'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
+
+    def test_200_040_InCoValuesPressureIsTooBig(self):
+        values={'observation': '30d1.5', 'height': '19.0', 'pressure': '2000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        result={'observation': '30d1.5', 'height': '19.0', 'pressure': '2000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85','error':'pressure is invalid'}
         self.assertDictEqual(dispatch.dispatch(values),result)
 
     # def test_100_010_ShouldBeNotNone(self):
