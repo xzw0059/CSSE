@@ -63,7 +63,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'o is not invalid__o is LT 0.0.1'
             return values
 
-        if ('height' is not in values):
+        if (not('height' in values)):
             h = 0
         else:
             h = values['height']
