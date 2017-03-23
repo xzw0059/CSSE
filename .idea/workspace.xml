@@ -30,8 +30,8 @@
       <file leaf-file-name="convertString2DictionaryTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+            <state relative-caret-position="410">
+              <caret line="53" column="80" lean-forward="false" selection-start-line="53" selection-start-column="80" selection-end-line="53" selection-end-column="80" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -113,8 +113,8 @@
         <option value="$PROJECT_DIR$/prod/convertString2DictionaryTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/wewef.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py" />
       </list>
     </option>
   </component>
@@ -590,9 +590,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 19h 51m 55s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 19h 55m 26s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -618,6 +615,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.22 at 20h 07m 02s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.03.22 at 20h 10m 37s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -820,8 +820,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="39" column="33" lean-forward="false" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+        <state relative-caret-position="410">
+          <caret line="53" column="80" lean-forward="false" selection-start-line="53" selection-start-column="80" selection-end-line="53" selection-end-column="80" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
