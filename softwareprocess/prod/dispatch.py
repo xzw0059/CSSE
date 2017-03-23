@@ -1,4 +1,6 @@
 import math
+import sys
+
 
 def dispatch(values=None,dip=None):
 
@@ -86,8 +88,13 @@ def dispatch(values=None,dip=None):
         #     # __not num
         #     return values
         try:
-            htest= int(h)
-            
+            htest= float(h)
+            except ValueError:
+            values['error'] = 'height is not invalid'
+            # __not num
+            return values
+
+
         if (not isinstance(float(h),float)):
             values['error'] = 'height is not invalid'
             # __not num
