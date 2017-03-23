@@ -19,7 +19,7 @@ class convertString2DictionaryTest(TestCase):
     def test_100_010_OpShouldBeNotNone(self):
         values={}
         self.assertDictEqual(dispatch.dispatch(values),{'error':'no op is specified'})
-        print dispatch.dispatch(values)
+
 
     def test_100_020_ValuesShouldNotViolatesTheParameterDescriptionAbove(self):
         values={'op': 'unknown'}
@@ -41,55 +41,55 @@ class convertString2DictionaryTest(TestCase):
         # result={'altitude':'9d54.7','temperature': '72', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'observation': '10d00.0', 'op': 'adjust'}
         result={'altitude':'9d54.7','temperature': '72', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'observation': '10d00.0', 'op': 'adjust'}
         self.assertDictEqual(dispatch.dispatch(values),result)
-        print values
+
 
 
     def test_100_050_RightValuesPdfEx2(self):
         values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
         result={'altitude':'45d11.9', 'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
         self.assertDictEqual(dispatch.dispatch(values),result)
-        print values
+        # print values
 
     def test_100_060_RightValuesXls2t1(self):
         values={'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         result={'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         self.assertDictEqual(dispatch.dispatch(values),result)
-        print values
+        # print values
 
     def test_100_070_RightValuesPdfEx2t3(self):
         values={'observation': '42d0.0',  'op': 'adjust'}
         result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
         self.assertDictEqual(dispatch.dispatch(values),result)
-        print values
+        # print values
 
     def test_100_080_NoOpInValuesEcl4(self):
         values={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72'}
         result={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72','error':'no op is specified'}
         self.assertDictEqual(dispatch.dispatch(values),result)
-        print values
+        # print values
 
     def test_100_090_RightValuesXls2t3(self):
         values={'observation': '42d0.0',  'op': 'adjust'}
         result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
         self.assertDictEqual(dispatch.dispatch(values),result)
-        print values
+        # print values
 
     def test_100_100_RightValuesXls2t5(self):
         values={'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
         result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
         self.assertDictEqual(dispatch.dispatch(values),result)
-        print values
+        # print values
 
     def test_100_110_InCoValuesXls2t6(self):
         values={'op': 'adjust'}
         result={'error':'mandatory information is missing'}
         self.assertDictEqual(dispatch.dispatch(values),result)
-        print values
+        # print values
 
     def test_100_120_InCoValuesXls2t7(self):
         values={'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
         result={'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error':'observation is invalid'}
-        {'temperature': '71', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'error': 'degree is not invalid__not in 0~90', 'observation': '101d15.2', 'op': 'adjust'}
+        # {'temperature': '71', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'error': 'degree is not invalid__not in 0~90', 'observation': '101d15.2', 'op': 'adjust'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 

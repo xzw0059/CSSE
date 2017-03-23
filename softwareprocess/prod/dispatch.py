@@ -54,23 +54,23 @@ def dispatch(values=None,dip=None):
 
         if not (isinstance(int(list1[0]),int)):
             # values['error'] = 'degree is not invalid__not int'
-            values['error'] = 'degree is not invalid'
+            values['error'] = 'observation is invalid'
             return values
         if  not (int(list1[0]) >= 0 and int(list1[0]) < 90):
-            values['error'] = 'degree is not invalid'
+            values['error'] = 'observation is invalid'
             # __not in 0~90
             return values
         if not (isinstance(y,float)):
-            values['error'] = 'min is not invalid'
+            values['error'] = 'observation is invalid'
             # __not float
             return values
         if not (y >= 0 and y < 60):
-            values['error'] = 'min is not invalid'
+            values['error'] = 'observation is invalid'
             # __not 0~60
             return values
 
         if (int(list1[0])==0 and y<0.1):
-            values['error'] = 'o is not invalid'
+            values['error'] = 'observation is invalid'
             # __o is LT 0.0.1
             return values
 
