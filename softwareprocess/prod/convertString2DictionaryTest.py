@@ -61,6 +61,12 @@ class convertString2DictionaryTest(TestCase):
         result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
+
+    def test_100_080_NoOpInValuesEcl4(self):
+        values={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72'}
+        result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
+        print values
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
     #     self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
