@@ -145,8 +145,7 @@ def dispatch(values=None,dip=None):
 
         print altitudedig
 
-        values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
-        print dispatch.dispatch(values)
+
 
 
 
@@ -170,5 +169,8 @@ def dispatch(values=None,dip=None):
         values['error'] = 'op is not a legal operation'
         return values
 
-values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
+# values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
+# print dispatch(values)
+        # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
+values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
 print dispatch(values)
