@@ -103,7 +103,7 @@ class convertString2DictionaryTest(TestCase):
         result={'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
         self.assertDictEqual(dispatch.dispatch(values),result)
 
-    def test_200_010_ObservationIsInvalidCauseMini(self):
+    def test_200_010_ObservationIsInvalidCauseMmnuteToobig(self):
         values={'observation': '45d95.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
         result={'observation is invalid'}
         self.assertDictEqual(dispatch.dispatch(values),result)
