@@ -3,7 +3,6 @@ import math
 def dispatch(values=None,dip=None):
 
 
-
     #Validate parm
     if(values == None):
         return {'error': 'parameter is missing'}
@@ -41,12 +40,11 @@ def dispatch(values=None,dip=None):
         # print type(list1[1])
         # print type(y)
         # print y
+        print 123
 
 
 
-        tc = 5 * (float(values['temperature']) - 32) / 9
-        p =float(values['pressure'])
-        hr = values['horizon']
+
         # print dip
 
         if not (isinstance(int(list1[0]),int)):
@@ -62,35 +60,45 @@ def dispatch(values=None,dip=None):
             values['error'] = 'min is not invalid__not 0~60'
             return values
 
-        if (values['height'] == None):
-            values['height'] = 0
+        if (int(list1[0])==0 and y<0.1):
+            values['error'] = 'o is not invalid__o is LT 0.0.1'
             return values
 
-        if (not isinstance(float(values['height']),float)):
+        if (not('height' in values)):
+            h = 0.0
+        else:
+            h = values['height']
+
+        if (not isinstance(float(h),float)):
             values['error'] = 'height is not invalid__not num'
             return values
 
 
-        if (not float(values['height']) >= 0):
+        if (not float(h) >= 0):
             values['error'] = 'height is not invalid__not >= 0'
             return values
 
-
-        if (int(values['temperature']) == None):
+        if (not('temperature' in values)):
             t = 72
+        else:
+            t =values['temperature']
+        if not isinstance(float(t),float):
+            values['error'] = 'temperature is not invalid__not number'
             return values
-        if not (isinstance(int(values['temperature']),int)or isinstance(float(values['temperature']),float)):
-            values['error'] = 'temperature is not invalid__not int'
-            return values
-        if not (int(values['temperature']) >= -20 and int(values['temperature']) <= 120):
+        if not (int(t) >= -20 and int(t) <= 120):
             values['error'] = 'temperature is not invalid__not -20~120'
             return values
 
+        tc = 5 * (float(t) - 32) / 9
 
-        if (p == None):
+        if (not('pressure' in values)):
             p = 1010
-            return values
-        if not (isinstance(float(values['pressure']),float)):
+        else:
+            p =float(values['pressure'])
+
+
+
+        if not (isinstance(float(p),float)):
             values['error'] = 'pressure is not invalid__not str of number'
             return values
         if not (p >= 100 and p <= 1100):
@@ -98,9 +106,11 @@ def dispatch(values=None,dip=None):
             values['error'] = 'pressure is not invalid__not 100~1100'
             return values
 
-        if (hr == None):
+        if (not('horizon' in values)):
             hr = 'natural'
-            return values
+        else:
+            hr = values['horizon']
+
         if not (isinstance(hr,str)):
             values['error'] = 'horizon is not invalid__not str'
             return values
@@ -109,7 +119,7 @@ def dispatch(values=None,dip=None):
             return values
 
         if (hr == 'natural'):
-            dip = (-0.97 * math.sqrt( float(values['height']) )) / 60
+            dip = (-0.97 * math.sqrt( float(h) )) / 60
 
         else:
             dip = 0
@@ -124,7 +134,7 @@ def dispatch(values=None,dip=None):
         D2 = int(altitude0)
         M2 = (altitude0 - D2)*60
         altitudedig = str(D2) + 'd' + str(round(M2,1))
-        print type(altitudedig)
+        #print altitudedig
 
 
         if not (isinstance(D2,int)):
@@ -141,10 +151,14 @@ def dispatch(values=None,dip=None):
             values['error'] = 'altitude-min is not invalid__not 0~60'
             return values
 
+        if ('altitude' in values):
+            values['error'] = 'altitude-already exist'
+            return values
+
         values['altitude'] = altitudedig
 
-        print altitudedig
-
+        # print altitudedig
+        # print values
 
 
 
@@ -169,9 +183,11 @@ def dispatch(values=None,dip=None):
         values['error'] = 'op is not a legal operation'
         return values
 
+
+
 # values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # print dispatch(values)
         # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
-print values['altitude']
+# print values['altitude']
 print dispatch(values)
