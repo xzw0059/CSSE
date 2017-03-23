@@ -55,6 +55,10 @@ import string
 k = 'adf'
 x = '567.675'
 u = '1234.0'
+o='123453456'
+list1 = o.split('d')
+print list1[0]
+print list1[1]
 
 # try:
 #     htest= float(x)
@@ -67,7 +71,7 @@ u = '1234.0'
 # u2=u1*10
 # y1=str(y)
 # # print u
-print type(k)
+# print type(k)
 # # print  type(u)
 # # print  type(y)
 # # print  type(u1)
