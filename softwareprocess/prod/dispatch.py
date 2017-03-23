@@ -40,6 +40,7 @@ def dispatch(values=None,dip=None):
         # print type(list1[1])
         # print type(y)
         # print y
+        print 123
 
 
 
@@ -133,7 +134,7 @@ def dispatch(values=None,dip=None):
         D2 = int(altitude0)
         M2 = (altitude0 - D2)*60
         altitudedig = str(D2) + 'd' + str(round(M2,1))
-        # print type(altitudedig)
+        #print altitudedig
 
 
         if not (isinstance(D2,int)):
