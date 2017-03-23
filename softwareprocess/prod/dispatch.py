@@ -51,8 +51,8 @@ def dispatch(values=None,dip=None):
             values['error'] = 'degree is not invalid__not int'
             return values
         if  not (int(list1[0]) >= 0 and int(list1[0]) < 90):
-                values['error'] = 'degree is not invalid__not in 0~90'
-                return values
+            values['error'] = 'degree is not invalid__not in 0~90'
+            return values
         if not (isinstance(y,float)):
             values['error'] = 'min is not invalid__not float'
             return values
@@ -123,7 +123,7 @@ def dispatch(values=None,dip=None):
 
         else:
             dip = 0
-            return values
+
 
 
 
@@ -134,15 +134,15 @@ def dispatch(values=None,dip=None):
         D2 = int(altitude0)
         M2 = (altitude0 - D2)*60
         altitudedig = str(D2) + 'd' + str(round(M2,1))
-        #print altitudedig
+        print altitudedig
 
 
         if not (isinstance(D2,int)):
             values['error'] = 'altitude-degree is not invalid__not int'
             return values
         if  not (D2 > -90 and D2 < 90):
-                values['error'] = 'altitude-degree is not invalid__not in -90~90'
-                return values
+            values['error'] = 'altitude-degree is not invalid__not in -90~90'
+            return values
 
         if not (isinstance(round(M2,1),float)):
             values['error'] = 'altitude-min is not invalid__not float'
