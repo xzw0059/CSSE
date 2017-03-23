@@ -116,7 +116,7 @@ def dispatch(values=None,dip=None):
             t =values['temperature']
 
         try:
-            temptest= float(t)
+            temptest= int(t)
         except ValueError:
             values['error'] = 'temperature is invalid'
             return values
@@ -141,7 +141,7 @@ def dispatch(values=None,dip=None):
             p = 1010
         else:
             try:
-                temptest= float(values['pressure'])
+                temptest= int(values['pressure'])
             except ValueError:
                 values['error'] = 'pressure is invalid'
                 return values
@@ -149,7 +149,7 @@ def dispatch(values=None,dip=None):
                 values['error'] = 'pressure is invalid'
                 return values
 
-            p =float(values['pressure'])
+            p =int(values['pressure'])
 
         # try:
         #     temptest= float(values['pressure'])
