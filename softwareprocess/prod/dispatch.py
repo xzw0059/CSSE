@@ -43,7 +43,7 @@ def dispatch(values=None,dip=None):
 
 
 
-        values['horizon'] = values['horizon']
+
         # print dip
 
         if not (isinstance(int(list1[0]),int)):
