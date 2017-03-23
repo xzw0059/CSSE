@@ -77,8 +77,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'height is not invalid__not >= 0'
             return values
 
-
-        if (int(values['temperature']) == None):
+        if (not('temperature' in values)):
             t = 72
         else:
             t =values['temperature']
@@ -89,7 +88,8 @@ def dispatch(values=None,dip=None):
             values['error'] = 'temperature is not invalid__not -20~120'
             return values
 
-
+        if (not('pressure' in values)):
+            
         p =float(values['pressure'])
         tc = 5 * (float(values['temperature']) - 32) / 9
 
