@@ -89,16 +89,16 @@ def dispatch(values=None,dip=None):
         #     return values
         try:
             htest= float(h)
-            except ValueError:
+        except ValueError:
             values['error'] = 'height is not invalid'
             # __not num
             return values
 
 
-        if (not isinstance(float(h),float)):
-            values['error'] = 'height is not invalid'
-            # __not num
-            return values
+        # if (not isinstance(float(h),float)):
+        #     values['error'] = 'height is not invalid'
+        #     # __not num
+        #     return values
 
 
         if (not float(h) >= 0):
