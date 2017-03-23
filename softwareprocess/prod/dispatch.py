@@ -64,7 +64,8 @@ def dispatch(values=None,dip=None):
             return values
 
         if (values['height'] == None):
-            values['height'] = 0
+            h=values['height']
+            h = 0
             return values
 
         if (not isinstance(float(values['height']),float)):
