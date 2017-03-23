@@ -50,7 +50,7 @@ def dispatch(values=None,dip=None):
 
 
         try:
-            odegreex= int(list1[0])
+            odegree= int(list1[0])
         except ValueError:
             values['error'] = 'observation is invalid'
             return values
@@ -116,7 +116,7 @@ def dispatch(values=None,dip=None):
             t =values['temperature']
 
         try:
-            temptest= float(t)
+            temptest= int(t)
         except ValueError:
             values['error'] = 'temperature is invalid'
             return values
@@ -141,7 +141,7 @@ def dispatch(values=None,dip=None):
             p = 1010
         else:
             try:
-                temptest= float(values['pressure'])
+                temptest= int(values['pressure'])
             except ValueError:
                 values['error'] = 'pressure is invalid'
                 return values
@@ -149,7 +149,7 @@ def dispatch(values=None,dip=None):
                 values['error'] = 'pressure is invalid'
                 return values
 
-            p =float(values['pressure'])
+            p =int(values['pressure'])
 
         # try:
         #     temptest= float(values['pressure'])
@@ -280,8 +280,7 @@ def dispatch(values=None,dip=None):
 
 
 
-
-values={'observation': '45d15.2', 'height': '6', 'horizon': '   ', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
+values={'observation': '45d15.2', 'op': 'adjust'}
 # values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # print dispatch(values)
         # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
