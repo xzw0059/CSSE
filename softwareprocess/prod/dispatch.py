@@ -78,9 +78,11 @@ def dispatch(values=None,dip=None):
             h = 0.0
         else:
             h = values['height']
-            
-        if (values['height'].isalpha()):
-            values['error'] = 'height is not invalid'
+
+        print values['height']
+
+        # if (values['height'].isalpha() == ture ):
+        #     values['error'] = 'height is not invalid'
             # __not num
             return values
         if (not isinstance(float(h),float)):
