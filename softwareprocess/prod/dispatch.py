@@ -81,10 +81,11 @@ def dispatch(values=None,dip=None):
 
 
 
-        if (values['height'].isalpha() == True ):
-            values['error'] = 'height is not invalid'
-            # __not num
-            return values
+        # if (values['height'].isalpha() == True ):
+        #     values['error'] = 'height is not invalid'
+        #     # __not num
+        #     return values
+
         if (not isinstance(float(h),float)):
             values['error'] = 'height is not invalid'
             # __not num
