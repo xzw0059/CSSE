@@ -43,7 +43,6 @@ def dispatch(values=None,dip=None):
 
 
 
-        tc = 5 * (float(values['temperature']) - 32) / 9
         p =float(values['pressure'])
         hr = values['horizon']
         # print dip
@@ -89,6 +88,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'temperature is not invalid__not -20~120'
             return values
 
+        tc = 5 * (float(values['temperature']) - 32) / 9
 
         if (p == None):
             p = 1010
