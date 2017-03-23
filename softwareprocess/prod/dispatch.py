@@ -43,7 +43,7 @@ def dispatch(values=None,dip=None):
 
 
 
-        hr = values['horizon']
+        values['horizon'] = values['horizon']
         # print dip
 
         if not (isinstance(int(list1[0]),int)):
@@ -102,17 +102,18 @@ def dispatch(values=None,dip=None):
             values['error'] = 'pressure is not invalid__not 100~1100'
             return values
 
-        if (hr == None):
-            hr = 'natural'
+
+        if (values['horizon'] == None):
+            values['horizon'] = 'natural'
             return values
-        if not (isinstance(hr,str)):
+        if not (isinstance(values['horizon'],str)):
             values['error'] = 'horizon is not invalid__not str'
             return values
-        if(not(hr == 'artificial' or 'natural')):
+        if(not(values['horizon'] == 'artificial' or 'natural')):
             values['error'] = 'horizon is not invalid__not  artificial or natural'
             return values
 
-        if (hr == 'natural'):
+        if (values['horizon'] == 'natural'):
             dip = (-0.97 * math.sqrt( float(values['height']) )) / 60
 
         else:
