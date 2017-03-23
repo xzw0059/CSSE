@@ -68,12 +68,17 @@ class convertString2DictionaryTest(TestCase):
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
-    def test_100_090_OnlyParameterInValuesEcl5(self):
+    def test_100_090_RightValuesXls2t3(self):
         values={'observation': '42d0.0',  'op': 'adjust'}
-        result={'error':'parameter is not a dictionary'}
+        result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
+   def test_100_090_RightValuesXls2t4(self):
+        values={'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
+        result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
+        print values
 
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
