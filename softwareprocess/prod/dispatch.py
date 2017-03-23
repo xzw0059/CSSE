@@ -143,9 +143,9 @@ def dispatch(values=None,dip=None):
         else:
             hr = values['horizon']
 
-        if (len(hr.replace(' ',' '))>0):
-            values['error'] = 'horizon is invalid'
-            return values
+        # if (len(hr.replace(' ',' '))>0):
+        #     values['error'] = 'horizon is invalid'
+        #     return values
 
         if(not(hr == 'artificial' or 'natural')):
             # values['error'] = 'horizon is not invalid__not  artificial or natural'
