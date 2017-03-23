@@ -56,9 +56,9 @@ k = 'adf'
 x = '567.675'
 u = '1234.0'
 o='123453456'
-list1 = o.split('d')
-print list1[0]
-print list1[1]
+# list1 = o.split('d')
+# print list1[0]
+# print list1[1]
 
 # try:
 #     htest= float(x)

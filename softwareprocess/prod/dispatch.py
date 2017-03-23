@@ -39,11 +39,18 @@ def dispatch(values=None,dip=None):
 
         o = values['observation']
         list1 = {}
+
         list1 = o.split('d')
+        try:
+            y = float(list1[1])
+        except IndexError:
+            values['error'] = 'observation is invalid'
+            return values
+
         # print type(list1[0])
         # print type(x)
         # print x
-        y = float(list1[1])
+
         # print type(list1[1])
         # print type(y)
         # print y
