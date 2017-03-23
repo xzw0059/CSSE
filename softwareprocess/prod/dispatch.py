@@ -140,7 +140,7 @@ def dispatch(values=None,dip=None):
 
 
         try:
-            temptest= float(p)
+            temptest= float(values['pressure'])
         except ValueError:
             values['error'] = 'pressure is invalid'
             return values
@@ -215,7 +215,7 @@ def dispatch(values=None,dip=None):
 
         if  not (D2 > -90 and D2 < 90):
             # values['error'] = 'altitude-degree is not invalid__not in -90~90'
-            values['error'] = 'altitude is not invalid'
+            values['error'] = 'altitude is invalid'
             return values
 
         try:
