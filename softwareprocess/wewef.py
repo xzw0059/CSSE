@@ -39,22 +39,18 @@ def dispatch(values=None,dip=None):
 
         o = values['observation']
         list1 = {}
+
+
         list1 = o.split('d')
-        # print type(list1[0])
-        # print type(x)
-        # print x
-        y = float(list1[1])
-        # print type(list1[1])
-        # print type(y)
-        # print y
-        # print 123
-
-
-
-
-        # print dip
         try:
-            degree= int(list1[0])
+            ominutes = float(list1[1])
+        except IndexError:
+            values['error'] = 'observation is invalid'
+            return values
+
+
+        try:
+            odegree= int(list1[0])
         except ValueError:
             values['error'] = 'observation is invalid'
             return values
@@ -65,24 +61,22 @@ def dispatch(values=None,dip=None):
             # __not in 0~90
             return values
 
-
         try:
-            minutes= float(y)
+            minutes= float(ominutes)
         except ValueError:
             values['error'] = 'observation is invalid'
             return values
 
-
-        # if not (isinstance(y,float)):
+        # if not (isinstance(ominutes,float)):
         #     values['error'] = 'observation is invalid'
         #     # __not float
         #     return values
-        if not (y >= 0 and y < 60):
+        if not (ominutes >= 0.0 and ominutes < 60.0):
             values['error'] = 'observation is invalid'
             # __not 0~60
             return values
 
-        if (int(list1[0])==0 and y<0.1):
+        if (int(list1[0])==0 and ominutes<0.1):
             values['error'] = 'observation is invalid'
             # __o is LT 0.0.1
             return values
@@ -120,10 +114,17 @@ def dispatch(values=None,dip=None):
             t = 72
         else:
             t =values['temperature']
-        if not isinstance(float(t),float):
+
+        try:
+            temptest= float(t)
+        except ValueError:
             values['error'] = 'temperature is invalid'
-            # __not number
             return values
+
+        # if not isinstance(float(t),float):
+        #     values['error'] = 'temperature is invalid'
+        #     # __not number
+        #     return values
         if not (int(t) >= -20 and int(t) <= 120):
             values['error'] = 'temperature is invalid'
             # __not -20~120
@@ -131,17 +132,39 @@ def dispatch(values=None,dip=None):
 
         tc = 5 * (float(t) - 32) / 9
 
+
+
+
+
+
         if (not('pressure' in values)):
             p = 1010
         else:
+            try:
+                temptest= float(values['pressure'])
+            except ValueError:
+                values['error'] = 'pressure is invalid'
+                return values
+            except KeyError:
+                values['error'] = 'pressure is invalid'
+                return values
+
             p =float(values['pressure'])
 
+        # try:
+        #     temptest= float(values['pressure'])
+        # except ValueError:
+        #     values['error'] = 'pressure is invalid'
+        #     return values
+        # except KeyError:
+        #     values['error'] = 'pressure is invalid'
+        #     return values
 
+        # if not (isinstance(float(p),float)):
+        #     values['error'] = 'pressure is invalid'
+        #     # __not str of number
+        #     return values
 
-        if not (isinstance(float(p),float)):
-            values['error'] = 'pressure is invalid'
-            # __not str of number
-            return values
         if not (p >= 100 and p <= 1100):
             print  values['pressure']
             values['error'] = 'pressure is invalid'
@@ -179,8 +202,8 @@ def dispatch(values=None,dip=None):
 
 
 
-        refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(y/60+int(list1[0])))
-        altitude0 = y/60+int(list1[0]) + dip + refraction
+        refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(ominutes/60+int(list1[0])))
+        altitude0 = ominutes/60+int(list1[0]) + dip + refraction
         # tempalt = {}
         # tempalt = str(altitude0).split('.')
         D2 = int(altitude0)
@@ -189,22 +212,36 @@ def dispatch(values=None,dip=None):
         print altitudedig
 
 
-        if not (isinstance(D2,int)):
-            # values['error'] = 'altitude-degree is not invalid__not int'
-            values['error'] = 'altitude-degree is not invalid'
-            return values
-        if  not (D2 > -90 and D2 < 90):
-            # values['error'] = 'altitude-degree is not invalid__not in -90~90'
-            values['error'] = 'altitude-degree is not invalid'
+        try:
+            temptest= int(D2)
+        except ValueError:
+            values['error'] = 'altitude is invalid'
             return values
 
-        if not (isinstance(round(M2,1),float)):
-            # values['error'] = 'altitude-min is not invalid__not float'
-            values['error'] = 'altitude-min is not invalid'
+        # if not (isinstance(D2,int)):
+        #     # values['error'] = 'altitude-degree is not invalid__not int'
+        #     values['error'] = 'altitude-degree is not invalid'
+        #     return values
+
+        if  not (D2 > -90 and D2 < 90):
+            # values['error'] = 'altitude-degree is not invalid__not in -90~90'
+            values['error'] = 'altitude is invalid'
             return values
-        if not (M2 >= 0 and round(M2,1) < 60):
+
+        try:
+            temptest= float(M2)
+        except ValueError:
+            values['error'] = 'altitude is invalid'
+            return values
+
+        # if not (isinstance(round(M2,1),float)):
+        #     # values['error'] = 'altitude-min is not invalid__not float'
+        #     values['error'] = 'altitude-min is not invalid'
+        #     return values
+
+        if (not (M2 >= 0 and round(M2,1) < 60)):
             # values['error'] = 'altitude-min is not invalid__not 0~60'
-            values['error'] = 'altitude is not invalid'
+            values['error'] = 'altitude is invalid'
             return values
 
         if ('altitude' in values):
@@ -239,6 +276,7 @@ def dispatch(values=None,dip=None):
         values = {}
         values['error'] = 'op is not a legal operation'
         return values
+
 
 
 
