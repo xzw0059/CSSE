@@ -143,6 +143,7 @@ def dispatch(values=None,dip=None):
         if ('altitude' in values):
             values['error'] = 'altitude-already exist'
             return values
+        if (values['observation' < ])
 
         values['altitude'] = altitudedig
 
