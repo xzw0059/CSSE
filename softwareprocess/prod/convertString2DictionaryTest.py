@@ -88,7 +88,8 @@ class convertString2DictionaryTest(TestCase):
 
     def test_100_120_InCoValuesXls2t7(self):
         values={'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
-        result={'error':'mandatory information is missing'}
+        result={'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71', 'error':'observation is invalid'}
+        {'temperature': '71', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'error': 'degree is not invalid__not in 0~90', 'observation': '101d15.2', 'op': 'adjust'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 

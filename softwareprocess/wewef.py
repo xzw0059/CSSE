@@ -11,7 +11,7 @@ def dispatch(values=None,dip=None):
         return {'error': 'parameter is not a dictionary'}
 
     if (not('op' in values)):
-        values['error'] = 'no op  is specified'
+        values['error'] = 'no op is specified'
         return values
 
 
@@ -29,6 +29,11 @@ def dispatch(values=None,dip=None):
 
     #Perform designated function
     if(values['op'] == 'adjust'):
+
+        if (not('observation' in values)):
+            values={}
+            values['error'] = 'mandatory information is missing'
+            return values
 
         o = values['observation']
         list1 = {}
@@ -157,7 +162,7 @@ def dispatch(values=None,dip=None):
 
         values['altitude'] = altitudedig
 
-        print altitudedig
+        # print altitudedig
         # print values
 
 
@@ -184,7 +189,8 @@ def dispatch(values=None,dip=None):
         return values
 
 
-values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
+
+values={'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
 # values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # print dispatch(values)
         # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
