@@ -76,7 +76,7 @@ class convertString2DictionaryTest(TestCase):
 
    def test_100_090_RightValuesXls2t4(self):
         values={'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
-        result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
+        result={'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}  
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
