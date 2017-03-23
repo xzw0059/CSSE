@@ -85,7 +85,7 @@ def dispatch(values=None,dip=None):
         if not isinstance(float(t),float):
             values['error'] = 'temperature is not invalid__not int'
             return values
-        if not (int(values['temperature']) >= -20 and int(values['temperature']) <= 120):
+        if not (int(t) >= -20 and int(t) <= 120):
             values['error'] = 'temperature is not invalid__not -20~120'
             return values
 
