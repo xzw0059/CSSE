@@ -88,7 +88,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'temperature is not invalid__not -20~120'
             return values
 
-        tc = 5 * (float(values['temperature']) - 32) / 9
+        tc = 5 * (float(t) - 32) / 9
 
         if (not('pressure' in values)):
             p = 1010
