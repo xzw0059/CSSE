@@ -31,6 +31,7 @@ def dispatch(values=None,dip=None):
     if(values['op'] == 'adjust'):
 
         if (not('observation' in values)):
+            values={}
             values['error'] = 'mandatory information is missing'
             return values
 
