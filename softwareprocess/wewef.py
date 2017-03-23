@@ -50,7 +50,7 @@ def dispatch(values=None,dip=None):
 
 
         try:
-            odegree= int(list1[0])
+            odegreex= int(list1[0])
         except ValueError:
             values['error'] = 'observation is invalid'
             return values
