@@ -90,7 +90,7 @@ def dispatch(values=None,dip=None):
         try:
             htest= float(h)
         except ValueError:
-            values['error'] = 'height is not invalid'
+            values['error'] = 'height is invalid'
             # __not num
             return values
 
