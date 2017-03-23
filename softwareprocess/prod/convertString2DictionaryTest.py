@@ -50,7 +50,7 @@ class convertString2DictionaryTest(TestCase):
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
-    def test_100_060_RightValuesPdfEx3(self):
+    def test_100_060_RightValuesXls2t1(self):
         values={'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         result={'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
         self.assertDictEqual(dispatch.dispatch(values),result)
@@ -68,11 +68,13 @@ class convertString2DictionaryTest(TestCase):
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
 
-    def test_100_080_NoOpInValuesEcl4(self):
-        values=42
-        result={'observation': '15d04.9', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'temperature': '72','error':'no op is specified'}
+    def test_100_090_OnlyParameterInValuesEcl5(self):
+        values={'observation': '42d0.0',  'op': 'adjust'}
+        result={'error':'parameter is not a dictionary'}
         self.assertDictEqual(dispatch.dispatch(values),result)
         print values
+
+
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
     #     self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
