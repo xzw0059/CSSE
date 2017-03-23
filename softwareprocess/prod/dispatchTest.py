@@ -60,7 +60,7 @@ test1='  '
 test2=''
 print type(test1)
 print type(test2)
-print type(   )
+print type()
 
 # list1 = o.split('d')
 # print list1[0]
