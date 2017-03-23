@@ -117,7 +117,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'horizon is not invalid__not  artificial or natural'
             return values
 
-        if (values['horizon'] == 'natural'):
+        if (hr == 'natural'):
             dip = (-0.97 * math.sqrt( float(values['height']) )) / 60
 
         else:
