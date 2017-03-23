@@ -102,7 +102,7 @@ def dispatch(values=None,dip=None):
 
 
         if (not float(h) >= 0):
-            values['error'] = 'height is not invalid'
+            values['error'] = 'height is invalid'
             # __not >= 0
             return values
 
@@ -111,11 +111,11 @@ def dispatch(values=None,dip=None):
         else:
             t =values['temperature']
         if not isinstance(float(t),float):
-            values['error'] = 'temperature is not invalid'
+            values['error'] = 'temperature is invalid'
             # __not number
             return values
         if not (int(t) >= -20 and int(t) <= 120):
-            values['error'] = 'temperature is not invalid'
+            values['error'] = 'temperature is invalid'
             # __not -20~120
             return values
 
@@ -129,12 +129,12 @@ def dispatch(values=None,dip=None):
 
 
         if not (isinstance(float(p),float)):
-            values['error'] = 'pressure is not invalid'
+            values['error'] = 'pressure is invalid'
             # __not str of number
             return values
         if not (p >= 100 and p <= 1100):
             print  values['pressure']
-            values['error'] = 'pressure is not invalid'
+            values['error'] = 'pressure is invalid'
             # __not 100~1100
             return values
 
@@ -145,11 +145,11 @@ def dispatch(values=None,dip=None):
 
         if(not(hr == 'artificial' or 'natural')):
             # values['error'] = 'horizon is not invalid__not  artificial or natural'
-            values['error'] = 'horizon is not invalid'
+            values['error'] = 'horizon is invalid'
             return values
 
         # if not (isinstance(hr,str)):
-        #     values['error'] = 'horizon is not invalid'
+        #     values['error'] = 'horizon is invalid'
         #     # __not str
         #     return values
 
