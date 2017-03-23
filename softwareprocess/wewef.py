@@ -142,13 +142,13 @@ def dispatch(values=None,dip=None):
             hr = 'natural'
         else:
             hr = values['horizon']
-        print hr
+
 
         if(not(hr == 'artificial' or 'natural')):
             # values['error'] = 'horizon is not invalid__not  artificial or natural'
             values['error'] = 'horizon is invalid'
             return values
-
+        print hr
         # if not (isinstance(hr,str)):
         #     values['error'] = 'horizon is invalid'
         #     # __not str
