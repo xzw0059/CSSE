@@ -538,11 +538,11 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'invalid time'
         #     return values
 
-        # try:
-        Obs_Year = int(fulldate[0])
-        # except:
-        #     values['error'] = 'Obs_Year is invalid'
-        #     return values
+        try:
+            Obs_Year = int(fulldate[0])
+        except:
+            values['error'] = 'Obs_Year is invalid'
+            return values
 
         try:
             obs_month = int(fulldate[1])
