@@ -619,21 +619,30 @@ def dispatch(values=None,dip=None):
 
         CumulativeProgresNum=differrence*(-14.31667/60)
         CPint=int(CumulativeProgresNum)
-        CPSmallnum=(CumulativeProgresNum-CPint)*60
-        CumulativeProgresStr=str(CPint)+ 'd' + str(round(CPSmallnum,1))
+        CPSmallnum=round(((CumulativeProgresNum-CPint)*60),1)
+        CumulativeProgresStr=str(CPint)+ 'd' + str(abs(CPSmallnum))
 
-        LYNum= int((differrence+1)/4)
+        # print CumulativeProgresStr
 
-        AmountOfDailyRoataAbs=0.59/60
+        LYNum= int((differrence+1)/4 -1)
+        print LYNum
+        AmountOfDailyRoataAbs=float(0.983)
+        print AmountOfDailyRoataAbs
         TotalProgressionNum=AmountOfDailyRoataAbs * LYNum
+        print TotalProgressionNum
         TotalProgressionNumInt=int(TotalProgressionNum)
-        TotalProgressionNumSmallNum=(TotalProgressionNum-TotalProgressionNumInt)*60
+        TotalProgressionNumSmallNum=round((TotalProgressionNum-TotalProgressionNumInt)*60,1)
         TotalProgressionStr=str(TotalProgressionNumInt)+'D'+str(TotalProgressionNumSmallNum)
+        print TotalProgressionStr
+
 
         GHAAries20010101Numlist = GHAAries20010101.split('d')
-        GHAAries20010101Int=float(GHAAries20010101Numlist[0])
-        GHAAries20010101SmallNum=float(GHAAries20010101Numlist[1])/60
+        print GHAAries20010101Numlist
+        GHAAries20010101Int=int(GHAAries20010101Numlist[0])
+        GHAAries20010101SmallNum=round(float(GHAAries20010101Numlist[1])/60.0,1)
 
+        GHAAries20010101Numliststr=str(GHAAries20010101Int)+ 'd'+ str(GHAAries20010101SmallNum)
+        print GHAAries20010101Numliststr
 
 
         GHAAriesObsY0101Num=GHAAries20010101Int+round(float(GHAAries20010101SmallNum),1)+CPint+round(CPSmallnum,1)+TotalProgressionNumInt+round(TotalProgressionNumSmallNum,1)
