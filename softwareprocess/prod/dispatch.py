@@ -524,20 +524,20 @@ def dispatch(values=None,dip=None):
 
         try:
             if "-" in obsdate:
-                fulldate = obsdate.strptime(obsdate, "%Y-%m-%d")
+                fulldate = time.strptime(obsdate, "%Y-%m-%d")
 
         except:
 
             values['error'] = 'fulltime is invalid'
             return values
 
-        #
-        # try:
-        #     fulldate = date.split('-')
-        #
-        # except:
-        #     values['error'] = 'fulldate is invalid'
-        #     return values
+
+        try:
+            fulldate = obsdate.split('-')
+
+        except:
+            values['error'] = 'fulldate is invalid'
+            return values
 
         try:
             Obs_Year = int(fulldate[0])
@@ -642,9 +642,9 @@ def dispatch(values=None,dip=None):
         GHAAriesObsY0101NumStr=str(GHAAries20010101Int)+'d'+str(round(GHAAriesObsY0101SmallNum,1))
 
         CalDate1=datetime.datetime(Obs_Year,01,01,00,00,00)
-        DateAndtime=fulldate
-        DateAndtime
-        CalDate2=datetime.datetime(fulldate,obstimedictionary)
+        # DateAndtime=fulldate
+        # DateAndtime.expand(obstimedictionary)
+        CalDate2=datetime.datetime(fulldate[0],fulldate[1],fulldate[2],obstimedictionary[0],obstimedictionary[1],obstimedictionary[2])
 
         NumberOfSecondsBetweenObsYear=(CalDate1-CalDate2).seconds
         AmountOfRotationNum=NumberOfSecondsBetweenObsYear/81164.1*360
