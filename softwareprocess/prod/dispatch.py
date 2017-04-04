@@ -531,19 +531,19 @@ def dispatch(values=None,dip=None):
             values['error'] = 'fulltime is invalid'
             return values
 
+        #
+        # try:
+        #     fulldate = obsdate.split('-')
+        #
+        # except:
+        #     values['error'] = 'fulldate is invalid'
+        #     return values
 
-        try:
-            fulldate = obsdate.split('-')
-
-        except:
-            values['error'] = 'fulldate is invalid'
-            return values
-
-        try:
-            Obs_Year = int(fulldate[0])
-        except:
-            values['error'] = 'Obs_Year is invalid'
-            return values
+        # try:
+        Obs_Year = int(fulldate[0])
+        # except:
+        #     values['error'] = 'Obs_Year is invalid'
+        #     return values
 
         try:
             obs_month = int(fulldate[1])
@@ -558,14 +558,14 @@ def dispatch(values=None,dip=None):
             return values
 
 
-        if  not (Obs_Year >= 2001 and Obs_Year <= 2016):
-            values['error'] = 'Obs_Year is invalid'
+        if  not (2001 <=Obs_Year):
+            values['error'] = 'Obs_Year is invalid1'
             # __not in 0~90
             return values
 
 
-        if  not (obs_month >= 1 and Obs_Year <= 12):
-            values['error'] = 'Obs_Year is invalid'
+        if  not (obs_month >= 1 and obs_month <= 12):
+            values['error'] = 'Obs_Year is invalid2'
             # __not in 0~90
             return values
 
@@ -573,25 +573,25 @@ def dispatch(values=None,dip=None):
         smallmonth = {4,6,9,11}
 
         if (obs_month in bigmonth):
-            if  not (obs_day >= 1 and Obs_Year <= 31):
-                values['error'] = 'Obs_Year is invalid'
+            if  not (obs_day >= 1 and obs_day <= 31):
+                values['error'] = 'obs_day is invalid'
             # __not in 0~90
                 return values
 
         if (obs_month in smallmonth):
-            if  not (obs_day >= 1 and Obs_Year <= 30):
-                values['error'] = 'Obs_Year is invalid'
+            if  not (obs_day >= 1 and obs_day <= 30):
+                values['error'] = 'obs_day is invalid'
             # __not in 0~90
                 return values
 
         if (Obs_Year % 4 == 0):
-            if  not (obs_day >= 1 and Obs_Year <= 29):
-                values['error'] = 'Obs_Year is invalid'
+            if  not (obs_day >= 1 and obs_day <= 29):
+                values['error'] = 'obs_day is invalid'
             # __not in 0~90
                 return values
         if (Obs_Year % 4 != 0):
-            if  not (obs_day >= 1 and Obs_Year <= 28):
-                values['error'] = 'Obs_Year is invalid'
+            if  not (obs_day >= 1 and obs_day <= 28):
+                values['error'] = 'obs_day is invalid'
             # __not in 0~90
                 return values
 
@@ -641,10 +641,16 @@ def dispatch(values=None,dip=None):
         GHAAriesObsY0101SmallNum=GHAAriesObsY0101Num-GHAAries20010101Int
         GHAAriesObsY0101NumStr=str(GHAAries20010101Int)+'d'+str(round(GHAAriesObsY0101SmallNum,1))
 
+        # print values
+        # print fulldate
+        # print obstimedictionary
+        # print fulldate[1]
+        # print obstimedictionary[0]
+
         CalDate1=datetime.datetime(Obs_Year,01,01,00,00,00)
         # DateAndtime=fulldate
         # DateAndtime.expand(obstimedictionary)
-        CalDate2=datetime.datetime(fulldate[0],fulldate[1],fulldate[2],obstimedictionary[0],obstimedictionary[1],obstimedictionary[2])
+        CalDate2=datetime.datetime(fulldate[0],fulldate[1],fulldate[2],obstimedictionary[3],obstimedictionary[4],obstimedictionary[5])
 
         NumberOfSecondsBetweenObsYear=(CalDate1-CalDate2).seconds
         AmountOfRotationNum=NumberOfSecondsBetweenObsYear/81164.1*360
@@ -698,4 +704,3 @@ def dispatch(values=None,dip=None):
         values = {}
         values['error'] = 'op is not a legal operation'
         return values
-
