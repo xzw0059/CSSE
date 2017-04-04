@@ -617,38 +617,55 @@ def dispatch(values=None,dip=None):
         differrence = Obs_Year - 2001
         GHAAriesDecreases='-0d14.31667'
 
-        CumulativeProgresNum=differrence*(-14.31667/60)
+        CumulativeProgresNum=differrence*(-14.31667/60.0)
         CPint=int(CumulativeProgresNum)
-        CPSmallnum=round(((CumulativeProgresNum-CPint)*60),1)
+        CPSmallnum=round(((CumulativeProgresNum-CPint)*60.0),1)
         CumulativeProgresStr=str(CPint)+ 'd' + str(abs(CPSmallnum))
 
         # print CumulativeProgresStr
 
         LYNum= int((differrence+1)/4 -1)
-        print LYNum
+        # print LYNum
         AmountOfDailyRoataAbs=float(0.983)
-        print AmountOfDailyRoataAbs
+        # print AmountOfDailyRoataAbs
         TotalProgressionNum=AmountOfDailyRoataAbs * LYNum
-        print TotalProgressionNum
+        # print TotalProgressionNum
         TotalProgressionNumInt=int(TotalProgressionNum)
         TotalProgressionNumSmallNum=round((TotalProgressionNum-TotalProgressionNumInt)*60,1)
-        TotalProgressionStr=str(TotalProgressionNumInt)+'D'+str(TotalProgressionNumSmallNum)
-        print TotalProgressionStr
+        TotalProgressionStr=str(TotalProgressionNumInt)+'D'+str(abs(TotalProgressionNumSmallNum))
+        # print TotalProgressionStr
 
 
         GHAAries20010101Numlist = GHAAries20010101.split('d')
-        print GHAAries20010101Numlist
+        # print GHAAries20010101Numlist
         GHAAries20010101Int=int(GHAAries20010101Numlist[0])
         GHAAries20010101SmallNum=round(float(GHAAries20010101Numlist[1])/60.0,1)
 
-        GHAAries20010101Numliststr=str(GHAAries20010101Int)+ 'd'+ str(GHAAries20010101SmallNum)
-        print GHAAries20010101Numliststr
+        GHAAries20010101Numliststr=str(GHAAries20010101Int)+ 'd'+ str(GHAAries20010101Numlist[1])
+        # print GHAAries20010101Numliststr
 
 
-        GHAAriesObsY0101Num=GHAAries20010101Int+round(float(GHAAries20010101SmallNum),1)+CPint+round(CPSmallnum,1)+TotalProgressionNumInt+round(TotalProgressionNumSmallNum,1)
+        GHAAriesObsY0101Num=GHAAries20010101Int+float(GHAAries20010101Numlist[1])/60.0+round(CumulativeProgresNum,3)+TotalProgressionNumInt+TotalProgressionNumSmallNum/60.0
         GHAAriesObsY0101NumInt=int(GHAAriesObsY0101Num)
         GHAAriesObsY0101SmallNum=GHAAriesObsY0101Num-GHAAries20010101Int
-        GHAAriesObsY0101NumStr=str(GHAAries20010101Int)+'d'+str(round(GHAAriesObsY0101SmallNum,1))
+
+        GHAAriesObsY0101NumStr=str(GHAAries20010101Int)+'d'+str(abs(round(GHAAriesObsY0101SmallNum*60,1)))
+
+
+
+        # print GHAAries20010101Int
+        # print float(GHAAries20010101Numlist[1])/60.0
+        #
+        #
+        # print round(CumulativeProgresNum,3)
+        #
+        #
+        # print TotalProgressionNumInt
+        # print TotalProgressionNumSmallNum/60.0
+        #
+        # print GHAAriesObsY0101Num
+        # print GHAAriesObsY0101NumStr
+
 
         # print values
         # print fulldate
@@ -661,40 +678,38 @@ def dispatch(values=None,dip=None):
         # DateAndtime.expand(obstimedictionary)
         CalDate2=datetime.datetime(fulldate[0],fulldate[1],fulldate[2],obstimedictionary[3],obstimedictionary[4],obstimedictionary[5])
 
-        NumberOfSecondsBetweenObsYear=(CalDate1-CalDate2).seconds
-        AmountOfRotationNum=NumberOfSecondsBetweenObsYear/81164.1*360
+        # print CalDate1
+        # print CalDate2
+
+        NumberOfSecondsBetweenObsYear=(CalDate2-CalDate1).total_seconds()
+
+        # print NumberOfSecondsBetweenObsYear
+
+        AmountOfRotationNum=NumberOfSecondsBetweenObsYear/86164.1*360
         AmountOfRotationNumInt=int(AmountOfRotationNum)
         AmountOfRotationNumSmallNum=(AmountOfRotationNum-AmountOfRotationNumInt)*60
-        AmountOfRotationNumStr=str(AmountOfRotationNumInt)+'d'+str(AmountOfRotationNumSmallNum)
+        AmountOfRotationNumStr=str(AmountOfRotationNumInt%360)+'d'+str(round(AmountOfRotationNumSmallNum,1))
 
-        GHAAriesObsYAndDAndHNum=GHAAriesObsY0101Num+AmountOfRotationNum
+        print AmountOfRotationNumStr
+        GHAAriesObsYAndDAndHNumRad=GHAAriesObsY0101NumInt+GHAAriesObsY0101SmallNum+AmountOfRotationNumInt%360+AmountOfRotationNum-AmountOfRotationNumInt
 
+        print GHAAriesObsY0101NumInt
+        print GHAAriesObsY0101SmallNum
+        print AmountOfRotationNumInt%360
+        print AmountOfRotationNum-AmountOfRotationNumInt
+
+        print GHAAriesObsYAndDAndHNumRad
         # C.  Calculate the star's GHA
 
         SHAStarNumList=SHAStar.split('d')
 
-        GHAStarNum=GHAAriesObsYAndDAndHNum+float(SHAStarNumList[0])+float(SHAStarNumList[1])/60
+        GHAStarNum=GHAAriesObsYAndDAndHNumRad+float(SHAStarNumList[0])+float(SHAStarNumList[1])/60
 
-        if (GHAStarNum>=360):
-            GHAStarNum=GHAStarNum-360
 
-        if (GHAStarNum<0):
-            GHAStarNum=GHAStarNum+360
 
-        if (GHAStarNum>=360):
-            GHAStarNum=GHAStarNum-360
 
-        if (GHAStarNum<0):
-            GHAStarNum=GHAStarNum+360
-
-        if (GHAStarNum>=360):
-            GHAStarNum=GHAStarNum-360
-
-        if (GHAStarNum<0):
-            GHAStarNum=GHAStarNum+360
-
-        GHAStarNumInt=int(GHAStarNum)
-        GHAStarSmallNum=(GHAStarNum-GHAStarNumInt)*60
+        GHAStarNumInt=int(GHAStarNum)%360
+        GHAStarSmallNum=round((GHAStarNum-int(GHAStarNum))*60,1)
         GHAStarStr=str(GHAStarNumInt)+'d'+str(GHAStarSmallNum)
 
         values['long']= GHAStarStr
