@@ -527,7 +527,7 @@ def dispatch(values=None,dip=None):
 
         except:
 
-            values['error'] = 'fulltime is invalid'
+            values['error'] = 'invalid time'
             return values
 
         #
@@ -535,7 +535,7 @@ def dispatch(values=None,dip=None):
         #     fulldate = obsdate.split('-')
         #
         # except:
-        #     values['error'] = 'fulldate is invalid'
+        #     values['error'] = 'invalid time'
         #     return values
 
         # try:
@@ -607,7 +607,7 @@ def dispatch(values=None,dip=None):
 
         except:
 
-            values['error'] = 'fulldate is invalid'
+            values['error'] = 'invalid time'
             return values
 
 
