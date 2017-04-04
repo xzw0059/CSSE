@@ -52,17 +52,17 @@ import time
 # dic.update(d)
 # # dic.update(d)
 #
-# print dic
-k = 'adf'
-x = '567.675'
-u = '1234.0'
-o='123453456'
-test1='  '
-test2=''
-x1=int(x)
-print type(x)
-print type(test2)
-ominutes='{}'
+# # print dic
+# k = 'adf'
+# x = '567.675'
+# u = '1234.0'
+# o='123453456'
+# test1='  '
+# test2=''
+# x1=int(x)
+# print type(x)
+# print type(test2)
+# ominutes='{}'
 
 DateStr='2001-01-01'
 try:
