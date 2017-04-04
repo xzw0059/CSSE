@@ -176,12 +176,12 @@ class convertString2DictionaryTest(TestCase):
 
     def test5_200_040_InValidValues(self):
         values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016:01:17', 'time': '03:15:42'}
-        result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016:01:17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
+        result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016:01:17', 'time': '03:15:42', 'error':'invalid time'}
         self.assertDictEqual(dispatch.dispatch(values),result)
 
     def test5_200_050_InValidValues(self):
         values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016 01 17', 'time': '03:15:42'}
-        result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016 01 17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
+        result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016 01 17', 'time': '03:15:42', 'error':'invalid time'}
         self.assertDictEqual(dispatch.dispatch(values),result)
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}

@@ -541,7 +541,7 @@ def dispatch(values=None,dip=None):
         try:
             Obs_Year = int(fulldate[0])
         except:
-            values['error'] = 'Obs_Year is invalid'
+            values['error'] = 'invalid time'
             return values
 
         try:
