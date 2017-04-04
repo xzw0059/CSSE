@@ -510,7 +510,7 @@ def dispatch(values=None,dip=None):
 
 
         else:
-            values['error'] = 'mandatory information is missing'
+            values['error'] = 'star not in catalog'
             return values
 
         if (not('date' in values)):
