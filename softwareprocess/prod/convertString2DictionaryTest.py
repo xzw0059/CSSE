@@ -148,6 +148,31 @@ class convertString2DictionaryTest(TestCase):
         values={'observation': '45d15.2', 'height': '6', 'horizon': 'a', 'pressure': '1010', 'op': 'adjust', 'temperature': '71'}
         result={'observation': '45d15.2', 'height': '6', 'horizon': 'a', 'pressure': '1010', 'op': 'adjust', 'temperature': '71', 'error':'horizon is invalid'}
 
+
+    def test5_100_010_ValidValues(self):
+        values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
+        result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
+
+    def test5_200_010_InvalidValues1(self):
+        values={'op': 'predict'}
+        result={'error':'mandatory information is missing', 'op': 'predict'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
+
+    def test5_200_020_InvalidValues1(self):
+        values={'op':'predict', 'body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42'}
+        result={'op':'predict', 'body': 'unknown', 'date': '2016-01-17', 'time': '03:15:42', 'error':'star not in catalog'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
+
+    def test5_200_030_InvalidValues1(self):
+        values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-99-17', 'time': '03:15:42'}
+        result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-99-17', 'time': '03:15:42', 'error':'invalid date'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
+
+    def test5_200_030_InvalidValues1(self):
+        values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:99'}
+        result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:99', 'error':'invalid time'}
+        self.assertDictEqual(dispatch.dispatch(values),result)
     # def test_100_010_ShouldBeNotNone(self):
     #     values={}
     #     self.assertDictEqual(dispatch.dispatch(values), {'error':'no op  is specified'})
