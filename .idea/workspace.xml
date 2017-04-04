@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad129f8-39f5-4318-8e6a-9f3508f446b2" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py" afterPath="$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" afterPath="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py" afterPath="$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,11 +20,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dispatchTest.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dispatchTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1559">
-              <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="23" />
+            <state relative-caret-position="540">
+              <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -35,8 +35,8 @@
       <file leaf-file-name="convertString2DictionaryTest.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="158" column="76" lean-forward="true" selection-start-line="158" selection-start-column="76" selection-end-line="158" selection-end-column="76" />
+            <state relative-caret-position="551">
+              <caret line="184" column="62" lean-forward="false" selection-start-line="184" selection-start-column="62" selection-end-line="184" selection-end-column="62" />
               <folding>
                 <element signature="e#0#29#0" expanded="true" />
               </folding>
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="839">
-              <caret line="508" column="26" lean-forward="false" selection-start-line="508" selection-start-column="26" selection-end-line="508" selection-end-column="26" />
+            <state relative-caret-position="452">
+              <caret line="613" column="25" lean-forward="true" selection-start-line="613" selection-start-column="25" selection-end-line="613" selection-end-column="25" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -59,8 +59,8 @@
       <file leaf-file-name="wewef.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/wewef.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="262" column="0" lean-forward="true" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+            <state relative-caret-position="1387">
+              <caret line="289" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -120,17 +120,18 @@
         <option value="$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py" />
         <option value="$PROJECT_DIR$/prod/dispatch.py" />
         <option value="$PROJECT_DIR$/prod/convertString2DictionaryTest.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/wewef.py" />
         <option value="$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1110" />
-    <option name="width" value="1893" />
-    <option name="height" value="1931" />
+    <option name="x" value="-13" />
+    <option name="y" value="-13" />
+    <option name="width" value="3026" />
+    <option name="height" value="1946" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -236,7 +237,7 @@
       <recent name="C:\Users\Administrator\PycharmProjects\CSSE\softwareprocess\test1" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.wewef">
+  <component name="RunManager" selected="Python tests.Unittests in dispatchTest">
     <configuration default="false" name="Unittests in convertString2DictionaryTest" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -580,8 +581,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.wewef" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in dispatchTest" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in dispatchTest" />
+        <item index="1" class="java.lang.String" itemvalue="Python.wewef" />
         <item index="2" class="java.lang.String" itemvalue="Python.dispatch" />
         <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in convertString2DictionaryTest" />
         <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest convertString2DictionaryTest.test100" />
@@ -595,27 +596,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 07m 28s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 08m 56s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 10m 47s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 12m 38s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 16m 44s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 21m 48s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 23m 43s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 26m 21s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -625,25 +605,46 @@
     <history-entry file="All_Tests_(TDD) - 2017.03.23 at 11h 27m 38s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="Unittests_in_dispatchTest - 2017.04.04 at 09h 35m 18s.xml">
+      <configuration name="Unittests in dispatchTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dispatchTest - 2017.04.04 at 09h 35m 48s.xml">
+      <configuration name="Unittests in dispatchTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dispatchTest - 2017.04.04 at 09h 36m 11s.xml">
+      <configuration name="Unittests in dispatchTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dispatchTest - 2017.04.04 at 09h 36m 40s.xml">
+      <configuration name="Unittests in dispatchTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dispatchTest - 2017.04.04 at 09h 36m 52s.xml">
+      <configuration name="Unittests in dispatchTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dispatchTest - 2017.04.04 at 09h 37m 59s.xml">
+      <configuration name="Unittests in dispatchTest" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Unittests_in_dispatchTest - 2017.04.04 at 09h 38m 41s.xml">
+      <configuration name="Unittests in dispatchTest" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1110" y="0" width="1893" height="1931" extended-state="0" />
-    <editor active="false" />
+    <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24725877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="526" y="42" width="327" height="644" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24725877" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="526" y="42" width="327" height="644" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35798818" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3480597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36119404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3480597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -655,7 +656,8 @@
     <MESSAGE value="2017-02-20" />
     <MESSAGE value="2017-02-21" />
     <MESSAGE value="2017-03-20" />
-    <option name="LAST_COMMIT_MESSAGE" value="2017-03-20" />
+    <MESSAGE value="2017-04-04" />
+    <option name="LAST_COMMIT_MESSAGE" value="2017-04-04" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -775,8 +777,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/wewef.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="262" column="0" lean-forward="true" selection-start-line="262" selection-start-column="0" selection-end-line="262" selection-end-column="0" />
+        <state relative-caret-position="1387">
+          <caret line="289" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="289" selection-end-column="0" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
@@ -785,30 +787,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="158" column="76" lean-forward="true" selection-start-line="158" selection-start-column="76" selection-end-line="158" selection-end-column="76" />
+        <state relative-caret-position="551">
+          <caret line="184" column="62" lean-forward="false" selection-start-line="184" selection-start-column="62" selection-end-line="184" selection-end-column="62" />
           <folding>
             <element signature="e#0#29#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="839">
-          <caret line="508" column="26" lean-forward="false" selection-start-line="508" selection-start-column="26" selection-end-line="508" selection-end-column="26" />
+        <state relative-caret-position="540">
+          <caret line="72" column="0" lean-forward="true" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
           <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py">
+    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1559">
-          <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="2" selection-end-line="63" selection-end-column="23" />
+        <state relative-caret-position="452">
+          <caret line="613" column="25" lean-forward="true" selection-start-line="613" selection-start-column="25" selection-end-line="613" selection-end-column="25" />
           <folding>
-            <element signature="e#0#15#0" expanded="true" />
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

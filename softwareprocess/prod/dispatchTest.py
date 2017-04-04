@@ -2,6 +2,7 @@ import unittest
 import softwareprocess.prod.dispatch as dispatch
 import math
 import string
+import time
 
 
 
@@ -58,9 +59,19 @@ u = '1234.0'
 o='123453456'
 test1='  '
 test2=''
-print type(test1)
+x1=int(x)
+print type(x)
 print type(test2)
 ominutes='{}'
+
+DateStr='2001-01-01'
+try:
+    FullDate = DateStr.split('-')
+
+except:
+    print 123
+
+
 # print float(ominutes)
 # print type()
 
