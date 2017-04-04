@@ -605,7 +605,7 @@ def dispatch(values=None,dip=None):
         obstime = values['time']
 
         try:
-            if ":" in time:
+            if ":" in obstime:
                 fulldate = time.strptime(obstime, "%H:%M:%S")
 
         except:
