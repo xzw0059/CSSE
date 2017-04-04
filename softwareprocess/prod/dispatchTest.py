@@ -64,6 +64,10 @@ import time
 # print type(test2)
 # ominutes='{}'
 
+u1=float(123)
+
+print u1
+
 DateStr='2001-01-01'
 try:
     FullDate = DateStr.split('-')

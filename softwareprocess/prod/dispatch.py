@@ -200,9 +200,6 @@ def dispatch(values=None,dip=None):
         else:
             dip = 0
 
-
-
-
         refraction=( -0.00452*int(p))/(273+tc)/math.tan(math.radians(ominutes/60+int(fulldate[0])))
         altitude0 = ominutes/60+int(fulldate[0]) + dip + refraction
         # tempalt = {}
@@ -543,57 +540,58 @@ def dispatch(values=None,dip=None):
         #     return values
 
         try:
-            DateYear = int(fulldate[0])
+            Obs_Year = int(fulldate[0])
         except:
-            values['error'] = 'DateYear is invalid'
+            values['error'] = 'Obs_Year is invalid'
             return values
 
         try:
-            DateMonth = int(fulldate[1])
+            obs_month = int(fulldate[1])
         except:
             values['error'] = 'DateMooth is invalid'
             return values
 
         try:
-            DateDay = int(fulldate[2])
+            obs_day = int(fulldate[2])
         except:
-            values['error'] = 'DateDay is invalid'
+            values['error'] = 'obs_day is invalid'
             return values
 
 
-        if  not (DateYear >= 2001 and DateYear <= 2016):
-            values['error'] = 'DateYear is invalid'
+        if  not (Obs_Year >= 2001 and Obs_Year <= 2016):
+            values['error'] = 'Obs_Year is invalid'
             # __not in 0~90
             return values
 
-        if  not (DateMonth >= 1 and DateYear <= 12):
-            values['error'] = 'DateYear is invalid'
+
+        if  not (obs_month >= 1 and Obs_Year <= 12):
+            values['error'] = 'Obs_Year is invalid'
             # __not in 0~90
             return values
 
         bigmonth ={1,3,5,7,8,10,12}
         smallmonth = {4,6,9,11}
 
-        if (DateMonth in bigmonth):
-            if  not (DateDay >= 1 and DateYear <= 31):
-                values['error'] = 'DateYear is invalid'
+        if (obs_month in bigmonth):
+            if  not (obs_day >= 1 and Obs_Year <= 31):
+                values['error'] = 'Obs_Year is invalid'
             # __not in 0~90
                 return values
 
-        if (DateMonth in smallmonth):
-            if  not (DateDay >= 1 and DateYear <= 30):
-                values['error'] = 'DateYear is invalid'
+        if (obs_month in smallmonth):
+            if  not (obs_day >= 1 and Obs_Year <= 30):
+                values['error'] = 'Obs_Year is invalid'
             # __not in 0~90
                 return values
 
-        if (DateYear % 4 == 0):
-            if  not (DateDay >= 1 and DateYear <= 29):
-                values['error'] = 'DateYear is invalid'
+        if (Obs_Year % 4 == 0):
+            if  not (obs_day >= 1 and Obs_Year <= 29):
+                values['error'] = 'Obs_Year is invalid'
             # __not in 0~90
                 return values
-        if (DateYear % 4 != 0):
-            if  not (DateDay >= 1 and DateYear <= 28):
-                values['error'] = 'DateYear is invalid'
+        if (Obs_Year % 4 != 0):
+            if  not (obs_day >= 1 and Obs_Year <= 28):
+                values['error'] = 'Obs_Year is invalid'
             # __not in 0~90
                 return values
 
@@ -606,7 +604,7 @@ def dispatch(values=None,dip=None):
 
         try:
             if ":" in obstime:
-                fulldate = time.strptime(obstime, "%H:%M:%S")
+                obstimedictionary = time.strptime(obstime, "%H:%M:%S")
 
         except:
 
@@ -616,7 +614,46 @@ def dispatch(values=None,dip=None):
 
 
         GHAAries20010101 = '100d42.6'
+        differrence = Obs_Year - 2001
+        GHAAriesDecreases='-0d14.31667'
 
+        CumulativeProgresNum=differrence*(-14.31667/60)
+        CPint=int(CumulativeProgresNum)
+        CPSmallnum=(CumulativeProgresNum-CPint)*60
+        CumulativeProgresStr=str(CPint)+ 'd' + str(round(CPSmallnum,1))
+
+        LYNum= int((differrence+1)/4)
+
+        AmountOfDailyRoataAbs=0.59/60
+        TotalProgressionNum=AmountOfDailyRoataAbs * LYNum
+        TotalProgressionNumInt=int(TotalProgressionNum)
+        TotalProgressionNumSmallNum=(TotalProgressionNum-TotalProgressionNumInt)*60
+        TotalProgressionStr=str(TotalProgressionNumInt)+'D'+str(TotalProgressionNumSmallNum)
+
+        GHAAries20010101Numlist = GHAAries20010101.split('d')
+        GHAAries20010101Int=GHAAries20010101Numlist[0]
+        GHAAries20010101SmallNum=float(GHAAries20010101Numlist[1])/60
+
+
+
+        GHAAriesObsY0101Num=GHAAries20010101Int+round(GHAAries20010101SmallNum,1)+CPint+round(CPSmallnum,1)+TotalProgressionNumInt+round(TotalProgressionNumSmallNum,1)
+        GHAAriesObsY0101NumInt=int(GHAAriesObsY0101Num)
+        GHAAriesObsY0101SmallNum=GHAAriesObsY0101Num-GHAAries20010101Int
+        GHAAriesObsY0101NumStr=str(GHAAries20010101Int)+'d'+str(round(GHAAriesObsY0101SmallNum),1)
+
+        CalDate1=datetime.datetime(Obs_Year,01,01,00,00,00)
+        CalDate2=datetime.datetime(fulldate,obstimedictionary)
+
+        NumberOfSecondsBetweenObsYear=(CalDate1-CalDate2).seconds
+        AmountOfRotationNum=NumberOfSecondsBetweenObsYear/81164.1*360
+        AmountOfRotationNumInt=int(AmountOfRotationNum)
+        AmountOfRotationNumSmallNum=(AmountOfRotationNum-AmountOfRotationNumInt)*60
+        AmountOfRotationNumStr=str(AmountOfRotationNumInt)+'d'+str(AmountOfRotationNumSmallNum)
+
+        GHAAriesObsYAndDAndHNum=GHAAriesObsY0101Num+AmountOfRotationNum
+
+        # C
+        
 
 
 
