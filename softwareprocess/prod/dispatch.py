@@ -631,17 +631,19 @@ def dispatch(values=None,dip=None):
         TotalProgressionStr=str(TotalProgressionNumInt)+'D'+str(TotalProgressionNumSmallNum)
 
         GHAAries20010101Numlist = GHAAries20010101.split('d')
-        GHAAries20010101Int=GHAAries20010101Numlist[0]
+        GHAAries20010101Int=float(GHAAries20010101Numlist[0])
         GHAAries20010101SmallNum=float(GHAAries20010101Numlist[1])/60
 
 
 
-        GHAAriesObsY0101Num=GHAAries20010101Int+round(GHAAries20010101SmallNum,1)+CPint+round(CPSmallnum,1)+TotalProgressionNumInt+round(TotalProgressionNumSmallNum,1)
+        GHAAriesObsY0101Num=GHAAries20010101Int+round(float(GHAAries20010101SmallNum),1)+CPint+round(CPSmallnum,1)+TotalProgressionNumInt+round(TotalProgressionNumSmallNum,1)
         GHAAriesObsY0101NumInt=int(GHAAriesObsY0101Num)
         GHAAriesObsY0101SmallNum=GHAAriesObsY0101Num-GHAAries20010101Int
-        GHAAriesObsY0101NumStr=str(GHAAries20010101Int)+'d'+str(round(GHAAriesObsY0101SmallNum),1)
+        GHAAriesObsY0101NumStr=str(GHAAries20010101Int)+'d'+str(round(GHAAriesObsY0101SmallNum,1))
 
         CalDate1=datetime.datetime(Obs_Year,01,01,00,00,00)
+        DateAndtime=fulldate
+        DateAndtime
         CalDate2=datetime.datetime(fulldate,obstimedictionary)
 
         NumberOfSecondsBetweenObsYear=(CalDate1-CalDate2).seconds
@@ -652,8 +654,38 @@ def dispatch(values=None,dip=None):
 
         GHAAriesObsYAndDAndHNum=GHAAriesObsY0101Num+AmountOfRotationNum
 
-        # C
-        
+        # C.  Calculate the star's GHA
+
+        SHAStarNumList=SHAStar.split('d')
+
+        GHAStarNum=GHAAriesObsYAndDAndHNum+float(SHAStarNumList[0])+float(SHAStarNumList[1])/60
+
+        if (GHAStarNum>=360):
+            GHAStarNum=GHAStarNum-360
+
+        if (GHAStarNum<0):
+            GHAStarNum=GHAStarNum+360
+
+        if (GHAStarNum>=360):
+            GHAStarNum=GHAStarNum-360
+
+        if (GHAStarNum<0):
+            GHAStarNum=GHAStarNum+360
+
+        if (GHAStarNum>=360):
+            GHAStarNum=GHAStarNum-360
+
+        if (GHAStarNum<0):
+            GHAStarNum=GHAStarNum+360
+
+        GHAStarNumInt=int(GHAStarNum)
+        GHAStarSmallNum=(GHAStarNum-GHAStarNumInt)*60
+        GHAStarStr=str(GHAStarNumInt)+'d'+str(GHAStarSmallNum)
+
+        values['long']= GHAStarStr
+        values['lat']= lattitude
+
+
 
 
 
