@@ -267,7 +267,6 @@ def dispatch(values=None,dip=None):
     elif(values['op'] == 'predict'):
 
         if (not('body' in values)):
-            values={}
             values['error'] = 'mandatory information is missing'
             return values
 
