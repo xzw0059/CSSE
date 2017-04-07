@@ -270,6 +270,9 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
+        Obody= values['error']
+        Obody.
+
         elif(values['body'] == 'Alpheratz'):
             SHAStar = '357d41.7'
             Dec =lattitude = '29d10.9'

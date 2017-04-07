@@ -45,8 +45,8 @@
       <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="710">
-              <caret line="718" column="29" lean-forward="true" selection-start-line="718" selection-start-column="29" selection-end-line="718" selection-end-column="29" />
+            <state relative-caret-position="643">
+              <caret line="273" column="14" lean-forward="false" selection-start-line="273" selection-start-column="14" selection-end-line="273" selection-end-column="14" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -134,7 +134,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-13" />
     <option name="y" value="-13" />
-    <option name="width" value="3026" />
+    <option name="width" value="3014" />
     <option name="height" value="1946" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -632,10 +632,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
-    <editor active="false" />
+    <frame x="-13" y="-13" width="3014" height="1946" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15454853" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="526" y="42" width="327" height="644" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15449916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="526" y="42" width="327" height="644" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -811,8 +811,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="710">
-          <caret line="718" column="29" lean-forward="true" selection-start-line="718" selection-start-column="29" selection-end-line="718" selection-end-column="29" />
+        <state relative-caret-position="643">
+          <caret line="273" column="14" lean-forward="false" selection-start-line="273" selection-start-column="14" selection-end-line="273" selection-end-column="14" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
