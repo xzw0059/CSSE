@@ -712,12 +712,12 @@ def dispatch(values=None,dip=None):
         GHAStarStr=str(GHAStarNumInt)+'d'+str(GHAStarSmallNum)
 
 
-        if (not('long' in values)):
-            values['error'] = 'no op is specified'
+        if ('long' in values):
+            values['error'] = 'long in values'
             return values
 
         if ('lat' in values):
-            values['error'] = 'no op is specified'
+            values['error'] = 'lat in values'
             return values
 
         values['long']= GHAStarStr
