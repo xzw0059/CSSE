@@ -711,6 +711,15 @@ def dispatch(values=None,dip=None):
         GHAStarSmallNum=round((GHAStarNum-int(GHAStarNum))*60,1)
         GHAStarStr=str(GHAStarNumInt)+'d'+str(GHAStarSmallNum)
 
+
+        if (not('long' in values)):
+            values['error'] = 'no op is specified'
+            return values
+
+        if ('lat' in values):
+            values['error'] = 'no op is specified'
+            return values
+
         values['long']= GHAStarStr
         values['lat']= lattitude
 
