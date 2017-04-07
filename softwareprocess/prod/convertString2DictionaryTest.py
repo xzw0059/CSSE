@@ -169,7 +169,7 @@ class convertString2DictionaryTest(TestCase):
         result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-99-17', 'time': '03:15:42', 'error':'invalid date'}
         self.assertDictEqual(dispatch.dispatch(values),result)
 
-    def test5_200_030_InvalidValues1(self):
+    def test5_200_030_InvalidValues2(self):
         values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:99'}
         result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:99', 'error':'invalid time'}
         self.assertDictEqual(dispatch.dispatch(values),result)
