@@ -270,242 +270,243 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-        Obody= values['error']
-        Obody.
 
-        elif(values['body'] == 'Alpheratz'):
+        obody= values['body']
+        lowerbody=obody.lower()
+
+        if(lowerbody == 'alpheratz'):
             SHAStar = '357d41.7'
             Dec =lattitude = '29d10.9'
 
-        elif(values['body'] == 'Ankaa'):
+        elif(lowerbody == 'ankaa'):
             SHAStar = '353d14.1'
             Dec =lattitude = '-42d13.4'
 
-        elif(values['body'] == 'Schedar'):
+        elif(lowerbody == 'schedar'):
             SHAStar = '349d38.4'
             Dec =lattitude = '56d37.7'
 
-        elif(values['body'] == 'Diphda'):
+        elif(lowerbody == 'diphda'):
             SHAStar = '348d54.1'
             Dec =lattitude = '-17d54.1'
 
-        elif(values['body'] == 'Achernar'):
+        elif(lowerbody == 'achernar'):
             SHAStar = '335d25.5'
             Dec =lattitude = '-57d09.7'
 
-        elif(values['body'] == 'Hamal'):
+        elif(lowerbody == 'hamal'):
             SHAStar = '327d58.7'
             Dec =lattitude = '23d32.3'
 
-        elif(values['body'] == 'Polaris'):
+        elif(lowerbody == 'polaris'):
             SHAStar = '316d41.3'
             Dec =lattitude = '89d20.1'
 
-        elif(values['body'] == 'Akamar'):
+        elif(lowerbody == 'akamar'):
             SHAStar = '315d16.8'
             Dec =lattitude = '-40d14.8'
 
-        elif(values['body'] == 'Menkar'):
+        elif(lowerbody == 'menkar'):
             SHAStar = '314d13.0'
             Dec =lattitude = '4d09.0'
 
-        elif(values['body'] == 'Mirfak'):
+        elif(lowerbody == 'mirfak'):
             SHAStar = '308d37.4'
             Dec =lattitude = '49d55.1'
 
-        elif(values['body'] == 'Aldebaran'):
+        elif(lowerbody == 'aldebaran'):
             SHAStar = '290d47.1'
             Dec =lattitude = '16d32.3'
 
-        elif(values['body'] == 'Rigel'):
+        elif(lowerbody == 'rigel'):
             SHAStar = '281d10.1'
             Dec =lattitude = '-8d11.3'
 
-        elif(values['body'] == 'Capella'):
+        elif(lowerbody == 'capella'):
             SHAStar = '280d31.4'
             Dec =lattitude = '46d00.7'
 
-        elif(values['body'] == 'Bellatrix'):
+        elif(lowerbody == 'bellatrix'):
             SHAStar = '278d29.8'
             Dec =lattitude = '6d21.6'
 
-        elif(values['body'] == 'Elnath'):
+        elif(lowerbody == 'elnath'):
             SHAStar = '278d10.1'
             Dec =lattitude = '28d37.1'
 
-        elif(values['body'] == 'Alnilam'):
+        elif(lowerbody == 'alnilam'):
             SHAStar = '275d44.3'
             Dec =lattitude = '-1d11.8'
 
-        elif(values['body'] == 'Betelgeuse'):
+        elif(lowerbody == 'betelgeuse'):
             SHAStar = '270d59.1'
             Dec =lattitude = '7d24.3'
 
-        elif(values['body'] == 'Canopus'):
+        elif(lowerbody == 'canopus'):
             SHAStar = '263d54.8'
             Dec =lattitude = '-52d42.5'
 
-        elif(values['body'] == 'Sirius'):
+        elif(lowerbody == 'sirius'):
             SHAStar = '258d31.7'
             Dec =lattitude = '-16d44.3'
 
-        elif(values['body'] == 'Adara'):
+        elif(lowerbody == 'adara'):
             SHAStar = '255d10.8'
             Dec =lattitude = '-28d59.9'
 
-        elif(values['body'] == 'Procyon'):
+        elif(lowerbody == 'procyon'):
             SHAStar = '244d57.5'
             Dec =lattitude = '5d10.9'
 
-        elif(values['body'] == 'Pollux'):
+        elif(lowerbody == 'pollux'):
             SHAStar = '243d25.2'
             Dec =lattitude = '27d59.0'
 
-        elif(values['body'] == 'Avior'):
+        elif(lowerbody == 'avior'):
             SHAStar = '234d16.6'
             Dec =lattitude = '-59d33.7'
 
-        elif(values['body'] == 'Suhail'):
+        elif(lowerbody == 'suhail'):
             SHAStar = '222d50.7'
             Dec =lattitude = '-43d29.8'
 
-        elif(values['body'] == 'Miaplacidus'):
+        elif(lowerbody == 'miaplacidus'):
             SHAStar = '221d38.4'
             Dec =lattitude = '-69d46.9'
 
-        elif(values['body'] == 'Alphard'):
+        elif(lowerbody == 'alphard'):
             SHAStar = '217d54.1'
             Dec =lattitude = '-8d43.8'
 
-        elif(values['body'] == 'Regulus'):
+        elif(lowerbody == 'regulus'):
             SHAStar = '207d41.4'
             Dec =lattitude = '11d53.2'
 
-        elif(values['body'] == 'Dubhe'):
+        elif(lowerbody == 'dubhe'):
             SHAStar = '193d49.4'
             Dec =lattitude = '61d39.5'
 
-        elif(values['body'] == 'Denebola'):
+        elif(lowerbody == 'denebola'):
             SHAStar = '182d31.8'
             Dec =lattitude = '14d28.9'
 
-        elif(values['body'] == 'Gienah'):
+        elif(lowerbody == 'gienah'):
             SHAStar = '175d50.4'
             Dec =lattitude = '-17d37.7'
 
-        elif(values['body'] == 'Acrux'):
+        elif(lowerbody == 'acrux'):
             SHAStar = '173d07.2'
             Dec =lattitude = '-63d10.9'
 
-        elif(values['body'] == 'Gacrux'):
+        elif(lowerbody == 'gacrux'):
             SHAStar = '171d58.8'
             Dec =lattitude = '-57d11.9'
 
-        elif(values['body'] == 'Alioth'):
+        elif(lowerbody == 'alioth'):
             SHAStar = '166d19.4'
             Dec =lattitude = '55d52.1'
 
-        elif(values['body'] == 'Spica'):
+        elif(lowerbody == 'spica'):
             SHAStar = '158d29.5'
             Dec =lattitude = '-11d14.5'
 
-        elif(values['body'] == 'Alcaid'):
+        elif(lowerbody == 'alcaid'):
             SHAStar = '152d57.8'
             Dec =lattitude = '49d13.8'
 
-        elif(values['body'] == 'Hadar'):
+        elif(lowerbody == 'hadar'):
             SHAStar = '148d45.5'
             Dec =lattitude = '-60d26.6'
 
-        elif(values['body'] == 'Menkent'):
+        elif(lowerbody == 'menkent'):
             SHAStar = '148d05.6'
             Dec =lattitude = '-36d26.6'
 
-        elif(values['body'] == 'Arcturus'):
+        elif(lowerbody == 'arcturus'):
             SHAStar = '145d54.2'
             Dec =lattitude = '19d06.2'
 
-        elif(values['body'] == 'Rigil Kent.'):
+        elif(lowerbody == 'rigil Kent.'):
             SHAStar = '139d49.6'
             Dec =lattitude = '-60d53.6'
 
-        elif(values['body'] == 'Zubenelg.'):
+        elif(lowerbody == 'zubenelg.'):
             SHAStar = '137d03.7'
             Dec =lattitude = '-16d06.3'
 
-        elif(values['body'] == 'Kochab'):
+        elif(lowerbody == 'kochab'):
             SHAStar = '137d21.0'
             Dec =lattitude = '74d05.2'
 
-        elif(values['body'] == 'Alphecca'):
+        elif(lowerbody == 'alphecca'):
             SHAStar = '126d09.9'
             Dec =lattitude = '26d39.7'
 
-        elif(values['body'] == 'Antares'):
+        elif(lowerbody == 'antares'):
             SHAStar = '112d24.4'
             Dec =lattitude = '-26d27.8'
 
-        elif(values['body'] == 'Atria'):
+        elif(lowerbody == 'atria'):
             SHAStar = '107d25.2'
             Dec =lattitude = '-69d03.0'
 
-        elif(values['body'] == 'Sabik'):
+        elif(lowerbody == 'sabik'):
             SHAStar = '102d10.9'
             Dec =lattitude = '-15d44.4'
 
-        elif(values['body'] == 'Shaula'):
+        elif(lowerbody == 'shaula'):
             SHAStar = '96d20.0'
             Dec =lattitude = '-37d06.'
 
-        elif(values['body'] == 'Rasalhague'):
+        elif(lowerbody == 'rasalhague'):
             SHAStar = '96d05.2'
             Dec =lattitude = '12d33.1'
 
-        elif(values['body'] == 'Etamin'):
+        elif(lowerbody == 'etamin'):
             SHAStar = '90d45.9'
             Dec =lattitude = '51d29.3'
 
-        elif(values['body'] == 'Kaus Aust.'):
+        elif(lowerbody == 'kaus aust.'):
             SHAStar = '83d41.9'
             Dec =lattitude = '-34d22.4'
 
-        elif(values['body'] == 'Vega'):
+        elif(lowerbody == 'vega'):
             SHAStar = '80d38.2'
             Dec =lattitude = '38d48.1'
 
-        elif(values['body'] == 'Nunki'):
+        elif(lowerbody == 'nunki'):
             SHAStar = '75d56.6'
             Dec =lattitude = '-26d16.4'
 
-        elif(values['body'] == 'Altair'):
+        elif(lowerbody == 'altair'):
             SHAStar = '62d06.9'
             Dec =lattitude = '8d54.8'
 
-        elif(values['body'] == 'Peacock'):
+        elif(lowerbody == 'peacock'):
             SHAStar = '53d17.2'
             Dec =lattitude = '-56d41.0'
 
-        elif(values['body'] == 'Deneb'):
+        elif(lowerbody == 'deneb'):
             SHAStar = '49d30.7'
             Dec =lattitude = '45d20.5'
 
-        elif(values['body'] == 'Enif'):
+        elif(lowerbody == 'enif'):
             SHAStar = '33d45.7'
             Dec =lattitude = '9d57.0'
 
-        elif(values['body'] == 'Alnair'):
+        elif(lowerbody == 'alnair'):
             SHAStar = '27d42.0'
             Dec =lattitude = '-46d53.1'
 
-        elif(values['body'] == 'Fomalhaut'):
+        elif(lowerbody == 'fomalhaut'):
             SHAStar = '15d22.4'
             Dec =lattitude = '-29d32.3'
 
-        elif(values['body'] == 'Scheat'):
+        elif(lowerbody == 'scheat'):
             SHAStar = '13d51.8'
             Dec =lattitude = '28d10.3'
 
-        elif(values['body'] == 'Markab'):
+        elif(lowerbody == 'markab'):
             SHAStar = '13d36.7'
             Dec =lattitude = '15d17.6'
 
