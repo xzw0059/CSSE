@@ -2,6 +2,7 @@ import math
 import datetime
 import time
 import softwareprocess.prod.dispatch as DP
+import unittest
 
 def dispatch(values=None,dip=None):
 
@@ -777,3 +778,4 @@ result = int(data[0]) + float(data[1])/60
 # values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
 # print values['altitude']
 print dispatch(values)
+dispatch.assertAlmostEquals(result, 11.695, delta=1.695)
