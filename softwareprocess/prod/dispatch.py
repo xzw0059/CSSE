@@ -726,7 +726,7 @@ def dispatch(values=None,dip=None):
         print GHAAriesObsY0101NumInt
         print GHAAriesObsY0101SmallNum
         print AmountOfRotationNumInt%360
-        print AmountOfRotationNum-AmountOfRotationNumInt
+        print 'AmountOfRotationNum-AmountOfRotationNumInt ='AmountOfRotationNum-AmountOfRotationNumInt
 
         print GHAAriesObsYAndDAndHNumRad
         # C.  Calculate the star's GHA
