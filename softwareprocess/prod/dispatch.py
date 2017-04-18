@@ -272,7 +272,12 @@ def dispatch(values=None,dip=None):
 
 
         obody= values['body']
-        lowerbody=obody.lower()
+        try:
+            lowerbody=obody.lower()
+
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
 
         if(lowerbody == 'alpheratz'):
             SHAStar = '357d41.7'
