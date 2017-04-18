@@ -780,10 +780,10 @@ def dispatch(values=None,dip=None):
 
 
 
-values = {'op': 'predict', 'body': 'Betelgeuse'}
-data = dispatch(values).get('long').split('d')
-result = int(data[0]) + float(data[1])/60
 
+values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
+
+result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
 
 # values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # print dispatch(values)
@@ -791,4 +791,5 @@ result = int(data[0]) + float(data[1])/60
 # values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
 # print values['altitude']
 print dispatch(values)
-dispatch.assertAlmostEquals(result, 11.695, delta=1.695)
+print dispatch(result)
+# dispatch.assertAlmostEquals(result, 11.695, delta=1.695)
