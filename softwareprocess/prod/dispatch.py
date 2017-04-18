@@ -280,11 +280,11 @@ def dispatch(values=None,dip=None):
             return values
 
         if ('long' in values):
-            values['error'] = 'long in values'
+            values['error'] = 'long in values is inccorect'
             return values
 
         if ('lat' in values):
-            values['error'] = 'lat in values'
+            values['error'] = 'lat in values is inccorect'
             return values
 
         if(lowerbody == 'alpheratz'):
@@ -726,7 +726,8 @@ def dispatch(values=None,dip=None):
         print GHAAriesObsY0101NumInt
         print GHAAriesObsY0101SmallNum
         print AmountOfRotationNumInt%360
-        print 'AmountOfRotationNum-AmountOfRotationNumInt ='+ AmountOfRotationNum-AmountOfRotationNumInt
+        print 'AmountOfRotationNum-AmountOfRotationNumInt ='
+        print AmountOfRotationNum-AmountOfRotationNumInt
 
         print GHAAriesObsYAndDAndHNumRad
         # C.  Calculate the star's GHA
