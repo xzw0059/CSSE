@@ -280,8 +280,11 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-        if ('long' in values):
+
+        if ('long' in values ):
+            # if (count1 !=1):
             values['error'] = 'long in values is incorrect'
+                # count1=count1+1
             return values
 
         if ('lat' in values):
