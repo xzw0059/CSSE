@@ -656,7 +656,12 @@ def dispatch(values=None,dip=None):
 
         # print CumulativeProgresStr
 
-        LYNum= int((differrence+1)/4 -1)
+        if (differrence<3):
+            LYNum=0
+        elif (differrence== 3):
+            LYNum=1
+        else:
+            LYNum= int((differrence+1)/4)
         # print LYNum
         AmountOfDailyRoataAbs=float(0.983)
         # print AmountOfDailyRoataAbs
