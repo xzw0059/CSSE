@@ -1,6 +1,8 @@
 import math
 import datetime
 import time
+import unittest
+import softwareprocess.prod.dispatch as DP
 
 
 def dispatch(values=None,dip=None):
@@ -280,11 +282,11 @@ def dispatch(values=None,dip=None):
             return values
 
         if ('long' in values):
-            values['error'] = 'long in values is inccorect'
+            values['error'] = 'long in values is incorrect'
             return values
 
         if ('lat' in values):
-            values['error'] = 'lat in values is inccorect'
+            values['error'] = 'lat in values is incorrect'
             return values
 
         if(lowerbody == 'alpheratz'):

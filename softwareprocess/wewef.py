@@ -1,8 +1,8 @@
 import math
 import datetime
 import time
-import softwareprocess.prod.dispatch as DP
 import unittest
+# import softwareprocess.prod.dispatch as DP
 
 def dispatch(values=None,dip=None):
 
@@ -280,13 +280,13 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-        # if ('long' in values):
-        #     values['error'] = 'long in values'
-        #     return values
-        #
-        # if ('lat' in values):
-        #     values['error'] = 'lat in values'
-        #     return values
+        if ('long' in values):
+            values['error'] = 'long in values is incorrect'
+            return values
+
+        if ('lat' in values):
+            values['error'] = 'lat in values is incorrect'
+            return values
 
         if(lowerbody == 'alpheratz'):
             SHAStar = '357d41.7'
@@ -727,6 +727,7 @@ def dispatch(values=None,dip=None):
         print GHAAriesObsY0101NumInt
         print GHAAriesObsY0101SmallNum
         print AmountOfRotationNumInt%360
+        print 'AmountOfRotationNum-AmountOfRotationNumInt ='
         print AmountOfRotationNum-AmountOfRotationNumInt
 
         print GHAAriesObsYAndDAndHNumRad
@@ -734,7 +735,7 @@ def dispatch(values=None,dip=None):
 
         SHAStarNumList=SHAStar.split('d')
 
-        GHAStarNum=GHAAriesObsYAndDAndHNumRad+int(SHAStarNumList[0])+float(SHAStarNumList[1])/60
+        GHAStarNum=GHAAriesObsYAndDAndHNumRad+float(SHAStarNumList[0])+float(SHAStarNumList[1])/60
 
 
 
@@ -767,8 +768,9 @@ def dispatch(values=None,dip=None):
 
 
 
+
 values = {'op': 'predict', 'body': 'Betelgeuse'}
-data = DP.dispatch(values).get('long').split('d')
+data = dispatch(values).get('long').split('d')
 result = int(data[0]) + float(data[1])/60
 
 
