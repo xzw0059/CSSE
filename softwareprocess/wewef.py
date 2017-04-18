@@ -735,13 +735,13 @@ def dispatch(values=None,dip=None):
         GHAStarStr=str(GHAStarNumInt)+'d'+str(GHAStarSmallNum)
 
 
-        if ('long' in values):
-            values['error'] = 'long in values'
-            return values
+        # if ('long' in values):
+        #     values['error'] = 'long in values'
+        #     return values
 
-        if ('lat' in values):
-            values['error'] = 'lat in values'
-            return values
+        # if ('lat' in values):
+        #     values['error'] = 'lat in values'
+        #     return values
 
         values['long']= GHAStarStr
         values['lat']= lattitude
