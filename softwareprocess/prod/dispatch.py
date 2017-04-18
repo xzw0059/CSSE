@@ -605,9 +605,9 @@ def dispatch(values=None,dip=None):
 
         obstime = values['time']
 
-        if ":" not in obstime:
-            values['error'] = 'invalid time'
-            return values
+        # if ":" not in obstime:
+        #     values['error'] = 'invalid time'
+        #     return values
 
         try:
             if ":" in obstime:
