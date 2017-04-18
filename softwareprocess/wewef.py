@@ -3,12 +3,6 @@ import datetime
 import time
 import unittest
 import softwareprocess.prod.dispatch as DP
-import math
-import datetime
-import time
-# import unittest
-# import softwareprocess.prod.dispatch as DP
-
 
 def dispatch(values=None,dip=None):
 
@@ -286,8 +280,11 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-        if ('long' in values):
+
+        if ('long' in values ):
+            # if (count1 !=1):
             values['error'] = 'long in values is incorrect'
+                # count1=count1+1
             return values
 
         if ('lat' in values):
@@ -357,6 +354,8 @@ def dispatch(values=None,dip=None):
         elif(lowerbody == 'alnilam'):
             SHAStar = '275d44.3'
             Dec =lattitude = '-1d11.8'
+
+# this is betelgeuse
 
         elif(lowerbody == 'betelgeuse'):
             SHAStar = '270d59.1'
@@ -661,11 +660,14 @@ def dispatch(values=None,dip=None):
 
         # print CumulativeProgresStr
 
-        if (differrence<3):
-            LYNum=0
-        else:
-            LYNum= int((differrence+1)/4)
+        LYNum= int((differrence+1)/4 -1)
+        if (LYNum<0):
+            LYNum = 0
+
+
+        print 'LYNum='
         print LYNum
+        # print LYNum
         AmountOfDailyRoataAbs=float(0.983)
         # print AmountOfDailyRoataAbs
         TotalProgressionNum=AmountOfDailyRoataAbs * LYNum
@@ -778,7 +780,9 @@ def dispatch(values=None,dip=None):
 
 
 
-
+values = {'op': 'predict', 'body': 'Betelgeuse'}
+data = dispatch(values).get('long').split('d')
+result = int(data[0]) + float(data[1])/60
 
 
 # values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
@@ -786,10 +790,5 @@ def dispatch(values=None,dip=None):
         # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
 # print values['altitude']
-    print 123
-    print dispatch(values)
-
-    values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
-    data = DP.dispatch(values).get('long').split('d')
-    result = int(data[0]) + float(data[1]) / 60
-# self.assertAlmostEqual(result, 75.8933333333, delta=0.895)
+print dispatch(values)
+dispatch.assertAlmostEquals(result, 11.695, delta=1.695)
