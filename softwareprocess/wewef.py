@@ -734,7 +734,7 @@ def dispatch(values=None,dip=None):
 
         SHAStarNumList=SHAStar.split('d')
 
-        GHAStarNum=GHAAriesObsYAndDAndHNumRad+float(SHAStarNumList[0])+float(SHAStarNumList[1])/60
+        GHAStarNum=GHAAriesObsYAndDAndHNumRad+int(SHAStarNumList[0])+float(SHAStarNumList[1])/60
 
 
 
