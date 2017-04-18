@@ -610,6 +610,16 @@ def dispatch(values=None,dip=None):
         #     return values
 
         try:
+            if ":" not in obstime:
+                values['error'] = 'invalid time'
+                return values
+
+        except:
+
+            values['error'] = 'invalid time'
+            return values
+
+        try:
             if ":" in obstime:
                 obstimedictionary = time.strptime(obstime, "%H:%M:%S")
 
