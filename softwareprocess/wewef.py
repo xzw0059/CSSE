@@ -2,7 +2,7 @@ import math
 import datetime
 import time
 import unittest
-# import softwareprocess.prod.dispatch as DP
+import softwareprocess.prod.dispatch as DP
 
 def dispatch(values=None,dip=None):
 
@@ -355,6 +355,8 @@ def dispatch(values=None,dip=None):
             SHAStar = '275d44.3'
             Dec =lattitude = '-1d11.8'
 
+# this is betelgeuse
+
         elif(lowerbody == 'betelgeuse'):
             SHAStar = '270d59.1'
             Dec =lattitude = '7d24.3'
@@ -658,7 +660,16 @@ def dispatch(values=None,dip=None):
 
         # print CumulativeProgresStr
 
-        LYNum= int((differrence+1)/4 -1)
+        if (differrence<3):
+            LYNum=0
+        elif (differrence== 3):
+            LYNum=1
+        else:
+            LYNum= int((differrence+1)/4)
+
+
+        print 'LYNum='
+        print LYNum
         # print LYNum
         AmountOfDailyRoataAbs=float(0.983)
         # print AmountOfDailyRoataAbs
