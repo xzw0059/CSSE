@@ -279,6 +279,14 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
+        # if ('long' in values):
+        #     values['error'] = 'long in values'
+        #     return values
+        #
+        # if ('lat' in values):
+        #     values['error'] = 'lat in values'
+        #     return values
+
         if(lowerbody == 'alpheratz'):
             SHAStar = '357d41.7'
             Dec =lattitude = '29d10.9'
@@ -735,13 +743,7 @@ def dispatch(values=None,dip=None):
         GHAStarStr=str(GHAStarNumInt)+'d'+str(GHAStarSmallNum)
 
 
-        # if ('long' in values):
-        #     values['error'] = 'long in values'
-        #     return values
 
-        # if ('lat' in values):
-        #     values['error'] = 'lat in values'
-        #     return values
 
         values['long']= GHAStarStr
         values['lat']= lattitude
@@ -759,6 +761,7 @@ def dispatch(values=None,dip=None):
         values = {}
         values['error'] = 'op is not a legal operation'
         return values
+
 
 
 
