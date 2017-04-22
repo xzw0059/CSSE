@@ -729,16 +729,16 @@ def dispatch(values=None,dip=None):
         AmountOfRotationNumSmallNum=(AmountOfRotationNum-AmountOfRotationNumInt)*60
         AmountOfRotationNumStr=str(AmountOfRotationNumInt%360)+'d'+str(round(AmountOfRotationNumSmallNum,1))
 
-        print AmountOfRotationNumStr
+        # print AmountOfRotationNumStr
         GHAAriesObsYAndDAndHNumRad=GHAAriesObsY0101NumInt+GHAAriesObsY0101SmallNum+AmountOfRotationNumInt%360+AmountOfRotationNum-AmountOfRotationNumInt
 
-        print GHAAriesObsY0101NumInt
-        print GHAAriesObsY0101SmallNum
-        print AmountOfRotationNumInt%360
-        print 'AmountOfRotationNum-AmountOfRotationNumInt ='
-        print AmountOfRotationNum-AmountOfRotationNumInt
-
-        print GHAAriesObsYAndDAndHNumRad
+        # print GHAAriesObsY0101NumInt
+        # print GHAAriesObsY0101SmallNum
+        # print AmountOfRotationNumInt%360
+        # print 'AmountOfRotationNum-AmountOfRotationNumInt ='
+        # print AmountOfRotationNum-AmountOfRotationNumInt
+        #
+        # print GHAAriesObsYAndDAndHNumRad
         # C.  Calculate the star's GHA
 
         SHAStarNumList=SHAStar.split('d')
