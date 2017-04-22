@@ -372,7 +372,7 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
 
     def test300_1050ShouldReturnErrorIfTimeIsNumeric(self):
-        values = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': 19}
+        values = {'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17','time': 19}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
 
     def test300_1060ShouldReturnErrorIfHourInTimeIsInvalid(self):
