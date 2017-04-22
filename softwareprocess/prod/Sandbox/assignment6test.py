@@ -1,7 +1,7 @@
 from unittest import TestCase
 import softwareprocess.prod.dispatch as dispatch
 from softwareprocess import prod as cs2d
-import dispatch
+import softwareprocess.prod.dispatch as DP
 
 
 class convertString2DictionaryTest(TestCase):
