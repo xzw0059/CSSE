@@ -1154,13 +1154,13 @@ def dispatch(values=None,dip=None):
         ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(ocorrectedAltitudelist[1])
         print ocorrectedAltitudestr
 
-        #
-        print 'float(oassumedLatlist[0])='
-        print float(oassumedLatlist[0])
-        print 'float(oassumedLatlist[1])/60='
-        print float(oassumedLatlist[1])/60
-        print 'assumedLatnumber='
-        print assumedLatnumber
+        # #
+        # print 'float(oassumedLatlist[0])='
+        # print float(oassumedLatlist[0])
+        # print 'float(oassumedLatlist[1])/60='
+        # print float(oassumedLatlist[1])/60
+        # print 'assumedLatnumber='
+        # print assumedLatnumber
         #
         # ====test values
         # print round(math.sin(math.radians(latnumberrad)),3)
