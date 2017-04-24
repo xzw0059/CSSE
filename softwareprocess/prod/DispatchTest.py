@@ -518,7 +518,7 @@ class MyTestCase(unittest.TestCase):
         values={'op':'correct', 'lat':'16d32.3', 'long':'95d ', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
-    def test6__200_160_InValidValueslat1ismultyspaces(self):
+    def test6__200_160_InValidValueslong1ismultyspaces(self):
         values={'op':'correct', 'lat':'16d32.3', 'long':'95d   ', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
