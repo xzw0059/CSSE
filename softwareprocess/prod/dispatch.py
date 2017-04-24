@@ -797,7 +797,7 @@ def dispatch(values=None,dip=None):
             return values
 
         try:
-            (float(olatlist[1])== float(int(olatlist[1]*10))/10)
+            (float(olatlist[1])== float(int(olatlist[1])*10)/10)
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
