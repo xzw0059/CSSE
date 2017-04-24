@@ -1108,12 +1108,20 @@ def dispatch(values=None,dip=None):
         oassumedLongnumber=float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
 
         LHAnumber=float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
-        LHAlist=LHAnumber.split('.')
+
+        LHAnumberstr=str(LHAnumber)
+        LHAlist=LHAnumberstr.split('.')
         LHAstr=str(LHAlist[0])+'d'+str(LHAlist[1])
+
+        print 'LHAstr='
+        print LHAstr
 
         latnumber=float(olatlist[0])+float(olatlist[1])/60
         assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
         intermediateDistancenumber=math.sin(math.radians(longnumber))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumber))*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
+        print 'intermediateDistancenumber='
+        print intermediateDistancenumber
+
 
         return values    #This calculation is stubbed out
 
