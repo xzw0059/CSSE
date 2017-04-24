@@ -1150,6 +1150,13 @@ def dispatch(values=None,dip=None):
         # print 'assumedLatnumber='
         # print assumedLatnumber
 
+
+        print round(math.sin(math.radians(latnumberrad)),3)
+        print round(math.sin(math.radians(assumedLatnumber)),3)
+        print round(math.cos(math.radians(latnumberrad)),3)
+        print (math.cos(math.radians(assumedLatnumber)),3)
+
+        
         print 'round(math.cos(math.radians(assumedLatnumber)),3)='
         print round(math.cos(math.radians(assumedLatnumber)),3)
         #
