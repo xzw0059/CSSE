@@ -1143,9 +1143,11 @@ def dispatch(values=None,dip=None):
         intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),4)*round(math.sin(math.radians(assumedLatnumber)),4)+round(math.cos(math.radians(latnumberrad)),4)*round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(LHAnumber)),4)
         intermediateDistancenumber=round(intermediateDistancenumbero,3)
 
+
+        print intermediateDistancenumber
         correctedAltitudeas=math.asin(intermediateDistancenumber)
         print correctedAltitudeas
-        
+
 
         #
         # print 'float(oassumedLatlist[0])='
