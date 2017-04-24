@@ -775,8 +775,8 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'mandatory information is missing'
             return values
-        print olatlist[0]
-        print olatlist[1]
+        # print olatlist[0]
+        # print olatlist[1]
         # print olatlist[2]
         olatnotcoumt0 = olatlist[0].count('.')
         olatnotcoumt1 = olatlist[0].count('.')
