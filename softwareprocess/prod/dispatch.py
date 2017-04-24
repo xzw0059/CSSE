@@ -1147,7 +1147,8 @@ def dispatch(values=None,dip=None):
         print intermediateDistancenumber
         correctedAltitudeas=math.asin(intermediateDistancenumber)
         print correctedAltitudeas
-
+        correctedAltituderad=math.radians(correctedAltitudeas)
+        print correctedAltituderad
 
         #
         # print 'float(oassumedLatlist[0])='
