@@ -1134,7 +1134,7 @@ def dispatch(values=None,dip=None):
             latnumberrad=float(olatlist[0])-float(olatlist[1])/60
 
 
-        if (oassumedLatlist[0]>0):
+        if (float(oassumedLatlist[0])>0):
             assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
         else:
             assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
