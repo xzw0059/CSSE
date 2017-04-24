@@ -784,13 +784,13 @@ def dispatch(values=None,dip=None):
             values['error'] = 'not(-90<olatlist[0]>90)'
             return values
 
-        if(not(olatlist[0]==int(olatlist[0]))):
+        if(not(float(olatlist[0])==int(olatlist[0]))):
             values['error'] = 'olatlist[0] is not int0'
             return values
 
-        if(not(olatlist[0]==(olatlist[0]))):
-            values['error'] = 'olatlist[0] is not int1'
-            return values
+        # if(not(olatlist[0]==(olatlist[0]))):
+        #     values['error'] = 'olatlist[0] is not int1'
+        #     return values
 
         if(not(0<olatlist[1]>60)):
             values['error'] = 'not(0<olatlist[1]>60)'
