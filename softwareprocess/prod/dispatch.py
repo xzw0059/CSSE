@@ -1134,8 +1134,8 @@ def dispatch(values=None,dip=None):
 
         print 'latnumberrad'
         print latnumberrad
-        print 'math.sin(16.5383333333)='
-        print math.sin(16.5383333333)
+        print 'math.sin(math.radians(16.5383333333))='
+        print math.sin(math.radians(16.5383333333))
 
         print 'math.sin(math.radians(90))='
         print math.sin(math.radians(90))
