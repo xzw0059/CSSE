@@ -1140,8 +1140,8 @@ def dispatch(values=None,dip=None):
             assumedLatnumber=float(oassumedLatlist[0])-float(oassumedLatlist[1])/60
 
 
-        intermediateDistancenumber=round(math.sin(math.radians(latnumberrad)),3)*round(math.sin(math.radians(assumedLatnumber)),3)+round(math.cos(math.radians(latnumberrad)),3)*round(math.cos(math.radians(assumedLatnumber)),3)*round(math.cos(math.radians(LHAnumber)),3)
-
+        intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),3)*round(math.sin(math.radians(assumedLatnumber)),3)+round(math.cos(math.radians(latnumberrad)),3)*round(math.cos(math.radians(assumedLatnumber)),3)*round(math.cos(math.radians(LHAnumber)),3)
+        intermediateDistancenumber=round(intermediateDistancenumbero,3)
         #
         # print 'float(oassumedLatlist[0])='
         # print float(oassumedLatlist[0])
@@ -1149,6 +1149,7 @@ def dispatch(values=None,dip=None):
         # print float(oassumedLatlist[1])/60
         # print 'assumedLatnumber='
         # print assumedLatnumber
+
         print 'round(math.cos(math.radians(assumedLatnumber)),3)='
         print round(math.cos(math.radians(assumedLatnumber)),3)
         #
