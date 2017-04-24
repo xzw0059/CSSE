@@ -1158,6 +1158,8 @@ def dispatch(values=None,dip=None):
         ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(ocorrectedAltitudelist[1])
         print 'ocorrectedAltitudestr='
         print ocorrectedAltitudestr
+        print 'ocorrectedAltitudelist[1]rad'
+        print math.radians(float(ocorrectedAltitudelist[1]))
 
         # #
         # print 'float(oassumedLatlist[0])='
