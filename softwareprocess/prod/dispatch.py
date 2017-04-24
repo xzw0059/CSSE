@@ -778,12 +778,18 @@ def dispatch(values=None,dip=None):
         print olatlist[0]
         print olatlist[1]
         # print olatlist[2]
-
+        olatnotcoumt0 = olatlist[0].count('.')
+        olatnotcoumt1 = olatlist[0].count('.')
         try:
-            "." not in olatlist[0]
+            olatnotcoumt0!=0
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
+        try:
+            olatnotcoumt1!=1
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values        
         try:
             (-90<olatlist[0]>90)
         except:
