@@ -1140,17 +1140,17 @@ def dispatch(values=None,dip=None):
             assumedLatnumber=float(oassumedLatlist[0])-float(oassumedLatlist[1])/60
 
 
-        intermediateDistancenumber=round(math.sin(math.radians(latnumberrad)),3)*round(math.sin(math.radians(assumedLatnumber)),3)+math.cos(math.radians(latnumberrad))*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
+        intermediateDistancenumber=round(math.sin(math.radians(latnumberrad)),3)*round(math.sin(math.radians(assumedLatnumber)),3)+round(math.cos(math.radians(latnumberrad)),3)*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
 
-
-        print 'float(oassumedLatlist[0])='
-        print float(oassumedLatlist[0])
-        print 'float(oassumedLatlist[1])/60='
-        print float(oassumedLatlist[1])/60
-        print 'assumedLatnumber='
-        print assumedLatnumber
-        print 'round(math.sin(math.radians(assumedLatnumber)),3)='
-        print round(math.sin(math.radians(assumedLatnumber)),3)
+        #
+        # print 'float(oassumedLatlist[0])='
+        # print float(oassumedLatlist[0])
+        # print 'float(oassumedLatlist[1])/60='
+        # print float(oassumedLatlist[1])/60
+        # print 'assumedLatnumber='
+        # print assumedLatnumber
+        print 'round(math.cos(math.radians(latnumberrad)),3)='
+        print round(math.cos(math.radians(latnumberrad)),3)
 
         print 'math.sin(math.radians(90))='
         print math.sin(math.radians(90))
