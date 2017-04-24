@@ -783,8 +783,12 @@ def dispatch(values=None,dip=None):
         # print olatlist[0]
         # print olatlist[1]
         # print olatlist[2]
-        olatnotcoumt0 = olatlist[0].count('.')
-        olatnotcoumt1 = olatlist[1].count('.')
+        try:
+            olatnotcoumt0 = olatlist[0].count('.')
+            olatnotcoumt1 = olatlist[1].count('.')
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
 
         print olatnotcoumt1
         try:
@@ -793,7 +797,8 @@ def dispatch(values=None,dip=None):
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
         try:
-            olatnotcoumt1!=1
+            # olatnotcoumt1 != 1
+            olatnotcoumt1 != 0
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
@@ -844,19 +849,19 @@ def dispatch(values=None,dip=None):
 # # result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
 #
 # # values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
-# # print dispatch(values)
+
 #         # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # # values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
 # # print values['altitude']
 # print 'v ='
 # print dispatch()
 
-def test6__200_120_InValidValueslat1havenotdot(self):
-    values={'op':'correct', 'lat':'16d32', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
-    self.assertTrue(DP.dispatch(values).has_key("error"), True)
-
-print DP.dispatch({'op':'correct', 'lat':'16d32', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'})
-
+# def test6__200_120_InValidValueslat1havenotdot(self):
+values={'op':'correct', 'lat':'16d32', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+    # self.assertTrue(DP.dispatch(values).has_key("error"), True)
+print dispatch(values)
+# print DP.dispatch({'op':'correct', 'lat':'16d32', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'})
+print
 # print 're ='
 # print dispatch(result)
 # dispatch.assertAlmostEquals(result, 11.695, delta=1.695)
