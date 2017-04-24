@@ -472,17 +472,17 @@ class MyTestCase(unittest.TestCase):
     def test6__200_120_InValidValueshavenotlong(self):
         values={'op':'correct', 'lat':'16d32.3', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    def test6__200_021_InValidValueshavenotvaludoflat(self):
-        values={'op':'correct','lat':'','long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+    def test6__200_021_InValidValueshavenotvaludoflong(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
     def test6__200_022_InValidValueshavenotvaludoflatspace(self):
-        values={'op':'correct','lat':' ','long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        values={'op':'correct', 'lat':'16d32.3', 'long':' ' 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
     def test6__200_0221_InValidValueshavenotvaludoflatdots(self):
-        values={'op':'correct','lat':'....','long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        values={'op':'correct', 'lat':'16d32.3', 'long':'.....6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    def test6__200_023_InValidValueslat0havedot(self):
-        values={'op':'correct', 'lat':'16.0d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+    def test6__200_023_InValidValueslat0have2dot(self):
+        values={'op':'correct',  'lat':'16d32.3', 'long':'95d41..6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
     def test6__200_030_InValidValueslat0iscarcater(self):
