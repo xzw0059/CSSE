@@ -783,7 +783,7 @@ def dispatch(values=None,dip=None):
             "." not in olatlist[0]
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
-            return values     
+            return values
         try:
             (-90<olatlist[0]>90)
         except:
