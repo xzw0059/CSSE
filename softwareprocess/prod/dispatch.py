@@ -779,25 +779,25 @@ def dispatch(values=None,dip=None):
         print olatlist[1]
         print olatlist[2]
         try:
-            (-90<olatlist[1]>90)
+            (-90<olatlist[0]>90)
         except:
-            values['error'] = 'not(-90<olatlist[1]>90)'
+            values['error'] = 'not(-90<olatlist[0]>90)'
             return values
 
-        if(not(olatlist[1]==int(olatlist[1]))):
-            values['error'] = 'olatlist[1] is not int'
+        if(not(olatlist[0]==int(olatlist[0]))):
+            values['error'] = 'olatlist[0] is not int'
             return values
 
-        if(not(olatlist[1]==(olatlist[1]))):
-            values['error'] = 'olatlist[1] is not int'
+        if(not(olatlist[0]==(olatlist[0]))):
+            values['error'] = 'olatlist[0] is not int'
             return values
 
-        if(not(0<olatlist[2]>60)):
-            values['error'] = 'not(0<olatlist[2]>60)'
+        if(not(0<olatlist[1]>60)):
+            values['error'] = 'not(0<olatlist[1]>60)'
             return values
 
         try:
-            (olatlist[2]== float(int(olatlist[2]*10))/10)
+            (olatlist[1]== float(int(olatlist[1]*10))/10)
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
