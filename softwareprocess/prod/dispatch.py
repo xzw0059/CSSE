@@ -1037,14 +1037,14 @@ def dispatch(values=None,dip=None):
 
 # ===========above is about assumedLat
 
-        if (not('long' in values)):
+        if (not('assumedLong' in values)):
             values['error'] = 'mandatory information is missing'
             return values
 
 
-        olong= values['long']
+        oassumedLong= values['assumedLong']
         try:
-            olonglist=olong.split('d')
+            oassumedLonglist=oassumedLong.split('d')
         except:
             values['error'] = 'mandatory information is missing'
             return values
@@ -1052,39 +1052,39 @@ def dispatch(values=None,dip=None):
         # print olatlist[1]
         # print olatlist[2]
         try:
-            olongnotcoumt0 = olonglist[0].count('.')
-            olongnotcoumt1 = olonglist[1].count('.')
+            oassumedLongnotcoumt0 = oassumedLonglist[0].count('.')
+            oassumedLongnotcoumt1 = oassumedLonglist[1].count('.')
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
         try:
-            olongnotcoumt0 != 0
+            oassumedLongnotcoumt0 != 0
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
         try:
-            olongnotcoumt1 != 1
+            oassumedLongnotcoumt1 != 1
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
 
-        if (olongnotcoumt0 != 0):
+        if (oassumedLongnotcoumt0 != 0):
             values['error'] = 'olatlist[0] is not  int'
             return values
 
-        if (olongnotcoumt1 != 1):
+        if (oassumedLongnotcoumt1 != 1):
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
 
         # print olatnotcoumt1
         try:
-            (0<olonglist[0]>360)
+            (0<oassumedLonglist[0]>360)
         except:
             values['error'] = 'not(-90<olatlist[0]>90)'
             return values
 
         try:
-            (float(olonglist[0])==int(olonglist[0]))
+            (float(oassumedLonglist[0])==int(oassumedLonglist[0]))
         except:
             values['error'] = 'olatlist[0] is not int'
             return values
@@ -1093,16 +1093,16 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<olonglist[1]>60)):
+        if(not(0<oassumedLonglist[1]>60)):
             values['error'] = 'not(0<olatlist[1]>60)'
             return values
 
         try:
-            (float(olonglist[1])== float(int(float(olonglist[1])*10))/10)
+            (float(oassumedLonglist[1])== float(int(float(oassumedLonglist[1])*10))/10)
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
-# ===========above is about long
+# ===========above is about assumedLong
         return values    #This calculation is stubbed out
 
     elif(values['op'] == 'locate'):

@@ -18,11 +18,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="920">
-              <caret line="1104" column="32" lean-forward="false" selection-start-line="1104" selection-start-column="32" selection-end-line="1104" selection-end-column="32" />
+            <state relative-caret-position="-8">
+              <caret line="1092" column="52" lean-forward="true" selection-start-line="1092" selection-start-column="52" selection-end-line="1092" selection-end-column="52" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -30,13 +30,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DispatchTest.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DispatchTest.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/DispatchTest.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="642" column="0" lean-forward="true" selection-start-line="642" selection-start-column="0" selection-end-line="642" selection-end-column="0" />
+            <state relative-caret-position="1676">
+              <caret line="696" column="44" lean-forward="false" selection-start-line="696" selection-start-column="44" selection-end-line="696" selection-end-column="44" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <marker date="1493010610881" expanded="true" signature="44796:45078" ph="..." />
               </folding>
             </state>
           </provider>
@@ -160,8 +161,8 @@
         <option value="$PROJECT_DIR$/softwareprocess/prod/convertString2DictionaryTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/prod/Sandbox/assignment6test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/wewef.py" />
-        <option value="$PROJECT_DIR$/softwareprocess/prod/DispatchTest.py" />
         <option value="$PROJECT_DIR$/softwareprocess/prod/dispatch.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/prod/DispatchTest.py" />
       </list>
     </option>
   </component>
@@ -654,9 +655,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.23 at 23h 49m 16s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.23 at 23h 50m 03s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -684,6 +682,9 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.24 at 00h 05m 48s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.24 at 00h 09m 06s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="3014" height="1946" extended-state="0" />
@@ -693,7 +694,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33253732" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35739645" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38698226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38698226" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -873,16 +874,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/DispatchTest.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="642" column="0" lean-forward="true" selection-start-line="642" selection-start-column="0" selection-end-line="642" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pycharm/utrunner.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -893,10 +884,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="1104" column="32" lean-forward="false" selection-start-line="1104" selection-start-column="32" selection-end-line="1104" selection-end-column="32" />
+        <state relative-caret-position="-8">
+          <caret line="1092" column="52" lean-forward="true" selection-start-line="1092" selection-start-column="52" selection-end-line="1092" selection-end-column="52" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/DispatchTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1676">
+          <caret line="696" column="44" lean-forward="false" selection-start-line="696" selection-start-column="44" selection-end-line="696" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1493010610881" expanded="true" signature="44796:45078" ph="..." />
           </folding>
         </state>
       </provider>
