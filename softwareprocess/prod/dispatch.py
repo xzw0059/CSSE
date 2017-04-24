@@ -1140,7 +1140,7 @@ def dispatch(values=None,dip=None):
             assumedLatnumber=float(oassumedLatlist[0])-float(oassumedLatlist[1])/60
 
 
-        intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),4)*round(math.sin(math.radians(assumedLatnumber)),4)+round(math.cos(math.radians(latnumberrad)),4)*round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(LHAnumber)),4)
+        intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),5)*round(math.sin(math.radians(assumedLatnumber)),5)+round(math.cos(math.radians(latnumberrad)),5)*round(math.cos(math.radians(assumedLatnumber)),5)*round(math.cos(math.radians(LHAnumber)),5)
         intermediateDistancenumber=round(intermediateDistancenumbero,3)
         print 'print intermediateDistancenumbero='
         print intermediateDistancenumbero
