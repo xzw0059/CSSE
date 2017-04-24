@@ -1146,20 +1146,21 @@ def dispatch(values=None,dip=None):
         print 'print intermediateDistancenumbero='
         print intermediateDistancenumbero
         # print intermediateDistancenumber
-        correctedAltitudeas=math.asin(-0.789410565)
+        correctedAltitudeas=math.asin(intermediateDistancenumbero)
         print 'correctedAltitudeas='
         print correctedAltitudeas
-        correctedAltitudedegrees=math.degrees(-0.909848202 )
+        correctedAltitudedegrees=math.degrees(correctedAltitudeas)
         print 'correctedAltitudedegrees='
         print correctedAltitudedegrees
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         ocorrectedAltitudelist=correctedAltitudedegreesstr.split('.')
-        ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(ocorrectedAltitudelist[1])
+        ocorrectedAltitudemin=math.degrees(float(correctedAltitudedegrees-float(ocorrectedAltitudelist[0])))
+        ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(ocorrectedAltitudemin)
         print 'ocorrectedAltitudestr='
         print ocorrectedAltitudestr
         print 'ocorrectedAltitudelist[1]rad'
-        print math.degrees(float(0.1304619722))
+        print math.degrees(float(ocorrectedAltitudelist[1]))
 
         # #
         # print 'float(oassumedLatlist[0])='
