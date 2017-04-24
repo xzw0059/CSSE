@@ -1163,7 +1163,8 @@ def dispatch(values=None,dip=None):
 
         # ===========correctedDistance
         correctedDistance=olatlist[0]*60+olatlist[1]+float(ocorrectedAltitudelist[0])+float(ocorrectedAltitudemin)
-        
+        print 'correctedDistance='
+        print correctedDistance
 
 
         return values    #This calculation is stubbed out
