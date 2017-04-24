@@ -1103,6 +1103,18 @@ def dispatch(values=None,dip=None):
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
 # ===========above is about assumedLong
+
+        longnumber=float(olonglist[0])+float(olonglist[1])/60
+        oassumedLongnumber=float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
+
+        LHAnumber=float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
+        LHAlist=LHAnumber.split('.')
+        LHAstr=str(LHAlist[0])+'d'+str(LHAlist[1])
+
+        latnumber=float(olatlist[0])+float(olatlist[1])/60
+        assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
+        intermediateDistancenumber=math.sin(math.radians(longnumber))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumber))*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
+
         return values    #This calculation is stubbed out
 
     elif(values['op'] == 'locate'):
