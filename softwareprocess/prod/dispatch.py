@@ -1120,7 +1120,7 @@ def dispatch(values=None,dip=None):
         print 'LHAmin='
         print LHAmin
 
-        LHAstr=str(LHAlist[0])+'d'+str(LHAlist[1])
+        LHAstr=str(LHAlist[0])+'d'+str(LHAmin)
 
         print 'LHAnumber='
         print LHAnumber
