@@ -775,9 +775,9 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'mandatory information is missing'
             return values
-        # print olatlist[0]
+        print olatlist[0]
         print olatlist[1]
-        print olatlist[2]
+        # print olatlist[2]
         try:
             (-90<olatlist[0]>90)
         except:
