@@ -1127,14 +1127,12 @@ def dispatch(values=None,dip=None):
         print 'LHAstr='
         print LHAstr
 
+        if olatlist[0]>0:
 
-        if oassumedLatlist[0]>0:
-
-            assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
+            latnumberrad=float(olatlist[0])+float(olatlist[1])/60
         else:
-            assumedLatnumber=float(oassumedLatlist[0])-float(oassumedLatlist[1])/60
+            latnumberrad=float(olatlist[0])-float(olatlist[1])/60
 
-        latnumberrad=float(olatlist[0])+float(olatlist[1])/60
 
         if oassumedLatlist[0]>0:
 
