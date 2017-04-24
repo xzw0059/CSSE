@@ -790,9 +790,9 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
-        
+
         if (olatnotcoumt0 != 0):
-            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            values['error'] = 'olatlist[0] is not  int'
             return values
 
         if (olatnotcoumt1 != 1):
