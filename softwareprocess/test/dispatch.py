@@ -764,47 +764,8 @@ def dispatch(values=None,dip=None):
 
         return values    #This calculation is stubbed out
     elif(values['op'] == 'correct'):
-        if (not('lat' in values)):
-            values['error'] = 'mandatory information is missing'
-            return values
-
-
-        olat= values['lat']
-        try:
-            olatlist=olat.split('d')
-        except:
-            values['error'] = 'mandatory information is missing'
-            return values
-
-        try:
-            (-90<olatlist[1]>90)
-        except:
-            values['error'] = 'not(-90<olatlist[1]>90)'
-            return values
-
-        if(not(olatlist[1]==int(olatlist[1]))):
-            values['error'] = 'olatlist[1] is not int'
-            return values
-
-        if(not(olatlist[1]==(olatlist[1]))):
-            values['error'] = 'olatlist[1] is not int'
-            return values
-
-        if(not(0<olatlist[2]>60)):
-            values['error'] = 'not(0<olatlist[2]>60)'
-            return values
-
-        try:
-            (olatlist[2]== float(int(olatlist[2]*10))/10)
-        except:
-            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
-            return values
-
-
-
 
         return values    #This calculation is stubbed out
-
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
     else:
