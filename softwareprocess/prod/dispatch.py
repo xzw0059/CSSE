@@ -1144,6 +1144,8 @@ def dispatch(values=None,dip=None):
         intermediateDistancenumber=round(math.sin(math.radians(latnumberrad)),3)*round(math.sin(math.radians(assumedLatnumber)),3)+math.cos(math.radians(latnumberrad))*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
 
 
+        print 'float(oassumedLatlist[0])='
+        print float(oassumedLatlist[0])
         print 'float(oassumedLatlist[1])/60='
         print float(oassumedLatlist[1])/60
         print 'assumedLatnumber='
