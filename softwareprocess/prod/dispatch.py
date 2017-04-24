@@ -1162,7 +1162,7 @@ def dispatch(values=None,dip=None):
         print ocorrectedAltitudestr
 
         # ===========correctedDistance
-        correctedDistance=
+        # correctedDistance=
 
         return values    #This calculation is stubbed out
 
