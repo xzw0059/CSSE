@@ -799,7 +799,7 @@ def dispatch(values=None,dip=None):
         try:
             (float(olatlist[0])==int(olatlist[0]))
         except:
-            values['error'] = 'olatlist[0] is not int0'
+            values['error'] = 'olatlist[0] is not int'
             return values
 
         # if(not(olatlist[0]==(olatlist[0]))):
