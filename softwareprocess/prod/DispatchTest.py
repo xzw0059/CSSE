@@ -640,60 +640,60 @@ class MyTestCase(unittest.TestCase):
         # print DP.dispatch(values)
 
 # ====above is about assumedLat
-    def test6__220_410_InValidValueshavenotassumedLat(self):
-        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3','assumedLong':' 74d35.3'}
+    def test6__220_410_InValidValueshavenotassumedLong(self):
+        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    def test6__220_411_InValidValueshavenotvaludofassumedLat(self):
-        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3','assumedLat':'', 'assumedLong':' 74d35.3'}
+    def test6__220_411_InValidValueshavenotvaludofassumedLong(self):
+        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3','assumedLat':'-53d38.4', 'assumedLong':''}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    def test6__220_412_InValidValueshavenotvaludofassumedLatspace(self):
-        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3 ',  'assumedLat':' ', 'assumedLong':' 74d35.3'}
+    def test6__220_412_InValidValueshavenotvaludofassumedLongspace(self):
+        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3 ','assumedLat':'-53d38.4', 'assumedLong':' '}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    def test6__220_4121_InValidValueshavenotvaludofassumedLatdots(self):
-        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-.....4', 'assumedLong':' 74d35.3'}
+    def test6__220_4121_InValidValueshavenotvaludofassumedLongdots(self):
+        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3', 'assumedLat':'-53d38.4', 'assumedLong':' .....3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    def test6__220_423_InValidValuesassumedLat0havedot(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53.0d38.4', 'assumedLong':' 74d35.3'}
+    def test6__220_4122_InValidValueshavenotvaludofassumedLongcaracters(self):
+        values={'op':'correct','lat':'16d32.3','long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' sssdddd'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-        # print DP.dispatch(values)
-    def test6__220_430_InValidValuesassumedLat0iscarcater(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'aad42.3',  'assumedLat':'-aad38.4', 'assumedLong':' 74d35.3'}
-        self.assertTrue(DP.dispatch(values).has_key("error"), True)
-        # print DP.dispatch(values)
-    def test6__220_440_InValidValuesassumedLat0isnull(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'d42.3',  'assumedLat':'d38.4', 'assumedLong':' 74d35.3'}
+    def test6__220_423_InValidValuesassumedLong0havedot(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74.0d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
-    def test6__220_450_InValidValuesassumedLat0isspace(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':' d42.3',  'assumedLat':' d38.4', 'assumedLong':' 74d35.3'}
+    def test6__220_430_InValidValuesassumedLong0iscarcater(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'aad42.3',  'assumedLat':'-53d38.4', 'assumedLong':' aad35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
-    def test6__220_460_InValidValuesassumedLat0ismultyspaces(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'  d38.4', 'assumedLong':' 74d35.3'}
+    def test6__220_440_InValidValuesassumedLong0isnull(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'d42.3',  'assumedLat':'-53d38.4', 'assumedLong':'d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
-    def test6__221_320_InValidValuesassumedLat1havenotdot(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38', 'assumedLong':' 74d35.3'}
+    def test6__220_450_InValidValuesassumedLong0isspace(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':' d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' d35.3'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+        # print DP.dispatch(values)
+    def test6__220_460_InValidValuesassumedLong0ismultyspaces(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':'    d35.3'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+        # print DP.dispatch(values)
+    def test6__221_320_InValidValuesassumedLong1havenotdot(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
 
-    def test6__221_330_InValidValuesassumedLat1iscarcater(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13daa',  'assumedLat':'-53daa', 'assumedLong':' 74d35.3'}
+    def test6__221_330_InValidValuesassumedLong1iscarcater(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13daa',   'assumedLat':'-53d38.4', 'assumedLong':' 74daa'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
-    def test6__221_340_InValidValuesassumedLat1isnull(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d',  'assumedLat':'-53d', 'assumedLong':' 74d35.3'}
+    def test6__221_340_InValidValuesassumedLong1isnull(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d',   'assumedLat':'-53d38.4', 'assumedLong':' 74d'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
-    def test6__221_350_InValidValuesassumedLat1isspace(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d ',  'assumedLat':'-53d  ', 'assumedLong':' 74d35.3'}
+    def test6__221_350_InValidValuesassumedLong1isspace(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d ',   'assumedLat':'-53d38.4', 'assumedLong':' 74d '}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
-    def test6__221_360_InValidValuesassumedLat1ismultyspaces(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d   ',  'assumedLat':'-53d  ', 'assumedLong':' 74d35.3'}
-        self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    def test6__221_361_InValidValuesassumedLat1ismultyspaces(self):
-        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'    13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+    def test6__221_360_InValidValuesassumedLong1ismultyspaces(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d   ',  'assumedLat':'-53d38.4', 'assumedLong':' 74d    '}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
 
