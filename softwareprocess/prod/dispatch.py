@@ -1132,8 +1132,12 @@ def dispatch(values=None,dip=None):
 
         intermediateDistancenumber=math.sin(latnumberrad)*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumber))*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
 
-        print 'math.sin(90)'
+        print 'math.sin(90)='
         print math.sin(90)
+
+        print 'math.sin(math.radians(90))='
+        print math.sin(math.radians(90))
+
         print 'math.sin(latnumberrad)='
         print math.sin(latnumberrad)
 
