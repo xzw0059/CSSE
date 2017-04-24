@@ -1139,15 +1139,15 @@ def dispatch(values=None,dip=None):
         else:
             assumedLatnumber=float(oassumedLatlist[0])-float(oassumedLatlist[1])/60
 
-        intermediateDistancenumbero=math.sin(math.radians(latnumberrad))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumberrad))*math.cos(math.radians(assumedLatnumber))*math.cos(math.radians(LHAnumber))
+        # intermediateDistancenumbero=math.sin(math.radians(latnumberrad))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumberrad))*math.cos(math.radians(assumedLatnumber))*math.cos(math.radians(LHAnumber))
 
-        # intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),6)*round(math.sin(math.radians(assumedLatnumber)),6)+round(math.cos(math.radians(latnumberrad)),6)*round(math.cos(math.radians(assumedLatnumber)),6)*round(math.cos(math.radians(LHAnumber)),6)
+        intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),6)*round(math.sin(math.radians(assumedLatnumber)),6)+round(math.cos(math.radians(latnumberrad)),6)*round(math.cos(math.radians(assumedLatnumber)),6)*round(math.cos(math.radians(LHAnumber)),6)
         intermediateDistancenumber=round(intermediateDistancenumbero,3)
         print 'print intermediateDistancenumbero='
         print intermediateDistancenumbero
         # print intermediateDistancenumber
         correctedAltitudeas=math.asin(intermediateDistancenumbero)
-        print round(correctedAltitudeas,4)
+        print correctedAltitudeas
         correctedAltitudedegrees=math.degrees(correctedAltitudeas)
         print correctedAltitudedegrees
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
