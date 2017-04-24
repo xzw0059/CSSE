@@ -406,7 +406,10 @@ class MyTestCase(unittest.TestCase):
     # def test300_1130ShouldReturnErrorIfLongitudeIsInInputDictionary(self):
     #     values = {'op': 'predict', 'body': 'Betelgeuse', 'date': '2017-02-10', 'time': '02:15:02', 'long':'75d53.6'}
     #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    def test6_200_050_InValidValues(self):
+    def test6__000_010_ValidValues(self):
         values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         result={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'-3950', 'correctedAzimuth':'164d43.1'}
         self.assertDictEqual(DP.dispatch(values),result)
+    def test6__100_050_InValidValues(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
