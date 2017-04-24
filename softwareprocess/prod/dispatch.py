@@ -967,6 +967,75 @@ def dispatch(values=None,dip=None):
 
 
 # ===========above is about altitude
+
+
+        if (not('altitude' in values)):
+            values['error'] = 'mandatory information is missing'
+            return values
+
+
+        oaltitude= values['altitude']
+        try:
+            oaltitudelist=oaltitude.split('d')
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # print olatlist[0]
+        # print olatlist[1]
+        # print olatlist[2]
+        try:
+            oaltitudenotcoumt0 = oaltitudelist[0].count('.')
+            oaltitudenotcoumt1 = oaltitudelist[1].count('.')
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            oaltitudenotcoumt0 != 0
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            oaltitudenotcoumt1 != 1
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        if (oaltitudenotcoumt0 != 0):
+            values['error'] = 'olatlist[0] is not  int'
+            return values
+
+        if (oaltitudenotcoumt1 != 1):
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        # print olatnotcoumt1
+        try:
+            (0<oaltitudelist[0]>90)
+        except:
+            values['error'] = 'not(-90<olatlist[0]>90)'
+            return values
+
+        try:
+            (float(oaltitudelist[0])==int(oaltitudelist[0]))
+        except:
+            values['error'] = 'olatlist[0] is not int'
+            return values
+
+        # if(not(olatlist[0]==(olatlist[0]))):
+        #     values['error'] = 'olatlist[0] is not int1'
+        #     return values
+
+        if(not(0<oaltitudelist[1]>60)):
+            values['error'] = 'not(0<olatlist[1]>60)'
+            return values
+
+        try:
+            (float(oaltitudelist[1])== float(int(float(oaltitudelist[1])*10))/10)
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+# ===========above is about altitude
         return values    #This calculation is stubbed out
 
     elif(values['op'] == 'locate'):
