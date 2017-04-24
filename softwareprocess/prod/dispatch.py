@@ -1117,7 +1117,7 @@ def dispatch(values=None,dip=None):
 
         LHAnumberstr=str(LHAnumber)
         LHAlist=LHAnumberstr.split('.')
-        LHAmin=round((LHAnumber-int(LHAnumber))*60,1)
+        LHAmin=round((LHAnumber-int(LHAnumber))*60,0)
         # print 'LHAmin='
         # print LHAmin
 
