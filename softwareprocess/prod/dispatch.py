@@ -1161,46 +1161,8 @@ def dispatch(values=None,dip=None):
         print 'ocorrectedAltitudestr='
         print ocorrectedAltitudestr
 
-        # #
-        # print 'float(oassumedLatlist[0])='
-        # print float(oassumedLatlist[0])
-        # print 'float(oassumedLatlist[1])/60='
-        # print float(oassumedLatlist[1])/60
-        # print 'assumedLatnumber='
-        # print assumedLatnumber
-        #
-        # ====test values
-        # print round(math.sin(math.radians(latnumberrad)),3)
-        # print round(math.sin(math.radians(assumedLatnumber)),3)
-        # print round(math.cos(math.radians(latnumberrad)),3)
-        # print (math.cos(math.radians(assumedLatnumber)),3)
-        #
-        #
-        # print 'round(math.cos(math.radians(assumedLatnumber)),3)='
-        # print round(math.cos(math.radians(assumedLatnumber)),3)
-        # ====test values
-        #
-        # print 'math.sin(math.radians(90))='
-        # print math.sin(math.radians(90))
-        #
-        # print 'math.sin(latnumberrad)='
-        # print math.sin(latnumberrad)
-        #
-        # print 'math.sin(math.radians(assumedLatnumber))='
-        # print math.sin(math.radians(assumedLatnumber))
-        #
-        # print 'math.sin(math.radians(latnumber))='
-        # print math.sin(math.radians(latnumber))
-        #
-        # print 'math.sin(math.radians(oassumedLongnumber))='
-        # print math.sin(math.radians(oassumedLongnumber))
-        #
-        # print 'math.sin(math.radians(LHAnumber))='
-        # print math.sin(math.radians(LHAnumber))
-        #
-        # print 'intermediateDistancenumber='
-        # print intermediateDistancenumber
-
+        # ===========correctedDistance
+        correctedDistance=
 
         return values    #This calculation is stubbed out
 
