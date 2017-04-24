@@ -932,8 +932,8 @@ values={'op':'correct', 'lat':'16d32', 'long':'95.41.6', 'altitude':'13d42.3',  
 
 #         # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # # values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
-print values['error']
-print 'v ='
+# print values['error']
+# print 'v ='
 # print dispatch()
 
 # def test6__200_120_InValidValueslat1havenotdot(self):
