@@ -422,3 +422,7 @@ class MyTestCase(unittest.TestCase):
         values={'op':'correct', 'lat':'aad32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
         print DP.dispatch(values)
+    def test6__200_030_InValidValueslat0isnull(self):
+        values={'op':'correct', 'lat':'d32.3', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+        print DP.dispatch(values)
