@@ -1145,7 +1145,7 @@ def dispatch(values=None,dip=None):
 
 
         # print intermediateDistancenumber
-        correctedAltitudeas=math.asin(intermediateDistancenumbero)
+        correctedAltitudeas=math.asin(intermediateDistancenumber)
         print correctedAltitudeas
         correctedAltitudedegrees=math.degrees(correctedAltitudeas)
         print correctedAltitudedegrees
