@@ -778,6 +778,12 @@ def dispatch(values=None,dip=None):
         print olatlist[0]
         print olatlist[1]
         # print olatlist[2]
+
+        try:
+            "." not in olatlist[0]
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values     
         try:
             (-90<olatlist[0]>90)
         except:
@@ -801,6 +807,8 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
+
+
 
 
 
