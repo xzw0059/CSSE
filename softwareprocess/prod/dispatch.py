@@ -1162,7 +1162,7 @@ def dispatch(values=None,dip=None):
         print ocorrectedAltitudestr
 
         # ===========correctedDistance
-        correctedDistance=float(oaltitudelist[0])*60+float(oaltitudelist[1])+float(ocorrectedAltitudelist[0])*60+float(ocorrectedAltitudemin)
+        correctedDistance=float(oaltitudelist[0])*60+float(oaltitudelist[1])-(float(ocorrectedAltitudelist[0])*60+float(ocorrectedAltitudemin))
         print float(oaltitudelist[0])
         print float(oaltitudelist[1])
         print 'correctedDistance='
