@@ -779,7 +779,7 @@ def dispatch(values=None,dip=None):
         # print olatlist[1]
         # print olatlist[2]
         olatnotcoumt0 = olatlist[0].count('.')
-        olatnotcoumt1 = olatlist[0].count('.')
+        olatnotcoumt1 = olatlist[1].count('.')
         try:
             olatnotcoumt0!=0
         except:
