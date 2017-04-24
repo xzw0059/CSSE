@@ -1151,7 +1151,7 @@ def dispatch(values=None,dip=None):
         print correctedAltitudedegrees
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         ocorrectedAltitudelist=correctedAltitudedegreesstr.split('.')
-        ocorrectedAltitudestr=str(ocorrectedAltitudelist[0]+'d'+str((ocorrectedAltitudelist[0])*60))
+        ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(ocorrectedAltitudelist[1])
         print ocorrectedAltitudestr
 
         #
