@@ -831,8 +831,73 @@ def dispatch(values=None,dip=None):
             return values
 
 
+# ===========above is about lat
+
+        if (not('long' in values)):
+            values['error'] = 'mandatory information is missing'
+            return values
 
 
+        olat= values['long']
+        try:
+            olonglist=olat.split('d')
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # print olatlist[0]
+        # print olatlist[1]
+        # print olatlist[2]
+        try:
+            olongnotcoumt0 = olatlist[0].count('.')
+            olongnotcoumt1 = olatlist[1].count('.')
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            olongnotcoumt0 != 0
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            olongnotcoumt1 != 1
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        if (olongnotcoumt0 != 0):
+            values['error'] = 'olatlist[0] is not  int'
+            return values
+
+        if (olongnotcoumt1 != 1):
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        # print olatnotcoumt1
+        try:
+            (0<olonglist[0]>360)
+        except:
+            values['error'] = 'not(-90<olatlist[0]>90)'
+            return values
+
+        try:
+            (float(olonglist[0])==int(olonglist[0]))
+        except:
+            values['error'] = 'olatlist[0] is not int'
+            return values
+
+        # if(not(olatlist[0]==(olatlist[0]))):
+        #     values['error'] = 'olatlist[0] is not int1'
+        #     return values
+
+        if(not(0<olonglist[1]>60)):
+            values['error'] = 'not(0<olatlist[1]>60)'
+            return values
+
+        try:
+            (float(olatlist[1])== float(int(float(olatlist[1])*10))/10)
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
 
 
         return values    #This calculation is stubbed out
