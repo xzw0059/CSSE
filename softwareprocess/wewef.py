@@ -814,7 +814,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
 
-        print olatnotcoumt1
+        # print olatnotcoumt1
         try:
             (-90<olatlist[0]>90)
         except:
@@ -849,9 +849,9 @@ def dispatch(values=None,dip=None):
             return values
 
 
-        olat= values['long']
+        olong= values['long']
         try:
-            olonglist=olat.split('d')
+            olonglist=olong.split('d')
         except:
             values['error'] = 'mandatory information is missing'
             return values
@@ -859,8 +859,8 @@ def dispatch(values=None,dip=None):
         # print olatlist[1]
         # print olatlist[2]
         try:
-            olongnotcoumt0 = olatlist[0].count('.')
-            olongnotcoumt1 = olatlist[1].count('.')
+            olongnotcoumt0 = olonglist[0].count('.')
+            olongnotcoumt1 = olonglist[1].count('.')
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
@@ -909,7 +909,222 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
+# ===========above is about long
+        if (not('altitude' in values)):
+            values['error'] = 'mandatory information is missing'
+            return values
 
+
+        oaltitude= values['altitude']
+        try:
+            oaltitudelist=oaltitude.split('d')
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # print olatlist[0]
+        # print olatlist[1]
+        # print olatlist[2]
+        try:
+            oaltitudenotcoumt0 = oaltitudelist[0].count('.')
+            oaltitudenotcoumt1 = oaltitudelist[1].count('.')
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            oaltitudenotcoumt0 != 0
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            oaltitudenotcoumt1 != 1
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        if (oaltitudenotcoumt0 != 0):
+            values['error'] = 'olatlist[0] is not  int'
+            return values
+
+        if (oaltitudenotcoumt1 != 1):
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        # print olatnotcoumt1
+        try:
+            (0<oaltitudelist[0]>90)
+        except:
+            values['error'] = 'not(-90<olatlist[0]>90)'
+            return values
+
+        try:
+            (float(oaltitudelist[0])==int(oaltitudelist[0]))
+        except:
+            values['error'] = 'olatlist[0] is not int'
+            return values
+
+        # if(not(olatlist[0]==(olatlist[0]))):
+        #     values['error'] = 'olatlist[0] is not int1'
+        #     return values
+
+        if(not(0<oaltitudelist[1]>60)):
+            values['error'] = 'not(0<olatlist[1]>60)'
+            return values
+
+        try:
+            (float(oaltitudelist[1])== float(int(float(oaltitudelist[1])*10))/10)
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+
+# ===========above is about altitude
+
+
+        if (not('assumedLat' in values)):
+            values['error'] = 'mandatory information is missing'
+            return values
+
+
+        oassumedLat= values['assumedLat']
+        try:
+            oassumedLatlist=oassumedLat.split('d')
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # print olatlist[0]
+        # print olatlist[1]
+        # print olatlist[2]
+        try:
+            oassumedLatnotcoumt0 = oassumedLatlist[0].count('.')
+            oassumedLatnotcoumt1 = oassumedLatlist[1].count('.')
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            oassumedLatnotcoumt0 != 0
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            oassumedLatnotcoumt1 != 1
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        if (oassumedLatnotcoumt0 != 0):
+            values['error'] = 'olatlist[0] is not  int'
+            return values
+
+        if (oassumedLatnotcoumt1 != 1):
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        # print olatnotcoumt1
+        try:
+            (-90<oassumedLatlist[0]>90)
+        except:
+            values['error'] = 'not(-90<olatlist[0]>90)'
+            return values
+
+        try:
+            (float(oassumedLatlist[0])==int(oassumedLatlist[0]))
+        except:
+            values['error'] = 'olatlist[0] is not int'
+            return values
+
+        # if(not(olatlist[0]==(olatlist[0]))):
+        #     values['error'] = 'olatlist[0] is not int1'
+        #     return values
+
+        if(not(0<oassumedLatlist[1]>60)):
+            values['error'] = 'not(0<olatlist[1]>60)'
+            return values
+
+        try:
+            (float(oassumedLatlist[1])== float(int(float(oassumedLatlist[1])*10))/10)
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+# ===========above is about assumedLat
+
+        if (not('assumedLong' in values)):
+            values['error'] = 'mandatory information is missing'
+            return values
+
+
+        oassumedLong= values['assumedLong']
+        try:
+            oassumedLonglist=oassumedLong.split('d')
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # print olatlist[0]
+        # print olatlist[1]
+        # print olatlist[2]
+        try:
+            oassumedLongnotcoumt0 = oassumedLonglist[0].count('.')
+            oassumedLongnotcoumt1 = oassumedLonglist[1].count('.')
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            oassumedLongnotcoumt0 != 0
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+        try:
+            oassumedLongnotcoumt1 != 1
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        if (oassumedLongnotcoumt0 != 0):
+            values['error'] = 'olatlist[0] is not  int'
+            return values
+
+        if (oassumedLongnotcoumt1 != 1):
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+
+        # print olatnotcoumt1
+        try:
+            (0<oassumedLonglist[0]>360)
+        except:
+            values['error'] = 'not(-90<olatlist[0]>90)'
+            return values
+
+        try:
+            (float(oassumedLonglist[0])==int(oassumedLonglist[0]))
+        except:
+            values['error'] = 'olatlist[0] is not int'
+            return values
+
+        # if(not(olatlist[0]==(olatlist[0]))):
+        #     values['error'] = 'olatlist[0] is not int1'
+        #     return values
+
+        if(not(0<oassumedLonglist[1]>60)):
+            values['error'] = 'not(0<olatlist[1]>60)'
+            return values
+
+        try:
+            (float(oassumedLonglist[1])== float(int(float(oassumedLonglist[1])*10))/10)
+        except:
+            values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
+            return values
+# ===========above is about assumedLong
+
+        longnumber=float(olonglist[0])+float(olonglist[1])/60
+        oassumedLongnumber=float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
+
+        LHAnumber=float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
+        LHAlist=LHAnumber.split('.')
+        LHAstr=str(LHAlist[0])+'d'+str(LHAlist[1])
+
+        latnumber=float(olatlist[0])+float(olatlist[1])/60
+        assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
+        intermediateDistancenumber=math.sin(math.radians(longnumber))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumber))*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
 
         return values    #This calculation is stubbed out
 
@@ -919,6 +1134,7 @@ def dispatch(values=None,dip=None):
         values = {}
         values['error'] = 'op is not a legal operation'
         return values
+
 
 
 
@@ -932,16 +1148,6 @@ values={'op':'correct', 'lat':'16d32', 'long':'95.41.6', 'altitude':'13d42.3',  
 
 #         # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # # values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
-# print values['error']
+print values['error']
 # print 'v ='
-# print dispatch()
 
-# def test6__200_120_InValidValueslat1havenotdot(self):
-
-    # self.assertTrue(DP.dispatch(values).has_key("error"), True)
-# print dispatch(values)
-# print DP.dispatch({'op':'correct', 'lat':'16d32', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'})
-# print
-# print 're ='
-# print dispatch(result)
-# dispatch.assertAlmostEquals(result, 11.695, delta=1.695)
