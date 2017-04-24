@@ -1156,7 +1156,7 @@ def dispatch(values=None,dip=None):
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         ocorrectedAltitudelist=correctedAltitudedegreesstr.split('.')
         # ocorrectedAltitudemin=math.degrees(round(float(correctedAltitudedegrees-int(correctedAltitudedegrees))),2)
-        ocorrectedAltitudemin=math.degrees(round(correctedAltitudedegrees-int(correctedAltitudedegrees),1))
+        ocorrectedAltitudemin=round(math.degrees(round(correctedAltitudedegrees-int(correctedAltitudedegrees),99)),2)
         ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(abs(ocorrectedAltitudemin))
         print 'ocorrectedAltitudestr='
         print ocorrectedAltitudestr
