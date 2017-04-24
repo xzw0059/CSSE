@@ -1123,14 +1123,30 @@ def dispatch(values=None,dip=None):
 
         LHAstr=str(LHAlist[0])+'d'+str(LHAmin)
 
-        print 'LHAnumber='
-        print LHAnumber
+
         print 'LHAstr='
         print LHAstr
 
         latnumber=float(olatlist[0])+float(olatlist[1])/60
         assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
+
         intermediateDistancenumber=math.sin(math.radians(longnumber))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumber))*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
+
+        print 'math.sin(math.radians(longnumber))='
+        print math.sin(math.radians(longnumber))
+
+        print 'math.sin(math.radians(assumedLatnumber))='
+        print math.sin(math.radians(assumedLatnumber))
+
+        print 'math.sin(math.radians(latnumber))='
+        print math.sin(math.radians(latnumber))
+
+        print 'math.sin(math.radians(oassumedLongnumber))='
+        print math.sin(math.radians(oassumedLongnumber))
+
+        print 'math.sin(math.radians(LHAnumber))='
+        print math.sin(math.radians(LHAnumber))
+
         print 'intermediateDistancenumber='
         print intermediateDistancenumber
 
