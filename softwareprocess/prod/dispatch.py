@@ -1109,12 +1109,17 @@ def dispatch(values=None,dip=None):
         print 'longnumber='
         print longnumber
 
-
+        print 'oassumedLongnumber='
+        print oassumedLongnumber
 
         LHAnumber=float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
 
         LHAnumberstr=str(LHAnumber)
         LHAlist=LHAnumberstr.split('.')
+        LHAmin=round((LHAnumber-int(LHAnumber))*60,1)
+        print 'LHAnumber='
+        print LHAnumber
+
         LHAstr=str(LHAlist[0])+'d'+str(LHAlist[1])
 
         print 'LHAnumber='
