@@ -1159,7 +1159,8 @@ def dispatch(values=None,dip=None):
         ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(abs(ocorrectedAltitudemin))
         print 'ocorrectedAltitudemin='
         print ocorrectedAltitudemin
-
+        print 'ocorrectedAltitudestr='
+        print ocorrectedAltitudestr
         # #
         # print 'float(oassumedLatlist[0])='
         # print float(oassumedLatlist[0])
