@@ -408,7 +408,7 @@ class MyTestCase(unittest.TestCase):
     #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
     def test6__000_010_ValidValues(self):
         values={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
-        result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'-3950', 'correctedAzimuth':'164d43.1'}
+        result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
         self.assertDictEqual(DP.dispatch(values),result)
     def test6__100_000_InValidValues(self):
         values={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
