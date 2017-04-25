@@ -156,80 +156,80 @@ class MyTestCase(unittest.TestCase):
     #
 
     # sad path
-    # def test200_910ShouldReturnErrorIfMandatoryInformationIsMissing(self):
-    #     values = {'op': 'adjust'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_920ShouldReturnErrorWhenObservationIsIncorrectFormat(self):
-    #     values = {'observation': 'abc', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '71'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_930ShouldReturnErrorWhenDegreeInObservationGreaterThan90(self):
-    #     values = {'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '71'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_940ShouldReturnErrorWhenDegreeInObservationLessThan0(self):
-    #         values = {'observation': '-12d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural',
-    #                   'op': 'adjust',
-    #                   'temperature': '71'}
-    #         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_950ShouldReturnErrorWhenHeightNotNumericalValue(self):
-    #     values = {'observation': '89d15.2', 'height': 'a', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '71'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_960ShouldReturnErrorWhenHeightLessThan0(self):
-    #     values = {'observation': '89d15.2', 'height': '-1', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '71'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_970ShouldReturnErrorWhenTempNotANumericalValue(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': 'ab'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_980ShouldReturnErrorWhenTempLTMinus20(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '-21'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_990ShouldReturnErrorWhenTempGEMinus120(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '121'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_1000ShouldReturnErrorWhenPressureNotANumericalValue(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': 'aa', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '72'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_1010ShouldReturnErrorWhenPressureLT100(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': '90', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '72'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_1020ShouldReturnErrorWhenPressureGT1100(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': '1120', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '72'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_1030ShouldReturnErrorWhenHorizonNotArtificalNorNatural(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'abc', 'op': 'adjust',
-    #               'temperature': '72'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_1040ShouldReturnErrorWhenHorizonNotString(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': '45', 'op': 'adjust',
-    #               'temperature': '72'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test200_1050ShouldReturnErrorWhenAltitudeInInputDictionary(self):
-    #     values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
-    #               'temperature': '72', 'altitude':'29d59.9'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
+    def test200_910ShouldReturnErrorIfMandatoryInformationIsMissing(self):
+        values = {'op': 'adjust'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_920ShouldReturnErrorWhenObservationIsIncorrectFormat(self):
+        values = {'observation': 'abc', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '71'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_930ShouldReturnErrorWhenDegreeInObservationGreaterThan90(self):
+        values = {'observation': '101d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '71'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_940ShouldReturnErrorWhenDegreeInObservationLessThan0(self):
+            values = {'observation': '-12d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural',
+                      'op': 'adjust',
+                      'temperature': '71'}
+            self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_950ShouldReturnErrorWhenHeightNotNumericalValue(self):
+        values = {'observation': '89d15.2', 'height': 'a', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '71'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_960ShouldReturnErrorWhenHeightLessThan0(self):
+        values = {'observation': '89d15.2', 'height': '-1', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '71'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_970ShouldReturnErrorWhenTempNotANumericalValue(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': 'ab'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_980ShouldReturnErrorWhenTempLTMinus20(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '-21'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_990ShouldReturnErrorWhenTempGEMinus120(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '121'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_1000ShouldReturnErrorWhenPressureNotANumericalValue(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': 'aa', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '72'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_1010ShouldReturnErrorWhenPressureLT100(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': '90', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '72'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_1020ShouldReturnErrorWhenPressureGT1100(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': '1120', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '72'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_1030ShouldReturnErrorWhenHorizonNotArtificalNorNatural(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'abc', 'op': 'adjust',
+                  'temperature': '72'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_1040ShouldReturnErrorWhenHorizonNotString(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': '45', 'op': 'adjust',
+                  'temperature': '72'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test200_1050ShouldReturnErrorWhenAltitudeInInputDictionary(self):
+        values = {'observation': '89d15.2', 'height': '10', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust',
+                  'temperature': '72', 'altitude':'29d59.9'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
     #
 
     # Happy Path
