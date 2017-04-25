@@ -1187,8 +1187,8 @@ def dispatch(values=None,dip=None):
         print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
 
         correctedAzimuth=correctedAzimuth1/cosassumedLat*cosasinintermediateDistance
-        print 'correctedAzimuth='
-        print correctedAzimuth
+        print ('correctedAzimuth=%s'%correctedAzimuth)
+
         values['correctedDistance'] = str(correctedDistance)
         return values    #This calculation is stubbed out
 
