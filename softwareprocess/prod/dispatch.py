@@ -1180,27 +1180,29 @@ def dispatch(values=None,dip=None):
         asinintermediateDistance=math.asin(intermediateDistancenumbero)
 
         cosasinintermediateDistance=round(math.cos(asinintermediateDistance),4)
-
-        print ('sinlat = %s'%sinlat)
-        print ('asinintermediateDistance = %s'%asinintermediateDistance)
-        print ('sinassumedLat = %s'%sinassumedLat)
-        print ('intermediateDistancenumberoround = %s'%intermediateDistancenumberoround)
-        print ('cosassumedLat = %s'%cosassumedLat)
-        print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
+        #
+        # print ('sinlat = %s'%sinlat)
+        # print ('asinintermediateDistance = %s'%asinintermediateDistance)
+        # print ('sinassumedLat = %s'%sinassumedLat)
+        # print ('intermediateDistancenumberoround = %s'%intermediateDistancenumberoround)
+        # print ('cosassumedLat = %s'%cosassumedLat)
+        # print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
 
         correctedAzimuthround1=round(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance),9)
 
-        correctedAzimuthnumber=math.acos(correctedAzimuthround1)
-        print ('correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance) = %s'%str(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)))
-        correctedAzimuth=round(correctedAzimuthnumber,4)
-        correctedAzimuthdegrees=math.degrees(correctedAzimuth)
+        correctedAzimuthnumberrad=math.acos(correctedAzimuthround1)
+        # print ('correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance) = %s'%str(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)))
+        correctedAzimuthrad=round(correctedAzimuthnumberrad,4)
+        correctedAzimuthdegrees=math.degrees(correctedAzimuthrad)
         correctedAzimuthdegreeslist=str(correctedAzimuthdegrees).split()
         correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
         correctedAzimuthdegreesmin=round(correctedAzimuthdegreesminnumber,1)
-        print ('correctedAzimuth=%s'%correctedAzimuth)
-
-        print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
-        print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
+        correctedAzimuth=
+        # print ('correctedAzimuth=%s'%correctedAzimuth)
+        #
+        #
+        # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
+        # print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
         # print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
 
 
