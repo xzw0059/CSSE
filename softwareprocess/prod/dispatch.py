@@ -1173,7 +1173,7 @@ def dispatch(values=None,dip=None):
 # should be:
 #         correctedAzimuth  = arccos((sin(lat) - (sin(assumedLat) * intermediateDistance))/(cos(assumedLat) * cos(arcsin(intermediateDistance))))
         sinlat=round(math.sin(math.radians(latnumberrad)),4)
-        sinassumedLat=round(math.sin(math.radians(assumedLatnumber)),5)
+        sinassumedLat=round(math.sin(math.radians(assumedLatnumber)),4)
         intermediateDistancenumberoround=round(intermediateDistancenumbero,4)
         correctedAzimuth1=(sinlat-sinassumedLat*intermediateDistancenumberoround)
         cosassumedLat=round(math.cos(math.radians(assumedLatnumber)),5)
@@ -1195,7 +1195,8 @@ def dispatch(values=None,dip=None):
         correctedAzimuth=round(correctedAzimuthnumber,4)
         correctedAzimuthdegrees=math.degrees(correctedAzimuth)
         correctedAzimuthdegreeslist=str(correctedAzimuthdegrees).split()
-        correctedAzimuthdegreesmin=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
+        correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
+        correctedAzimuthdegreesmin=round(correctedAzimuthdegreesminnumber,
         print ('correctedAzimuth=%s'%correctedAzimuth)
 
         print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
