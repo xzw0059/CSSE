@@ -34,9 +34,9 @@ class MyTestCase(unittest.TestCase):
     #                     missing dictionary            dispatch()
     #                        -- return {'error':'dictionary is missing'}
     # Happy path
-    def test100_010ShouldReturnUnchangedValuesWithOperationAdjust(self):
-       values = {'op':'adjust'}
-       self.assertDictEqual(DP.dispatch(values), values)
+    # def test100_010ShouldReturnUnchangedValuesWithOperationAdjust(self):
+    #    values = {'op':'adjust'}
+    #    self.assertDictEqual(DP.dispatch(values), values)
 
     def test100_010ShouldReturnUnchangedValuesWithOperationPredict(self):
         values = {'op': 'predict'}
