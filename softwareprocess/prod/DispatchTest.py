@@ -704,3 +704,9 @@ class MyTestCase(unittest.TestCase):
         # print DP.dispatch(values)
 
 # ====above is about assumedLat
+    def test6__331_000_InValidValuesassumedLong1ismultyspaces(self):
+        values={}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+    def test6__331_010_InValidValuesassumedLong1ismultyspaces(self):
+        values={}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
