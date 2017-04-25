@@ -17,7 +17,7 @@ class MyTestCase(unittest.TestCase):
     def test6__000_010_ValidValues(self):
         values={'op':'correct', 'lat':'16aad32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
-        self.assertDictEqual(DP.dispatch(values),result)
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
 
     def test6__000_011_ValidValues(self):
         values={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',  'assumedLat':'35d59.7', 'assumedLong':' 74d35.3'}
