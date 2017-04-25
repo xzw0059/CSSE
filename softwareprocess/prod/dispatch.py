@@ -1206,6 +1206,9 @@ def dispatch(values=None,dip=None):
         # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
         # print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
         # print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
+        print ('correctedAzimuth= %s'%correctedAzimuth)
+        print ('correctedDistance = %s'%correctedDistance)
+        
         print ('type(correctedAzimuth) = %s'%type(correctedAzimuth))
         print ('type(correctedDistance) = %s'%type(correctedDistance))
 
