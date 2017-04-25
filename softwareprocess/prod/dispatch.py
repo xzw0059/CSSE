@@ -1165,7 +1165,7 @@ def dispatch(values=None,dip=None):
 
         correctedDistance=int(float(oaltitudelist[0])*60+float(oaltitudelist[1])-(float(ocorrectedAltitudelist[0])*60+float(ocorrectedAltitudemin)))
 
-        print ('float(oaltitudelist[0]) =%d'%float(oaltitudelist[0]))
+        print float(oaltitudelist[0])
         print float(oaltitudelist[1])
         print 'correctedDistance='
         print correctedDistance
@@ -1206,15 +1206,9 @@ def dispatch(values=None,dip=None):
         # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
         # print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
         # print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
-        print ('correctedAzimuth= %s'%correctedAzimuth)
-        print ('correctedDistance = %s'%correctedDistance)
 
-        print ('type(correctedAzimuth) = %s'%type(correctedAzimuth))
-        print ('type(correctedDistance) = %s'%type(correctedDistance))
 
-        print ('values[correctedAzimuth] = %s'%values['correctedAzimuth'])
-        print ('values[correctedDistance]  = %s' %values['correctedDistance'] )
-        values['correctedAzimuth'] = str(correctedAzimuth)
+
         values['correctedDistance'] = str(correctedDistance)
         return values    #This calculation is stubbed out
 
