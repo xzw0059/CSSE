@@ -1176,7 +1176,7 @@ def dispatch(values=None,dip=None):
         sinassumedLat=round(math.sin(math.radians(assumedLatnumber)),4)
         correctedAzimuth1=math.acos((sinlat-sinassumedLat*math.radians(intermediateDistancenumbero)))
         cosassumedLat=round(math.cos(math.radians(assumedLatnumber)),4)
-        asinintermediateDistance=math.asin(math.radians(intermediateDistancenumbero))
+        asinintermediateDistance=math.asin(intermediateDistancenumbero)
 
         cosasinintermediateDistance=round(math.cos(asinintermediateDistance),4)
 
