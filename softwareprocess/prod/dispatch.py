@@ -1214,7 +1214,7 @@ def dispatch(values=None,dip=None):
 
         print ('values[correctedAzimuth] = %s'%values['correctedAzimuth'])
         print ('values[correctedDistance]  = %s' %values['correctedDistance'] )
-        values['correctedAzimuth'] = correctedAzimuth
+        values['correctedAzimuth'] = str(correctedAzimuth)
         values['correctedDistance'] = str(correctedDistance)
         return values    #This calculation is stubbed out
 
