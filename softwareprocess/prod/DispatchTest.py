@@ -714,7 +714,7 @@ class MyTestCase(unittest.TestCase):
     def test6__331_020_InValidValuesassumedLong1ismultyspaces(self):
         values={'op': 'unknown'}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
-
-    def test6__331_030_InValidValuesassumedLong1ismultyspaces(self):
-        DP.dispatch()
-        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+    #
+    # def test6__331_030_InValidValuesassumedLong1ismultyspaces(self):
+    #     DP.dispatch()
+    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
