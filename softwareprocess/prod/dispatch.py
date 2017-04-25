@@ -1175,7 +1175,7 @@ def dispatch(values=None,dip=None):
         sinlat=round(math.sin(math.radians(latnumberrad)),3)
         sinassumedLat=round(math.sin(math.radians(assumedLatnumber)),3)
         intermediateDistancenumberoround=round(intermediateDistancenumbero,3)
-        correctedAzimuth1=math.acos((sinlat-sinassumedLat*intermediateDistancenumberoround))
+        correctedAzimuth1=(sinlat-sinassumedLat*intermediateDistancenumberoround)
         cosassumedLat=round(math.cos(math.radians(assumedLatnumber)),3)
         asinintermediateDistance=math.asin(intermediateDistancenumbero)
 
@@ -1188,7 +1188,7 @@ def dispatch(values=None,dip=None):
         print ('cosassumedLat = %s'%cosassumedLat)
         print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
 
-        correctedAzimuth=correctedAzimuth1/cosassumedLat*cosasinintermediateDistance
+        correctedAzimuth=math.acos(correctedAzimuth1/cosassumedLat*cosasinintermediateDistance)
         print ('correctedAzimuth=%s'%correctedAzimuth)
 
         values['correctedDistance'] = str(correctedDistance)
