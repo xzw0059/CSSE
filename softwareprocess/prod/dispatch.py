@@ -1179,7 +1179,7 @@ def dispatch(values=None,dip=None):
         asinintermediateDistance=round(math.asin(math.radians(intermediateDistancenumbero)),4)
         cosasinintermediateDistance=round(math.cos(asinintermediateDistance),4)
 
-        
+        print ('sinlat = %s'%sinlat)
         correctedAzimuth=correctedAzimuth1/cosassumedLat*cosasinintermediateDistance
         print 'correctedAzimuth='
         print correctedAzimuth
