@@ -34,21 +34,21 @@ class MyTestCase(unittest.TestCase):
     #                     missing dictionary            dispatch()
     #                        -- return {'error':'dictionary is missing'}
     # Happy path
-    # def test100_010ShouldReturnUnchangedValuesWithOperationAdjust(self):
-    #    values = {'op':'adjust'}
-    #    self.assertDictEqual(DP.dispatch(values), values)
+    def test100_010ShouldReturnUnchangedValuesWithOperationAdjust(self):
+       values = {'op':'adjust'}
+       self.assertDictEqual(DP.dispatch(values), values)
 
-    # def test100_010ShouldReturnUnchangedValuesWithOperationPredict(self):
-    #     values = {'op': 'predict'}
-    #     self.assertDictEqual(DP.dispatch(values), values)
+    def test100_010ShouldReturnUnchangedValuesWithOperationPredict(self):
+        values = {'op': 'predict'}
+        self.assertDictEqual(DP.dispatch(values), values)
 
-    # def test100_010ShouldReturnUnchangedValuesWithOperationCorrect(self):
-    #     values = {'op': 'correct'}
-    #     self.assertDictEqual(DP.dispatch(values), values)
-    #
-    # def test100_020ShouldReturnUnchangedValuesWithOperationLocate(self):
-    #     values = {'op': 'locate'}
-    #     self.assertDictEqual(DP.dispatch(values), values)
+    def test100_010ShouldReturnUnchangedValuesWithOperationCorrect(self):
+        values = {'op': 'correct'}
+        self.assertDictEqual(DP.dispatch(values), values)
+
+    def test100_020ShouldReturnUnchangedValuesWithOperationLocate(self):
+        values = {'op': 'locate'}
+        self.assertDictEqual(DP.dispatch(values), values)
 
     # Sad path
     def test100_910_ShouldReturnValuesWithErrorKeyWhenNoOpSpecified(self):
