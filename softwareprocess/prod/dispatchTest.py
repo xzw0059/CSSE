@@ -30,6 +30,14 @@ class MyTestCase(unittest.TestCase):
     #     values={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
     #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
         # print DP.dispatch(values)
+    def test6__200_012_inValidValues(self):
+        values={'op':'correct', 'lat':'16-23.4', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+    def test6__200_013_inValidValues(self):
+        values={'op':'correct', 'lat':32, 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
     def test6__200_010_inValidValues(self):
         values={'op':'correct', 'lat':'16aad32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
