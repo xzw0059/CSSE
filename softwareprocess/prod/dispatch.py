@@ -1189,6 +1189,10 @@ def dispatch(values=None,dip=None):
         print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
 
         correctedAzimuth=math.acos(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance))
+
+
+        print ('correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance) = %s'%(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)))
+
         print ('correctedAzimuth=%s'%correctedAzimuth)
 
         values['correctedDistance'] = str(correctedDistance)
