@@ -1193,8 +1193,8 @@ def dispatch(values=None,dip=None):
         correctedAzimuthnumber=math.acos(correctedAzimuthround1)
         print ('correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance) = %s'%str(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)))
         correctedAzimuth=round(correctedAzimuthnumber,7)
-        correctedAzimuthrad=math.degrees(correctedAzimuth)
-        print ('correctedAzimuthrad = %s'%correctedAzimuthrad)
+        correctedAzimuthdegrees=math.degrees(correctedAzimuth)
+        print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
 
         print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
 
