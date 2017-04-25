@@ -1165,10 +1165,10 @@ def dispatch(values=None,dip=None):
 
         correctedDistance=int(float(oaltitudelist[0])*60+float(oaltitudelist[1])-(float(ocorrectedAltitudelist[0])*60+float(ocorrectedAltitudemin)))
 
-        # print float(oaltitudelist[0])
-        # print float(oaltitudelist[1])
-        # print 'correctedDistance='
-        # print correctedDistance
+        print ('float(oaltitudelist[0]) =%n'%float(oaltitudelist[0]))
+        print float(oaltitudelist[1])
+        print 'correctedDistance='
+        print correctedDistance
 
 # should be:
 #         correctedAzimuth  = arccos((sin(lat) - (sin(assumedLat) * intermediateDistance))/(cos(assumedLat) * cos(arcsin(intermediateDistance))))
