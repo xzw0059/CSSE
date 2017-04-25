@@ -1180,6 +1180,7 @@ def dispatch(values=None,dip=None):
 
         cosasinintermediateDistance=round(math.cos(asinintermediateDistance),4)
 
+        print ('sinlat = %s'%sinlat)
         print ('asinintermediateDistance = %s'%asinintermediateDistance)
         print ('sinassumedLat = %s'%sinassumedLat)
         print ('intermediateDistancenumbero = %s'%intermediateDistancenumbero)
