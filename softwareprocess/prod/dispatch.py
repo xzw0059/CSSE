@@ -1184,11 +1184,11 @@ def dispatch(values=None,dip=None):
         print ('sinlat = %s'%sinlat)
         print ('asinintermediateDistance = %s'%asinintermediateDistance)
         print ('sinassumedLat = %s'%sinassumedLat)
-        print ('intermediateDistancenumbero = %s'%intermediateDistancenumbero)
+        print ('intermediateDistancenumberoround = %s'%intermediateDistancenumberoround)
         print ('cosassumedLat = %s'%cosassumedLat)
         print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
 
-        correctedAzimuth=math.acos(correctedAzimuth1/cosassumedLat*cosasinintermediateDistance)
+        correctedAzimuth=math.acos(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance))
         print ('correctedAzimuth=%s'%correctedAzimuth)
 
         values['correctedDistance'] = str(correctedDistance)
