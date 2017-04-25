@@ -1,7 +1,7 @@
 from unittest import TestCase
 import urllib
 
-import prod.convertString2Dictionary as cs2d
+import softwareprocess.convertString2Dictionary as cs2d
 
 class convertString2DictionaryTest(TestCase):
 

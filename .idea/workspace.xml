@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad129f8-39f5-4318-8e6a-9f3508f446b2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/softwareprocess/convertString2Dictionary/__init__.py" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/softwareprocess/prod/Sandbox/assignment6test.py" afterPath="$PROJECT_DIR$/softwareprocess/test/assignment6test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/convertString2Dictionary/convertString2DictionaryTest.py" afterPath="$PROJECT_DIR$/softwareprocess/convertString2Dictionary/convertString2DictionaryTest.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py" afterPath="$PROJECT_DIR$/softwareprocess/prod/dispatchTest.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -76,16 +74,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dispatchadd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/softwareprocess/test/dispatchadd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="269" column="0" lean-forward="true" selection-start-line="269" selection-start-column="0" selection-end-line="269" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="assignment6test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/softwareprocess/test/assignment6test.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -98,8 +86,32 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DispatchTest.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/softwareprocess/prod/DispatchTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="936">
+              <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="58" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="convertString2DictionaryTest.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/softwareprocess/convertString2Dictionary/convertString2DictionaryTest.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="609">
+              <caret line="57" column="74" lean-forward="true" selection-start-line="57" selection-start-column="74" selection-end-line="57" selection-end-column="74" />
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/softwareprocess/__init__.py">
+        <entry file="file://$PROJECT_DIR$/softwareprocess/prod/Sandbox/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -108,14 +120,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DispatchTest.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/softwareprocess/prod/DispatchTest.py">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/softwareprocess/convertString2Dictionary/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="32" column="58" lean-forward="false" selection-start-line="32" selection-start-column="53" selection-end-line="32" selection-end-column="58" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -166,6 +176,7 @@
         <option value="$PROJECT_DIR$/softwareprocess/test/DispatchTestofassigment6.py" />
         <option value="$PROJECT_DIR$/softwareprocess/prod/Sandbox/assignment6test.py" />
         <option value="$PROJECT_DIR$/softwareprocess/convertString2Dictionary/.convertString2Dictionary.py" />
+        <option value="$PROJECT_DIR$/softwareprocess/convertString2Dictionary/convertString2DictionaryTest.py" />
       </list>
     </option>
   </component>
@@ -326,11 +337,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\1\PycharmProjects\CSSE\softwareprocess\convertString2Dictionary" />
       <recent name="C:\Users\1\PycharmProjects\CSSE\softwareprocess\test" />
       <recent name="C:\Users\1\PycharmProjects\CSSE\softwareprocess\prod\Sandbox" />
       <recent name="C:\Users\1\PycharmProjects\CSSE\softwareprocess\prod" />
       <recent name="C:\Users\1\PycharmProjects\CSSE\softwareprocess" />
-      <recent name="C:\Users\1\PycharmProjects\CSSE\prod" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\1\PycharmProjects\CSSE\softwareprocess\test" />
@@ -699,9 +710,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.24 at 21h 46m 31s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.24 at 21h 52m 16s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -727,6 +735,9 @@
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.24 at 22h 04m 18s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.24 at 22h 32m 20s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
   </component>
@@ -801,15 +812,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py" />
-    <entry file="file://$PROJECT_DIR$/softwareprocess/SampleTest.py" />
-    <entry file="file://C:/Python27/Lib/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6954">
-          <caret line="366" column="0" lean-forward="false" selection-start-line="366" selection-start-column="0" selection-end-line="366" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/test" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/Sample.py" />
     <entry file="file://$PROJECT_DIR$/softwareprocess/ttt.py" />
@@ -967,6 +969,32 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/prod/Sandbox/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/convertString2Dictionary/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/softwareprocess/convertString2Dictionary/convertString2DictionaryTest.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="57" column="74" lean-forward="true" selection-start-line="57" selection-start-column="74" selection-end-line="57" selection-end-column="74" />
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
