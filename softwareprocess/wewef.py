@@ -1115,17 +1115,113 @@ def dispatch(values=None,dip=None):
             return values
 # ===========above is about assumedLong
 
-        longnumber=float(olonglist[0])+float(olonglist[1])/60
-        oassumedLongnumber=float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
+        longnumber=float(olonglist[0])+round(float(olonglist[1])/60,2)
+        oassumedLongnumber=float(oassumedLonglist[0])+round(float(oassumedLonglist[1])/60,1)
+        # print 'longnumber='
+        # print longnumber
+        #
+        # print 'oassumedLongnumber='
+        # print oassumedLongnumber
 
-        LHAnumber=float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
-        LHAlist=LHAnumber.split('.')
-        LHAstr=str(LHAlist[0])+'d'+str(LHAlist[1])
+        LHAnumber=longnumber+oassumedLongnumber
+            # float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
 
-        latnumber=float(olatlist[0])+float(olatlist[1])/60
-        assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
-        intermediateDistancenumber=math.sin(math.radians(longnumber))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumber))*math.cos(math.radians(oassumedLongnumber))*math.cos(math.radians(LHAnumber))
+        LHAnumberstr=str(LHAnumber)
+        LHAlist=LHAnumberstr.split('.')
+        LHAmin=round((LHAnumber-int(LHAnumber))*60,0)
+        # print 'LHAmin='
+        # print LHAmin
 
+        LHAstr=str(LHAlist[0])+'d'+str(LHAmin)
+
+        #
+        # print 'LHAstr='
+        # print LHAstr
+
+        if olatlist[0]>0:
+
+            latnumberrad=float(olatlist[0])+float(olatlist[1])/60
+        else:
+            latnumberrad=float(olatlist[0])-float(olatlist[1])/60
+
+
+        if (float(oassumedLatlist[0])>0):
+            assumedLatnumber=float(oassumedLatlist[0])+float(oassumedLatlist[1])/60
+        else:
+            assumedLatnumber=float(oassumedLatlist[0])-float(oassumedLatlist[1])/60
+
+        # intermediateDistancenumbero=math.sin(math.radians(latnumberrad))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumberrad))*math.cos(math.radians(assumedLatnumber))*math.cos(math.radians(LHAnumber))
+
+        intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),5)*round(math.sin(math.radians(assumedLatnumber)),4)+round(math.cos(math.radians(latnumberrad)),4)*round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(LHAnumber)),4)
+        intermediateDistancenumber=round(intermediateDistancenumbero,99)
+        # print 'print intermediateDistancenumbero='
+        # print intermediateDistancenumbero
+        # print intermediateDistancenumber
+        correctedAltitudeas=math.asin(intermediateDistancenumber)
+        # print 'correctedAltitudeas='
+        # print correctedAltitudeas
+        correctedAltitudedegrees=math.degrees(correctedAltitudeas)
+        # print 'correctedAltitudedegrees='
+        # print correctedAltitudedegrees
+        correctedAltitudedegreesstr=str(correctedAltitudedegrees)
+        correctedAltitudedegreesstr=str(correctedAltitudedegrees)
+        ocorrectedAltitudelist=correctedAltitudedegreesstr.split('.')
+        # ocorrectedAltitudemin=math.degrees(round(float(correctedAltitudedegrees-int(correctedAltitudedegrees))),2)
+        ocorrectedAltitudemin=round(math.degrees(round(correctedAltitudedegrees-int(correctedAltitudedegrees),99)),1)
+        ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(abs(ocorrectedAltitudemin))
+        # print 'ocorrectedAltitudestr='
+        # print ocorrectedAltitudestr
+
+        # ===========correctedDistance
+
+        correctedDistance=int(float(oaltitudelist[0])*60+float(oaltitudelist[1])-(float(ocorrectedAltitudelist[0])*60+float(ocorrectedAltitudemin)))
+
+        print ('float(oaltitudelist[0]) =%d'%float(oaltitudelist[0]))
+        print float(oaltitudelist[1])
+        print 'correctedDistance='
+        print correctedDistance
+
+# should be:
+#         correctedAzimuth  = arccos((sin(lat) - (sin(assumedLat) * intermediateDistance))/(cos(assumedLat) * cos(arcsin(intermediateDistance))))
+        sinlat=round(math.sin(math.radians(latnumberrad)),4)
+        sinassumedLat=round(math.sin(math.radians(assumedLatnumber)),4)
+        intermediateDistancenumberoround=round(intermediateDistancenumbero,4)
+        correctedAzimuth1=(sinlat-sinassumedLat*intermediateDistancenumberoround)
+        cosassumedLat=round(math.cos(math.radians(assumedLatnumber)),5)
+        asinintermediateDistance=math.asin(intermediateDistancenumbero)
+
+        cosasinintermediateDistance=round(math.cos(asinintermediateDistance),4)
+        #
+        # print ('sinlat = %s'%sinlat)
+        # print ('asinintermediateDistance = %s'%asinintermediateDistance)
+        # print ('sinassumedLat = %s'%sinassumedLat)
+        # print ('intermediateDistancenumberoround = %s'%intermediateDistancenumberoround)
+        # print ('cosassumedLat = %s'%cosassumedLat)
+        # print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
+
+        correctedAzimuthround1=round(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance),9)
+
+        correctedAzimuthnumberrad=math.acos(correctedAzimuthround1)
+        # print ('correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance) = %s'%str(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)))
+        correctedAzimuthrad=round(correctedAzimuthnumberrad,4)
+        correctedAzimuthdegrees=math.degrees(correctedAzimuthrad)
+        correctedAzimuthdegreeslist=str(correctedAzimuthdegrees).split()
+        correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
+        correctedAzimuthdegreesmin=round(correctedAzimuthdegreesminnumber,1)
+        correctedAzimuth=str(int(correctedAzimuthdegrees))+'d'+str(correctedAzimuthdegreesmin)
+
+        print ('correctedAzimuthdegrees=%s'%correctedAzimuthdegrees)
+        print ('correctedAzimuth=%s'%correctedAzimuth)
+        #
+        #
+        # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
+        # print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
+        # print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
+
+        print ('type(correctedAzimuth) = %s'%type(correctedAzimuth))
+        print ('type(correctedDistance) = %s'%type(correctedDistance))
+        values['correctedAzimuth'] = str(correctedAzimuth)
+        values['correctedDistance'] = str(correctedDistance)
         return values    #This calculation is stubbed out
 
     elif(values['op'] == 'locate'):
@@ -1137,17 +1233,16 @@ def dispatch(values=None,dip=None):
 
 
 
-
 #
 # values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
 #
-values={'op':'correct', 'lat':'16d32', 'long':'95.41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+values={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',  'assumedLat':'35d59.7', 'assumedLong':' 74d35.3'}
 # # result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
 #
 # # values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 
 #         # values={'observation': '10d00.0', 'height': '6.0', 'pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}
 # # values={'observation': '45d15.2', 'height': '6', 'pressure': '1010', 'horizon': 'natural', 'op': 'adjust', 'temperature': '71'}
-print values['error']
+print values
 # print 'v ='
 
