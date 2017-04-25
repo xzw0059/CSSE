@@ -1143,23 +1143,23 @@ def dispatch(values=None,dip=None):
 
         intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),5)*round(math.sin(math.radians(assumedLatnumber)),4)+round(math.cos(math.radians(latnumberrad)),4)*round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(LHAnumber)),4)
         intermediateDistancenumber=round(intermediateDistancenumbero,99)
-        print 'print intermediateDistancenumbero='
-        print intermediateDistancenumbero
+        # print 'print intermediateDistancenumbero='
+        # print intermediateDistancenumbero
         # print intermediateDistancenumber
         correctedAltitudeas=math.asin(intermediateDistancenumber)
-        print 'correctedAltitudeas='
-        print correctedAltitudeas
+        # print 'correctedAltitudeas='
+        # print correctedAltitudeas
         correctedAltitudedegrees=math.degrees(correctedAltitudeas)
-        print 'correctedAltitudedegrees='
-        print correctedAltitudedegrees
+        # print 'correctedAltitudedegrees='
+        # print correctedAltitudedegrees
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         ocorrectedAltitudelist=correctedAltitudedegreesstr.split('.')
         # ocorrectedAltitudemin=math.degrees(round(float(correctedAltitudedegrees-int(correctedAltitudedegrees))),2)
         ocorrectedAltitudemin=round(math.degrees(round(correctedAltitudedegrees-int(correctedAltitudedegrees),99)),1)
         ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(abs(ocorrectedAltitudemin))
-        print 'ocorrectedAltitudestr='
-        print ocorrectedAltitudestr
+        # print 'ocorrectedAltitudestr='
+        # print ocorrectedAltitudestr
 
         # ===========correctedDistance
 
