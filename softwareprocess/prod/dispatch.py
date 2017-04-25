@@ -1213,7 +1213,7 @@ def dispatch(values=None,dip=None):
         print ('type(correctedDistance) = %s'%type(correctedDistance))
 
         # print ('values[correctedAzimuth] = %s'%values['correctedAzimuth'])
-        print ('values[correctedDistance]  = %s' %values['correctedDistance'] )
+        # print ('values[correctedDistance]  = %s' %values['correctedDistance'] )
         values['correctedAzimuth'] = correctedAzimuth
         values['correctedDistance'] = str(correctedDistance)
         return values    #This calculation is stubbed out
