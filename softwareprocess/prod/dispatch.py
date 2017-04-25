@@ -1198,7 +1198,7 @@ def dispatch(values=None,dip=None):
         correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
         correctedAzimuthdegreesmin=round(correctedAzimuthdegreesminnumber,1)
         correctedAzimuth=
-        # print ('correctedAzimuth=%s'%correctedAzimuth)
+        print ('correctedAzimuthdegrees=%s'%correctedAzimuthdegrees)
         #
         #
         # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
