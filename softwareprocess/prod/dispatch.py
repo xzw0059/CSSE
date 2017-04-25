@@ -1162,13 +1162,22 @@ def dispatch(values=None,dip=None):
         print ocorrectedAltitudestr
 
         # ===========correctedDistance
-        correctedDistance=round(float(oaltitudelist[0])*60+float(oaltitudelist[1])-(float(ocorrectedAltitudelist[0])*60+float(ocorrectedAltitudemin)),0)
-        print float(oaltitudelist[0])
-        print float(oaltitudelist[1])
-        print 'correctedDistance='
-        print correctedDistance
 
+        correctedDistance=int(float(oaltitudelist[0])*60+float(oaltitudelist[1])-(float(ocorrectedAltitudelist[0])*60+float(ocorrectedAltitudemin)))
 
+        # print float(oaltitudelist[0])
+        # print float(oaltitudelist[1])
+        # print 'correctedDistance='
+        # print correctedDistance
+
+# should be:
+        correctedAzimuth  = arccos((sin(lat) - (sin(assumedLat) * intermediateDistance))/(cos(assumedLat) * cos(arcsin(intermediateDistance))))
+        sinlat=round(math.sin(math.radians(latnumberrad)),5)
+        sinassumedLat=round(math.sin(math.radians(assumedLatnumber)),4)
+        correctedAzimuth1=math.acos((sinlat-sinassumedLat*intermediateDistancenumbero))
+        
+        correctedAzimuth=correctedAzimuth1/round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(assumedLatnumber)),4)
+        values['correctedDistance'] = str(correctedDistance)
         return values    #This calculation is stubbed out
 
     elif(values['op'] == 'locate'):
