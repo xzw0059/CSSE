@@ -233,20 +233,20 @@ class MyTestCase(unittest.TestCase):
     #
 
     # Happy Path
-    # def test200_110ShouldCalculateAltitude(self):
-    #     values = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
-    #     expectedDictionary = {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
-    #     self.assertDictEqual(DP.dispatch(values), expectedDictionary)
-    #
-    # def test200_120ShouldCalculateAltitudeWithDefaultValue(self):
-    #     values = {'observation': '42d0.0',  'op': 'adjust'}
-    #     expectedDictionary = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
-    #     self.assertDictEqual(DP.dispatch(values), expectedDictionary)
-    #
-    # def test200_130ShouldCalculateAltitudeWithExtraKey(self):
-    #     values = {'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
-    #     expectedDictionary = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
-    #     self.assertDictEqual(DP.dispatch(values), expectedDictionary)
+    def test200_110ShouldCalculateAltitude(self):
+        values = {'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        expectedDictionary = {'altitude':'29d59.9', 'observation': '30d1.5', 'height': '19.0', 'pressure': '1000', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '85'}
+        self.assertDictEqual(DP.dispatch(values), expectedDictionary)
+
+    def test200_120ShouldCalculateAltitudeWithDefaultValue(self):
+        values = {'observation': '42d0.0',  'op': 'adjust'}
+        expectedDictionary = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust'}
+        self.assertDictEqual(DP.dispatch(values), expectedDictionary)
+
+    def test200_130ShouldCalculateAltitudeWithExtraKey(self):
+        values = {'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
+        expectedDictionary = {'altitude':'41d59.0', 'observation': '42d0.0',  'op': 'adjust', 'extraKey':'ignore'}
+        self.assertDictEqual(DP.dispatch(values), expectedDictionary)
 
     # -----------------------------------------------------------------------
     # ---- Acceptance Tests
@@ -415,7 +415,11 @@ class MyTestCase(unittest.TestCase):
         result={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',  'assumedLat':'35d59.7', 'assumedLong':' 74d35.3', 'correctedDistance':'104', 'correctedAzimuth':'0d36.8'}
         # self.assertAlmostEquals(int(values['correctedDistance']), 104, delta=1)
         # self.assertDictEqual(DP.dispatch(values),result)
-        print values
+    def test6__000_010_ValidValues(self):
+        values={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        result={'extraKey':'ignore','op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
+        self.assertDictEqual(DP.dispatch(values),result)
+# 'extraKey':'ignore'
     # def test6__100_000_InValidValues(self):
     #     values={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
     #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
