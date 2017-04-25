@@ -708,5 +708,5 @@ class MyTestCase(unittest.TestCase):
         values={}
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
     def test6__331_010_InValidValuesassumedLong1ismultyspaces(self):
-        values={}
+        values=42
         self.assertTrue(DP.dispatch(values).has_key("error"), True)
