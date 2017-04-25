@@ -1198,22 +1198,32 @@ def dispatch(values=None,dip=None):
         correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
         correctedAzimuthdegreesmin=round(correctedAzimuthdegreesminnumber,1)
         correctedAzimuth=str(int(correctedAzimuthdegrees))+'d'+str(correctedAzimuthdegreesmin)
-
-        print ('correctedAzimuthdegrees=%s'%correctedAzimuthdegrees)
-        print ('correctedAzimuth=%s'%correctedAzimuth)
         #
+        # print ('correctedAzimuthdegrees=%s'%correctedAzimuthdegrees)
+        # print ('correctedAzimuth=%s'%correctedAzimuth)
+        # #
+        # #
+        # # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
+        # # print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
+        # # print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
+        # print ('correctedAzimuth= %s'%correctedAzimuth)
+        # print ('correctedDistance = %s'%correctedDistance)
         #
-        # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
-        # print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
-        # print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
-        print ('correctedAzimuth= %s'%correctedAzimuth)
-        print ('correctedDistance = %s'%correctedDistance)
-
-        print ('type(correctedAzimuth) = %s'%type(correctedAzimuth))
+        # print ('type(correctedAzimuth) = %s'%type(correctedAzimuth))
         print ('type(correctedDistance) = %s'%type(correctedDistance))
 
         # print ('values[correctedAzimuth] = %s'%values['correctedAzimuth'])
         # print ('values[correctedDistance]  = %s' %values['correctedDistance'] )
+
+
+        if ('correctedAzimuth' in values):
+            values['error'] = 'mandatory information is missing'
+            return values
+
+        if ('correctedDistance' in values):
+            values['error'] = 'mandatory information is missing'
+            return values
+
         values['correctedAzimuth'] = correctedAzimuth
         values['correctedDistance'] = str(correctedDistance)
         return values    #This calculation is stubbed out
