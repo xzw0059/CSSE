@@ -51,20 +51,20 @@ class MyTestCase(unittest.TestCase):
     #     self.assertDictEqual(DP.dispatch(values), values)
 
     # Sad path
-    # def test100_910_ShouldReturnValuesWithErrorKeyWhenNoOpSpecified(self):
-    #     values = {}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test100_920ShouldReturnValuesWithErrorWhenParameterIsNotADictionary(self):
-    #     values = 42
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test100_930ShouldReturnValuesWithErrorWhenOpNotALegalOperation(self):
-    #     values = {'op': 'unknown'}
-    #     self.assertTrue(DP.dispatch(values).has_key("error"), True)
-    #
-    # def test100_940ShouldReturnValuesWithErrorWhenDictionaryMissing(self):
-    #     self.assertTrue(DP.dispatch().has_key("error"), True)
+    def test100_910_ShouldReturnValuesWithErrorKeyWhenNoOpSpecified(self):
+        values = {}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test100_920ShouldReturnValuesWithErrorWhenParameterIsNotADictionary(self):
+        values = 42
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test100_930ShouldReturnValuesWithErrorWhenOpNotALegalOperation(self):
+        values = {'op': 'unknown'}
+        self.assertTrue(DP.dispatch(values).has_key("error"), True)
+
+    def test100_940ShouldReturnValuesWithErrorWhenDictionaryMissing(self):
+        self.assertTrue(DP.dispatch().has_key("error"), True)
 
     # -----------------------------------------------------------------------
     # ---- Acceptance Tests
