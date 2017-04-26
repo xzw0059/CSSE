@@ -1146,8 +1146,8 @@ def dispatch(values=None,dip=None):
         LHAstr=str(LHAlist[0])+'d'+str(LHAmin)
 
         #
-        # print 'LHAstr='
-        # print LHAstr
+        print 'LHAstr='
+        print LHAstr
 
         if olatlist[0]>0:
 
