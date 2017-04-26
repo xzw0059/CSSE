@@ -43,6 +43,10 @@ class MyTestCase(unittest.TestCase):
         values={'op':'correct', 'lat':'16D32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         result={'op':'correct', 'lat':'16D32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
         self.assertDictEqual(DP.dispatch(values),result)
+    def test6__000_014_ValidValues(self):
+        values={'op':'correct', 'lat':'16Dd32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
+        result={'op':'correct', 'lat':'16Dd32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
+        self.assertDictEqual(DP.dispatch(values),result)
     def test6__200_010_inValidValues(self):
         values={'op':'correct', 'lat':'16aad32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3'}
         result={'op':'correct', 'lat':'16d32.3', 'long':'95d41.6', 'altitude':'13d42.3',  'assumedLat':'-53d38.4', 'assumedLong':' 74d35.3', 'correctedDistance':'3950', 'correctedAzimuth':'164d42.9'}
