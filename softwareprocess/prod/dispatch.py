@@ -844,8 +844,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        olong= values['long']
+        try:
+            olong= values['long'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # olong= values['long']
         try:
             olonglist=olong.split('d')
         except:
@@ -910,8 +914,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        oaltitude= values['altitude']
+        try:
+            oaltitude= values['altitude'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # oaltitude= values['altitude']
         try:
             oaltitudelist=oaltitude.split('d')
         except:
@@ -980,8 +988,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        oassumedLat= values['assumedLat']
+        try:
+            oassumedLat= values['assumedLat'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # oassumedLat= values['assumedLat']
         try:
             oassumedLatlist=oassumedLat.split('d')
         except:
@@ -1048,8 +1060,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        oassumedLong= values['assumedLong']
+        try:
+            oassumedLong= values['assumedLong'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # oassumedLong= values['assumedLong']
         try:
             oassumedLonglist=oassumedLong.split('d')
         except:
