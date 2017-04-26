@@ -1130,8 +1130,8 @@ def dispatch(values=None,dip=None):
         longnumber=float(olonglist[0])+float(olonglist[1])/60
         oassumedLongnumber=float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
         print ('oassumedLongnumber=%d'%oassumedLongnumber)
-        # print 'longnumber='
-        # print longnumber
+        print 'longnumber='
+        print longnumber
         #
         # print 'oassumedLongnumber='
         # print oassumedLongnumber
