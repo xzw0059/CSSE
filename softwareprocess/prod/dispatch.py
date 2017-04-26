@@ -1171,9 +1171,9 @@ def dispatch(values=None,dip=None):
 
         # intermediateDistancenumbero=math.sin(math.radians(latnumberrad))*round(math.sin(math.radians(assumedLatnumber)),4)+round(math.cos(math.radians(latnumberrad)),4)*round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(LHAnumber)),4)
         intermediateDistancenumber=intermediateDistancenumbero
-        print 'print intermediateDistancenumbero='
-        print intermediateDistancenumbero
-        print intermediateDistancenumber
+        # print 'print intermediateDistancenumbero='
+        # print intermediateDistancenumbero
+        # print intermediateDistancenumber
         asincorrectedAltitude=math.asin(intermediateDistancenumber)
 
         print 'asincorrectedAltitude='
