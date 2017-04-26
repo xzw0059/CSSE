@@ -1134,7 +1134,7 @@ def dispatch(values=None,dip=None):
         print float(oassumedLonglist[0])
         print float(oassumedLonglist[1])/60
         print type(float(oassumedLonglist[1])/60)
-        print ('oassumedLongnumber1=%d'%oassumedLongnumber1)
+        print ('oassumedLongnumbermin=%d'%oassumedLongnumbermin)
         print ('oassumedLongnumber=%d'%oassumedLongnumber)
         print 'longnumber='
         print longnumber
