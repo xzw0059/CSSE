@@ -1136,7 +1136,7 @@ def dispatch(values=None,dip=None):
 
         LHAnumber=longnumber+oassumedLongnumber
             # float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
-
+        print LHAnumber
         LHAnumberstr=str(LHAnumber)
         LHAlist=LHAnumberstr.split('.')
         LHAmin=(LHAnumber-int(LHAnumber))*60
