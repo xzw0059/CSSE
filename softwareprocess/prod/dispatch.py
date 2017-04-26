@@ -1194,8 +1194,7 @@ def dispatch(values=None,dip=None):
         # print ('correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance) = %s'%str(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)))
         correctedAzimuthrad=round(correctedAzimuthnumberrad,4)
 
-        0.5465765756
-        .09398
+
         correctedAzimuthdegrees=math.degrees(correctedAzimuthrad)
         correctedAzimuthdegreeslist=str(correctedAzimuthdegrees).split()
         correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
