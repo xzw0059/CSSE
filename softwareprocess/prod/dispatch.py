@@ -772,8 +772,11 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
+        try:
         olat= values['lat'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
         try:
             olatlist=olat.split('d')
         except:
