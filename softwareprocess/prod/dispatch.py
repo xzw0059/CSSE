@@ -764,14 +764,16 @@ def dispatch(values=None,dip=None):
 
         return values    #This calculation is stubbed out
 
-==================
+# ==================below is correct
+
+
     elif(values['op'] == 'correct'):
         if (not('lat' in values)):
             values['error'] = 'mandatory information is missing'
             return values
 
 
-        olat= values['lat']
+        olat= values['lat'].lower()
         try:
             olatlist=olat.split('d')
         except:
