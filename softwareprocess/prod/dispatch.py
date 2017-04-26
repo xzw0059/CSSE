@@ -1126,7 +1126,7 @@ def dispatch(values=None,dip=None):
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
 # ===========above is about assumedLong
-        longnumber=float(olonglist[0])+round(float(olonglist[1])/60,2)
+        longnumber=float(olonglist[0])+float(olonglist[1])/60
         oassumedLongnumber=float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
         print 'longnumber='
         print longnumber
