@@ -1128,11 +1128,11 @@ def dispatch(values=None,dip=None):
 # ===========above is about assumedLong
         longnumber=float(olonglist[0])+round(float(olonglist[1])/60,2)
         oassumedLongnumber=float(oassumedLonglist[0])+round(float(oassumedLonglist[1])/60,1)
-        # print 'longnumber='
-        # print longnumber
-        #
-        # print 'oassumedLongnumber='
-        # print oassumedLongnumber
+        print 'longnumber='
+        print longnumber
+
+        print 'oassumedLongnumber='
+        print oassumedLongnumber
 
         LHAnumber=longnumber+oassumedLongnumber
             # float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
