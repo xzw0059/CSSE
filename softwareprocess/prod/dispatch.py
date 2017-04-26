@@ -1163,8 +1163,11 @@ def dispatch(values=None,dip=None):
 
         sinlat=math.sin(math.radians(latnumberrad))
         sinassumedLat=math.sin(math.radians(assumedLatnumber))
-        cosassumedLat=
-        intermediateDistancenumbero=(sinlat*sinassumedLat)+*math.cos(math.radians(assumedLatnumber))*math.cos(math.radians(LHAnumber))
+        coslat=math.cos(math.radians(latnumberrad))
+        cosassumedLat=math.cos(math.radians(assumedLatnumber))
+        cosLHA=math.cos(math.radians(LHAnumber))
+
+        intermediateDistancenumbero=(sinlat*sinassumedLat)+(coslat*cosassumedLat*cosLHA)
 
         # intermediateDistancenumbero=math.sin(math.radians(latnumberrad))*round(math.sin(math.radians(assumedLatnumber)),4)+round(math.cos(math.radians(latnumberrad)),4)*round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(LHAnumber)),4)
         intermediateDistancenumber=intermediateDistancenumbero
