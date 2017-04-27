@@ -1201,14 +1201,14 @@ def dispatch(values=None,dip=None):
 
 # should be:
 #         correctedAzimuth  = arccos((sin(lat) - (sin(assumedLat) * intermediateDistance))/(cos(assumedLat) * cos(arcsin(intermediateDistance))))
-        sinlat=round(math.sin(math.radians(latnumberrad)),4)
-        sinassumedLat=round(math.sin(math.radians(assumedLatnumber)),4)
-        intermediateDistancenumberoround=round(intermediateDistancenumbero,4)
+        sinlat=math.sin(math.radians(latnumberrad))
+        sinassumedLat=math.sin(math.radians(assumedLatnumber))
+        intermediateDistancenumberoround=intermediateDistancenumbero
         correctedAzimuth1=(sinlat-sinassumedLat*intermediateDistancenumberoround)
-        cosassumedLat=round(math.cos(math.radians(assumedLatnumber)),5)
+        cosassumedLat=math.cos(math.radians(assumedLatnumber))
         asinintermediateDistance=math.asin(intermediateDistancenumbero)
 
-        cosasinintermediateDistance=round(math.cos(asinintermediateDistance),4)
+        cosasinintermediateDistance=math.cos(asinintermediateDistance)
         #
         # print ('sinlat = %s'%sinlat)
         # print ('asinintermediateDistance = %s'%asinintermediateDistance)
@@ -1217,17 +1217,17 @@ def dispatch(values=None,dip=None):
         # print ('cosassumedLat = %s'%cosassumedLat)
         # print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
 
-        correctedAzimuthround1=round(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance),9)
+        correctedAzimuthround1=correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)
 
         correctedAzimuthnumberrad=math.acos(correctedAzimuthround1)
         # print ('correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance) = %s'%str(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)))
-        correctedAzimuthrad=round(correctedAzimuthnumberrad,4)
+        correctedAzimuthrad=correctedAzimuthnumberrad
 
 
         correctedAzimuthdegrees=math.degrees(correctedAzimuthrad)
         correctedAzimuthdegreeslist=str(correctedAzimuthdegrees).split()
         correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
-        correctedAzimuthdegreesmin=round(correctedAzimuthdegreesminnumber,1)
+        correctedAzimuthdegreesmin=correctedAzimuthdegreesminnumber
         correctedAzimuth=str(int(correctedAzimuthdegrees))+'d'+str(correctedAzimuthdegreesmin)
         #
         # print ('correctedAzimuthdegrees=%s'%correctedAzimuthdegrees)
