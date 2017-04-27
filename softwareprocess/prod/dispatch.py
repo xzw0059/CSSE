@@ -1262,6 +1262,6 @@ def dispatch(values=None,dip=None):
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
     else:
-        values = {}
+        # values = {}
         values['error'] = 'op is not a legal operation'
         return values

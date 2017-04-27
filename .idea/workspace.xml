@@ -20,8 +20,8 @@
       <file leaf-file-name="dispatch.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
-              <caret line="1187" column="98" lean-forward="false" selection-start-line="1187" selection-start-column="98" selection-end-line="1187" selection-end-column="98" />
+            <state relative-caret-position="36">
+              <caret line="1175" column="42" lean-forward="true" selection-start-line="1175" selection-start-column="42" selection-end-line="1175" selection-end-column="42" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -661,12 +661,6 @@
     <configuration />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_Tests_(TDD) - 2017.04.26 at 17h 11m 19s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
-    <history-entry file="All_Tests_(TDD) - 2017.04.26 at 17h 18m 38s.xml">
-      <configuration name="All Tests (TDD)" configurationId="tests" />
-    </history-entry>
     <history-entry file="All_Tests_(TDD) - 2017.04.26 at 17h 21m 09s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
@@ -691,9 +685,15 @@
     <history-entry file="All_Tests_(TDD) - 2017.04.26 at 19h 57m 50s.xml">
       <configuration name="All Tests (TDD)" configurationId="tests" />
     </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.26 at 20h 03m 36s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
+    <history-entry file="All_Tests_(TDD) - 2017.04.26 at 20h 06m 42s.xml">
+      <configuration name="All Tests (TDD)" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="3026" height="1946" extended-state="7" />
+    <frame x="-13" y="-13" width="3026" height="1946" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24822456" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" x="526" y="42" width="327" height="644" />
@@ -913,8 +913,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/softwareprocess/prod/dispatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="1187" column="98" lean-forward="false" selection-start-line="1187" selection-start-column="98" selection-end-line="1187" selection-end-column="98" />
+        <state relative-caret-position="36">
+          <caret line="1175" column="42" lean-forward="true" selection-start-line="1175" selection-start-column="42" selection-end-line="1175" selection-end-column="42" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>
