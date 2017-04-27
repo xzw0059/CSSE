@@ -1226,7 +1226,7 @@ def dispatch(values=None,dip=None):
 
         correctedAzimuthdegrees=math.degrees(correctedAzimuthrad)
         correctedAzimuthdegreeslist=str(correctedAzimuthdegrees).split()
-        correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
+        correctedAzimuthdegreesminnumber=60*(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
         correctedAzimuthdegreesmin=correctedAzimuthdegreesminnumber
         correctedAzimuth=str(int(correctedAzimuthdegrees))+'d'+str(correctedAzimuthdegreesmin)
         #
