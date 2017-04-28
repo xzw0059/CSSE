@@ -1176,11 +1176,11 @@ def dispatch(values=None,dip=None):
         # print intermediateDistancenumber
         asincorrectedAltitude=math.asin(intermediateDistancenumber)
 
-        print 'asincorrectedAltitude='
-        print asincorrectedAltitude
+        # print 'asincorrectedAltitude='
+        # print asincorrectedAltitude
         correctedAltitudedegrees=math.degrees(asincorrectedAltitude)
-        print 'correctedAltitudedegrees='
-        print correctedAltitudedegrees
+        # print 'correctedAltitudedegrees='
+        # print correctedAltitudedegrees
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         ocorrectedAltitudelist=correctedAltitudedegreesstr.split('.')
