@@ -1146,8 +1146,8 @@ def dispatch(values=None,dip=None):
         LHAstr=str(LHAlist[0])+'d'+str(LHAmin)
 
         #
-        print 'LHAstr='
-        print LHAstr
+        # print 'LHAstr='
+        # print LHAstr
 
         if olatlist[0]>0:
 
@@ -1187,8 +1187,8 @@ def dispatch(values=None,dip=None):
         # ocorrectedAltitudemin=math.degrees(round(float(correctedAltitudedegrees-int(correctedAltitudedegrees))),2)
         ocorrectedAltitudemin=60 * (correctedAltitudedegrees-float(ocorrectedAltitudelist[0]))
         ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(abs(ocorrectedAltitudemin))
-        print 'ocorrectedAltitudestr='
-        print ocorrectedAltitudestr
+        # print 'ocorrectedAltitudestr='
+        # print ocorrectedAltitudestr
 
         # ===========correctedDistance
 
@@ -1196,8 +1196,8 @@ def dispatch(values=None,dip=None):
 
         # print ('float(oaltitudelist[0]) =%d'%float(oaltitudelist[0]))
         # print float(oaltitudelist[1])
-        print 'correctedDistance='
-        print correctedDistance
+        # print 'correctedDistance='
+        # print correctedDistance
 
 # should be:
 #         correctedAzimuth  = arccos((sin(lat) - (sin(assumedLat) * intermediateDistance))/(cos(assumedLat) * cos(arcsin(intermediateDistance))))
