@@ -828,11 +828,11 @@ def dispatch(values=None,dip=None):
         #     return values
         print type(olatlist[1])
 
-        if(not(0<olatlist[1])):
+        if(not(0<float(olatlist[1]))):
             values['error'] = 'not(0<olatlist[1])'
             return values
 
-        if(not(olatlist[1]<60)):
+        if(not(float(olatlist[1])<60)):
             values['error'] = 'not(olatlist[1]<60)'
             return values
 
