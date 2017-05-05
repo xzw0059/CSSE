@@ -902,7 +902,7 @@ def dispatch(values=None,dip=None):
         #     return values
 
         if(not(0<olonglist[1]<60)):
-            values['error'] = 'not(0<olatlist[1]<60)'
+            values['error'] = 'not(0<olonglist[1]<60)'
             return values
 
         try:
@@ -958,11 +958,11 @@ def dispatch(values=None,dip=None):
         try:
             (0<oaltitudelist[0]<90)
         except:
-            values['error'] = 'not(-90<olatlist[0]>90)'
+            values['error'] = 'not(-90<oaltitudelist[0]>90)'
             return values
 
         if not((0<oaltitudelist[0]<90)):
-            values['error'] = 'not(-90<olatlist[0]>90)'
+            values['error'] = 'not(-90<oaltitudelist[0]>90)'
             return values
 
         try:
@@ -976,7 +976,7 @@ def dispatch(values=None,dip=None):
         #     return values
 
         if(not(0<oaltitudelist[1]<60)):
-            values['error'] = 'not(0<olatlist[1]<60)'
+            values['error'] = 'not(0<oaltitudelist[1]<60)'
             return values
 
         try:
@@ -1036,7 +1036,7 @@ def dispatch(values=None,dip=None):
         try:
             (-90<oassumedLatlist[0]<90)
         except:
-            values['error'] = 'not(-90<olatlist[0]<90)'
+            values['error'] = 'not(-90<oassumedLatlist[0]<90)'
             return values
 
         try:
@@ -1050,7 +1050,7 @@ def dispatch(values=None,dip=None):
         #     return values
 
         if(not(0<oassumedLatlist[1]<60)):
-            values['error'] = 'not(0<olatlist[1]<60)'
+            values['error'] = 'not(0<oassumedLatlist[1]<60)'
             return values
 
         try:
@@ -1122,7 +1122,7 @@ def dispatch(values=None,dip=None):
         #     return values
 
         if(not(0<oassumedLonglist[1]<60)):
-            values['error'] = 'not(0<olatlist[1]<60)'
+            values['error'] = 'not(0<oassumedLonglist[1]<60)'
             return values
 
         try:
