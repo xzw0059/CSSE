@@ -15,6 +15,12 @@ import time
 # import unittest
 # import softwareprocess.prod.dispatch as DP
 
+import math
+import datetime
+import time
+# import unittest
+# import softwareprocess.prod.dispatch as DP
+
 
 def dispatch(values=None,dip=None):
 
@@ -774,13 +780,20 @@ def dispatch(values=None,dip=None):
 
 
         return values    #This calculation is stubbed out
+
+# ==================below is correct
+
+
     elif(values['op'] == 'correct'):
         if (not('lat' in values)):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        olat= values['lat']
+        try:
+            olat= values['lat'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
         try:
             olatlist=olat.split('d')
         except:
@@ -830,9 +843,14 @@ def dispatch(values=None,dip=None):
         # if(not(olatlist[0]==(olatlist[0]))):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
+        print type(olatlist[1])
 
-        if(not(0<olatlist[1]>60)):
-            values['error'] = 'not(0<olatlist[1]>60)'
+        if(not(0<float(olatlist[1]))):
+            values['error'] = 'not(0<olatlist[1])'
+            return values
+
+        if(not(float(olatlist[1])<60)):
+            values['error'] = 'not(olatlist[1]<60)'
             return values
 
         try:
@@ -848,8 +866,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        olong= values['long']
+        try:
+            olong= values['long'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # olong= values['long']
         try:
             olonglist=olong.split('d')
         except:
@@ -885,9 +907,9 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (0<olonglist[0]>360)
+            (0<float(olonglist[0])<360)
         except:
-            values['error'] = 'not(-90<olatlist[0]>90)'
+            values['error'] = 'not(0<olonglist[0]<360)'
             return values
 
         try:
@@ -900,8 +922,8 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<olonglist[1]>60)):
-            values['error'] = 'not(0<olatlist[1]>60)'
+        if(not(0<float(olonglist[1])<60)):
+            values['error'] = 'not(0<olonglist[1]<60)'
             return values
 
         try:
@@ -914,8 +936,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        oaltitude= values['altitude']
+        try:
+            oaltitude= values['altitude'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # oaltitude= values['altitude']
         try:
             oaltitudelist=oaltitude.split('d')
         except:
@@ -951,9 +977,13 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (0<oaltitudelist[0]>90)
+            (0<float(oaltitudelist[0])<90)
         except:
-            values['error'] = 'not(-90<olatlist[0]>90)'
+            values['error'] = 'not(-90<oaltitudelist[0]>90)'
+            return values
+
+        if not((0<float(oaltitudelist[0])<90)):
+            values['error'] = 'not(-90<oaltitudelist[0]>90)'
             return values
 
         try:
@@ -966,8 +996,8 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<oaltitudelist[1]>60)):
-            values['error'] = 'not(0<olatlist[1]>60)'
+        if(not(0<float(oaltitudelist[1])<60)):
+            values['error'] = 'not(0<oaltitudelist[1]<60)'
             return values
 
         try:
@@ -984,8 +1014,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        oassumedLat= values['assumedLat']
+        try:
+            oassumedLat= values['assumedLat'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # oassumedLat= values['assumedLat']
         try:
             oassumedLatlist=oassumedLat.split('d')
         except:
@@ -1021,9 +1055,9 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (-90<oassumedLatlist[0]>90)
+            (-90<float(oassumedLatlist[0])<90)
         except:
-            values['error'] = 'not(-90<olatlist[0]>90)'
+            values['error'] = 'not(-90<oassumedLatlist[0]<90)'
             return values
 
         try:
@@ -1036,8 +1070,8 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<oassumedLatlist[1]>60)):
-            values['error'] = 'not(0<olatlist[1]>60)'
+        if(not(0<float(oassumedLatlist[1])<60)):
+            values['error'] = 'not(0<oassumedLatlist[1]<60)'
             return values
 
         try:
@@ -1052,8 +1086,12 @@ def dispatch(values=None,dip=None):
             values['error'] = 'mandatory information is missing'
             return values
 
-
-        oassumedLong= values['assumedLong']
+        try:
+            oassumedLong= values['assumedLong'].lower()
+        except:
+            values['error'] = 'mandatory information is missing'
+            return values
+        # oassumedLong= values['assumedLong']
         try:
             oassumedLonglist=oassumedLong.split('d')
         except:
@@ -1089,9 +1127,9 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (0<oassumedLonglist[0]>360)
+            (0<float(oassumedLonglist[0])<360)
         except:
-            values['error'] = 'not(-90<olatlist[0]>90)'
+            values['error'] = 'not(0<oassumedLonglist[0]<360)'
             return values
 
         try:
@@ -1104,8 +1142,8 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<oassumedLonglist[1]>60)):
-            values['error'] = 'not(0<olatlist[1]>60)'
+        if(not(0<float(oassumedLonglist[1])<60)):
+            values['error'] = 'not(0<oassumedLonglist[1]<60)'
             return values
 
         try:
@@ -1114,9 +1152,8 @@ def dispatch(values=None,dip=None):
             values['error'] = 'olatlist[1] is not  accurate to 1/10 of an arc-minute'
             return values
 # ===========above is about assumedLong
-
-        longnumber=float(olonglist[0])+round(float(olonglist[1])/60,2)
-        oassumedLongnumber=float(oassumedLonglist[0])+round(float(oassumedLonglist[1])/60,1)
+        longnumber=float(olonglist[0])+float(olonglist[1])/60
+        oassumedLongnumber=float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
         # print 'longnumber='
         # print longnumber
         #
@@ -1125,10 +1162,10 @@ def dispatch(values=None,dip=None):
 
         LHAnumber=longnumber+oassumedLongnumber
             # float(olonglist[0])+float(olonglist[1])/60+float(oassumedLonglist[0])+float(oassumedLonglist[1])/60
-
+        # print LHAnumber
         LHAnumberstr=str(LHAnumber)
         LHAlist=LHAnumberstr.split('.')
-        LHAmin=round((LHAnumber-int(LHAnumber))*60,0)
+        LHAmin=(LHAnumber-int(LHAnumber))*60
         # print 'LHAmin='
         # print LHAmin
 
@@ -1150,24 +1187,31 @@ def dispatch(values=None,dip=None):
         else:
             assumedLatnumber=float(oassumedLatlist[0])-float(oassumedLatlist[1])/60
 
-        # intermediateDistancenumbero=math.sin(math.radians(latnumberrad))*math.sin(math.radians(assumedLatnumber))+math.cos(math.radians(latnumberrad))*math.cos(math.radians(assumedLatnumber))*math.cos(math.radians(LHAnumber))
+        sinlat=math.sin(math.radians(latnumberrad))
+        sinassumedLat=math.sin(math.radians(assumedLatnumber))
+        coslat=math.cos(math.radians(latnumberrad))
+        cosassumedLat=math.cos(math.radians(assumedLatnumber))
+        cosLHA=math.cos(math.radians(LHAnumber))
 
-        intermediateDistancenumbero=round(math.sin(math.radians(latnumberrad)),5)*round(math.sin(math.radians(assumedLatnumber)),4)+round(math.cos(math.radians(latnumberrad)),4)*round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(LHAnumber)),4)
-        intermediateDistancenumber=round(intermediateDistancenumbero,99)
+        intermediateDistancenumbero=(sinlat*sinassumedLat)+(coslat*cosassumedLat*cosLHA)
+
+        # intermediateDistancenumbero=math.sin(math.radians(latnumberrad))*round(math.sin(math.radians(assumedLatnumber)),4)+round(math.cos(math.radians(latnumberrad)),4)*round(math.cos(math.radians(assumedLatnumber)),4)*round(math.cos(math.radians(LHAnumber)),4)
+        intermediateDistancenumber=intermediateDistancenumbero
         # print 'print intermediateDistancenumbero='
         # print intermediateDistancenumbero
         # print intermediateDistancenumber
-        correctedAltitudeas=math.asin(intermediateDistancenumber)
-        # print 'correctedAltitudeas='
-        # print correctedAltitudeas
-        correctedAltitudedegrees=math.degrees(correctedAltitudeas)
+        asincorrectedAltitude=math.asin(intermediateDistancenumber)
+
+        # print 'asincorrectedAltitude='
+        # print asincorrectedAltitude
+        correctedAltitudedegrees=math.degrees(asincorrectedAltitude)
         # print 'correctedAltitudedegrees='
         # print correctedAltitudedegrees
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         correctedAltitudedegreesstr=str(correctedAltitudedegrees)
         ocorrectedAltitudelist=correctedAltitudedegreesstr.split('.')
         # ocorrectedAltitudemin=math.degrees(round(float(correctedAltitudedegrees-int(correctedAltitudedegrees))),2)
-        ocorrectedAltitudemin=round(math.degrees(round(correctedAltitudedegrees-int(correctedAltitudedegrees),99)),1)
+        ocorrectedAltitudemin=60 * (correctedAltitudedegrees-float(ocorrectedAltitudelist[0]))
         ocorrectedAltitudestr=str(ocorrectedAltitudelist[0])+'d'+str(abs(ocorrectedAltitudemin))
         # print 'ocorrectedAltitudestr='
         # print ocorrectedAltitudestr
@@ -1176,21 +1220,21 @@ def dispatch(values=None,dip=None):
 
         correctedDistance=int(float(oaltitudelist[0])*60+float(oaltitudelist[1])-(float(ocorrectedAltitudelist[0])*60+float(ocorrectedAltitudemin)))
 
-        print ('float(oaltitudelist[0]) =%d'%float(oaltitudelist[0]))
-        print float(oaltitudelist[1])
-        print 'correctedDistance='
-        print correctedDistance
+        # print ('float(oaltitudelist[0]) =%d'%float(oaltitudelist[0]))
+        # print float(oaltitudelist[1])
+        # print 'correctedDistance='
+        # print correctedDistance
 
 # should be:
 #         correctedAzimuth  = arccos((sin(lat) - (sin(assumedLat) * intermediateDistance))/(cos(assumedLat) * cos(arcsin(intermediateDistance))))
-        sinlat=round(math.sin(math.radians(latnumberrad)),4)
-        sinassumedLat=round(math.sin(math.radians(assumedLatnumber)),4)
-        intermediateDistancenumberoround=round(intermediateDistancenumbero,4)
+        sinlat=math.sin(math.radians(latnumberrad))
+        sinassumedLat=math.sin(math.radians(assumedLatnumber))
+        intermediateDistancenumberoround=intermediateDistancenumbero
         correctedAzimuth1=(sinlat-sinassumedLat*intermediateDistancenumberoround)
-        cosassumedLat=round(math.cos(math.radians(assumedLatnumber)),5)
+        cosassumedLat=math.cos(math.radians(assumedLatnumber))
         asinintermediateDistance=math.asin(intermediateDistancenumbero)
 
-        cosasinintermediateDistance=round(math.cos(asinintermediateDistance),4)
+        cosasinintermediateDistance=math.cos(asinintermediateDistance)
         #
         # print ('sinlat = %s'%sinlat)
         # print ('asinintermediateDistance = %s'%asinintermediateDistance)
@@ -1199,44 +1243,65 @@ def dispatch(values=None,dip=None):
         # print ('cosassumedLat = %s'%cosassumedLat)
         # print ('cosasinintermediateDistance = %s'%cosasinintermediateDistance)
 
-        correctedAzimuthround1=round(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance),9)
+        correctedAzimuthround1=correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)
 
         correctedAzimuthnumberrad=math.acos(correctedAzimuthround1)
         # print ('correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance) = %s'%str(correctedAzimuth1/(cosassumedLat*cosasinintermediateDistance)))
-        correctedAzimuthrad=round(correctedAzimuthnumberrad,4)
+        correctedAzimuthrad=correctedAzimuthnumberrad
+
+
         correctedAzimuthdegrees=math.degrees(correctedAzimuthrad)
         correctedAzimuthdegreeslist=str(correctedAzimuthdegrees).split()
-        correctedAzimuthdegreesminnumber=math.degrees(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
-        correctedAzimuthdegreesmin=round(correctedAzimuthdegreesminnumber,1)
-        correctedAzimuth=str(int(correctedAzimuthdegrees))+'d'+str(correctedAzimuthdegreesmin)
-
-        print ('correctedAzimuthdegrees=%s'%correctedAzimuthdegrees)
-        print ('correctedAzimuth=%s'%correctedAzimuth)
+        correctedAzimuthdegreesminnumber=60*(correctedAzimuthdegrees-int(correctedAzimuthdegrees))
+        correctedAzimuthdegreesmin=correctedAzimuthdegreesminnumber
+        correctedAzimuth=str(int(correctedAzimuthdegrees))+'d'+str(round(correctedAzimuthdegreesmin,1))
         #
+        # print ('correctedAzimuthdegrees=%s'%correctedAzimuthdegrees)
+        # print ('correctedAzimuth=%s'%correctedAzimuth)
+        # #
+        # #
+        # # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
+        # # print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
+        # # print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
+        # print ('correctedAzimuth= %s'%correctedAzimuth)
+        # print ('correctedDistance = %s'%correctedDistance)
         #
-        # print ('correctedAzimuthdegrees = %s'%correctedAzimuthdegrees)
-        # print ('correctedAzimuthdegreesmin = %s'%correctedAzimuthdegreesmin)
-        # print ('correctedAzimuthround1= %s'%correctedAzimuthround1)
+        # print ('type(correctedAzimuth) = %s'%type(correctedAzimuth))
+        # print ('type(correctedDistance) = %s'%type(correctedDistance))
 
-        print ('type(correctedAzimuth) = %s'%type(correctedAzimuth))
-        print ('type(correctedDistance) = %s'%type(correctedDistance))
-        values['correctedAzimuth'] = str(correctedAzimuth)
+        # print ('values[correctedAzimuth] = %s'%values['correctedAzimuth'])
+        # print ('values[correctedDistance]  = %s' %values['correctedDistance'] )
+
+
+        if ('correctedAzimuth' in values):
+            values['error'] = 'mandatory information is missing'
+            return values
+
+        if ('correctedDistance' in values):
+            values['error'] = 'mandatory information is missing'
+            return values
+
+        values['correctedAzimuth'] = correctedAzimuth
         values['correctedDistance'] = str(correctedDistance)
         return values    #This calculation is stubbed out
 
     elif(values['op'] == 'locate'):
         return values    #This calculation is stubbed out
     else:
-        values = {}
+        # values = {}
         values['error'] = 'op is not a legal operation'
         return values
+
 
 
 
 #
 # values={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42'}
 #
-values={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',  'assumedLat':'35d59.7', 'assumedLong':' 74d35.3'}
+values = {'op': 'correct', 'lat': '91d32.3', 'long': '95d41.6', 'altitude': '13d42.3',
+                  'assumedLat': '-53d38.4',
+                  'assumedLong': '74d35.3'}
+# values={'op':'correct', 'lat':'89d20.1', 'long':'154d5.4', 'altitude':'37d17.4',  'assumedLat':'35d59.7', 'assumedLong':' 74d35.3'}
 # # result={'op':'predict', 'body': 'Betelgeuse', 'date': '2016-01-17', 'time': '03:15:42', 'long':'75d53.6', 'lat':'7d24.3'}
 #
 # # values={'observation': '10d00.0', 'height': '6.0','pressure': '1010', 'horizon': 'artificial', 'op': 'adjust', 'temperature': '72'}

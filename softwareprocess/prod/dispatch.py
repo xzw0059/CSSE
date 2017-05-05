@@ -890,7 +890,7 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (0<olonglist[0]<360)
+            (0<float(olonglist[0])<360)
         except:
             values['error'] = 'not(0<olonglist[0]<360)'
             return values
@@ -905,7 +905,7 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<olonglist[1]<60)):
+        if(not(0<float(olonglist[1])<60)):
             values['error'] = 'not(0<olonglist[1]<60)'
             return values
 
@@ -960,12 +960,12 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (0<oaltitudelist[0]<90)
+            (0<float(oaltitudelist[0])<90)
         except:
             values['error'] = 'not(-90<oaltitudelist[0]>90)'
             return values
 
-        if not((0<oaltitudelist[0]<90)):
+        if not((0<float(oaltitudelist[0])<90)):
             values['error'] = 'not(-90<oaltitudelist[0]>90)'
             return values
 
@@ -979,7 +979,7 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<oaltitudelist[1]<60)):
+        if(not(0<float(oaltitudelist[1])<60)):
             values['error'] = 'not(0<oaltitudelist[1]<60)'
             return values
 
@@ -1038,7 +1038,7 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (-90<oassumedLatlist[0]<90)
+            (-90<float(oassumedLatlist[0])<90)
         except:
             values['error'] = 'not(-90<oassumedLatlist[0]<90)'
             return values
@@ -1053,7 +1053,7 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<oassumedLatlist[1]<60)):
+        if(not(0<float(oassumedLatlist[1])<60)):
             values['error'] = 'not(0<oassumedLatlist[1]<60)'
             return values
 
@@ -1110,7 +1110,7 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (0<oassumedLonglist[0]<360)
+            (0<float(oassumedLonglist[0])<360)
         except:
             values['error'] = 'not(0<oassumedLonglist[0]<360)'
             return values
@@ -1125,7 +1125,7 @@ def dispatch(values=None,dip=None):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
 
-        if(not(0<oassumedLonglist[1]<60)):
+        if(not(0<float(oassumedLonglist[1])<60)):
             values['error'] = 'not(0<oassumedLonglist[1]<60)'
             return values
 
