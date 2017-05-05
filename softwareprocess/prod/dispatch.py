@@ -816,6 +816,9 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'not(-90<olatlist[0]>90)'
             return values
+        if not(-90<float(olatlist[0])>90):
+            values['error'] = 'not(-90<olatlist[0]>90)'
+            return values
 
         try:
             (float(olatlist[0])==int(olatlist[0]))
