@@ -959,7 +959,9 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'not(-90<olatlist[0]>90)'
             return values
-
+        if not((0<oaltitudelist[0]>90)):
+            values['error'] = 'not(-90<olatlist[0]>90)'
+            return values
         try:
             (float(oaltitudelist[0])==int(oaltitudelist[0]))
         except:
