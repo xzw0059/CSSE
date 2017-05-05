@@ -1124,7 +1124,9 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'not(0<oassumedLonglist[0]<360)'
             return values
-
+        if(not(0<float(oassumedLonglist[0])<360)):
+            values['error'] = 'not(0<float(oassumedLonglist[0])<360)'
+            return values
         try:
             (float(oassumedLonglist[0])==int(oassumedLonglist[0]))
         except:
