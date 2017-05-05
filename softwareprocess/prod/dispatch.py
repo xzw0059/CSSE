@@ -1049,6 +1049,10 @@ def dispatch(values=None,dip=None):
             values['error'] = 'not(-90<oassumedLatlist[0]<90)'
             return values
 
+        if(not(-90<float(oassumedLatlist[0])<90)):
+            values['error'] = 'not(-90<float(oassumedLatlist[0])<90)'
+            return values
+
         try:
             (float(oassumedLatlist[0])==int(oassumedLatlist[0]))
         except:
