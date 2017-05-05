@@ -898,7 +898,9 @@ def dispatch(values=None,dip=None):
         except:
             values['error'] = 'not(0<olonglist[0]<360)'
             return values
-
+        if not(0<float(olonglist[0])<360):
+            values['error'] = 'not (0<float(olonglist[0])<360)'
+            return values
         try:
             (float(olonglist[0])==int(olonglist[0]))
         except:
