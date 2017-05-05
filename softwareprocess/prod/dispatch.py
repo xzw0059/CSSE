@@ -955,13 +955,15 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (0<oaltitudelist[0]>90)
+            (0<oaltitudelist[0]<90)
         except:
             values['error'] = 'not(-90<olatlist[0]>90)'
             return values
-        # if not((0<oaltitudelist[0]>90)):
-        #     values['error'] = 'not(-90<olatlist[0]>90)'
-        #     return values
+
+        if not((0<oaltitudelist[0]<90)):
+            values['error'] = 'not(-90<olatlist[0]>90)'
+            return values
+
         try:
             (float(oaltitudelist[0])==int(oaltitudelist[0]))
         except:
