@@ -826,7 +826,7 @@ def dispatch(values=None,dip=None):
         # if(not(olatlist[0]==(olatlist[0]))):
         #     values['error'] = 'olatlist[0] is not int1'
         #     return values
-        print olatlist[1]
+        print type.olatlist[1]
 
         if(not(0<olatlist[1])):
             values['error'] = 'not(0<olatlist[1])'
@@ -835,7 +835,7 @@ def dispatch(values=None,dip=None):
         if(not(olatlist[1]<60)):
             values['error'] = 'not(olatlist[1]<60)'
             return values
-        
+
         try:
             (float(olatlist[1])== float(int(float(olatlist[1])*10))/10)
         except:
