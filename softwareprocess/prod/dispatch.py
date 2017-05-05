@@ -812,7 +812,7 @@ def dispatch(values=None,dip=None):
 
         # print olatnotcoumt1
         try:
-            (-90<olatlist[0]>90)
+            (-90<float(olatlist[0])>90)
         except:
             values['error'] = 'not(-90<olatlist[0]>90)'
             return values
